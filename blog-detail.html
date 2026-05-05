@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KEYSHU | Blog Detail</title>
+
+  <!-- CSS chính -->
+  <link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="blog-detail.css" />
+  <!-- CSS footer nếu bạn đang tách riêng -->
+  <link rel="stylesheet" href="footer.css" />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+</head>
+<body>
+
+  <!-- =========================================================
+    HEADER
+  ========================================================== -->
+  <header class="site-header">
+    <div class="container">
+
+      <div class="header-top">
+        <div class="header-logo">
+          <a href="#">
+            <img src="img/Logo-keyshu-1-01.jpg" alt="KEYSHU Logo" />
+          </a>
+        </div>
+
+        <div class="header-search">
+          <form action="#">
+            <input
+              type="text"
+              placeholder="Nhập từ khóa tìm kiếm sản phẩm, danh mục..."
+            />
+            <button type="submit" aria-label="Tìm kiếm">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M21 21L16.65 16.65M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <div class="header-actions">
+          <a href="#" class="action-item action-link">
+            <span class="action-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M3 7H21V19H3V7Z" stroke="currentColor" stroke-width="1.8" />
+                <path
+                  d="M7 7V5C7 3.89543 7.89543 3 9 3H15C16.1046 3 17 3.89543 17 5V7"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                />
+                <path d="M3 11H21" stroke="currentColor" stroke-width="1.8" />
+              </svg>
+            </span>
+            <span>Hệ thống cửa hàng</span>
+          </a>
+
+          <a href="#" class="action-item action-link">
+            <span class="action-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M4 19.5V4.5C4 3.67157 4.67157 3 5.5 3H16.5L20 6.5V19.5C20 20.3284 19.3284 21 18.5 21H5.5C4.67157 21 4 20.3284 4 19.5Z"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                />
+                <path d="M16 3V7H20" stroke="currentColor" stroke-width="1.8" />
+                <path
+                  d="M8 11H16"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M8 15H13"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </span>
+            <span>Tạp chí làm đẹp</span>
+          </a>
+
+          <a href="#" class="login-link" aria-label="Đăng nhập hoặc đăng ký">
+            <span class="login-link-icon">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                  d="M14 16.5L18.5 12L14 7.5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M18 12H9"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10 21H6.5C5.11929 21 4 19.8807 4 18.5V5.5C4 4.11929 5.11929 3 6.5 3H10"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+            <span class="login-link-text">Login/Register</span>
+          </a>
+
+          <a href="#" class="icon-btn" aria-label="Yêu thích">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M12 20.5C12 20.5 4 15.36 4 9.5C4 6.46243 6.46243 4 9.5 4C11.1569 4 12.6429 4.74157 13.6667 5.90968C14.6904 4.74157 16.1764 4 17.8333 4C20.8709 4 23.3333 6.46243 23.3333 9.5C23.3333 15.36 15.3333 20.5 15.3333 20.5H12Z"
+                stroke="currentColor"
+                stroke-width="1.7"
+                transform="translate(-1.66665 0)"
+              />
+            </svg>
+          </a>
+
+          <a href="#" class="icon-btn" aria-label="Giỏ hàng">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M3 5H5L7 15H18L20 8H8"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <circle cx="9" cy="19" r="1.6" stroke="currentColor" stroke-width="1.6" />
+              <circle cx="17" cy="19" r="1.6" stroke="currentColor" stroke-width="1.6" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <nav class="main-menu">
+        <a href="#">Trang Chủ</a>
+        <a href="#">Mặt Nạ</a>
+        <a href="#">Tẩy Trang</a>
+        <a href="#">Sữa Rửa Mặt</a>
+        <a href="#">Toner</a>
+        <a href="#">Serum</a>
+        <a href="#">Combo Siêu Hời</a>
+        <a href="#">Chính Sách</a>
+        <a href="#">Liên Hệ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================
+    BLOG DETAIL PAGE
+  ========================================================== -->
+  <main class="blog-detail-page">
+    <div class="container">
+
+      <!-- Breadcrumb -->
+      <div class="blog-detail-breadcrumb">
+        <a href="#">Trang chủ</a>
+        <span>/</span>
+        <a href="#">Blog làm đẹp</a>
+        <span>/</span>
+        <span>Routine chăm sóc da buổi tối giúp da phục hồi tốt hơn</span>
+      </div>
+
+      <!-- Hero -->
+      <section class="blog-detail-hero">
+        <div class="blog-detail-hero__content">
+          <span class="blog-detail-category">Chăm sóc da</span>
+          <h1>ROUTINE CHĂM SÓC DA BUỔI TỐI GIÚP DA PHỤC HỒI TỐT HƠN MỖI NGÀY</h1>
+
+          <div class="blog-detail-meta">
+            <div class="blog-detail-meta__item">
+              <i class="fa-regular fa-calendar"></i>
+              <span>12/04/2026</span>
+            </div>
+            <div class="blog-detail-meta__item">
+              <i class="fa-regular fa-user"></i>
+              <span>KEYSHU Team</span>
+            </div>
+            <div class="blog-detail-meta__item">
+              <i class="fa-regular fa-clock"></i>
+              <span>8 phút đọc</span>
+            </div>
+          </div>
+
+          <p class="blog-detail-intro">
+            Một routine buổi tối đúng cách không chỉ giúp da được làm sạch kỹ hơn,
+            mà còn là thời điểm lý tưởng để phục hồi, cấp ẩm và nuôi dưỡng làn da
+            sau một ngày dài tiếp xúc với nắng, bụi bẩn và lớp trang điểm.
+          </p>
+        </div>
+
+        <div class="blog-detail-hero__image">
+          <img src="img-product/rau-ma-scaled.jpg" alt="Routine chăm sóc da buổi tối" />
+        </div>
+      </section>
+
+      <!-- Content layout -->
+      <section class="blog-detail-layout">
+
+        <!-- Main article -->
+        <article class="blog-detail-article">
+
+          <div class="blog-detail-featured-image">
+            <img src="img-product/rau-ma-scaled.jpg" alt="Chăm sóc da buổi tối" />
+          </div>
+
+          <div class="blog-detail-content">
+            <p class="blog-detail-lead">
+              Buổi tối là khoảng thời gian làn da bước vào giai đoạn nghỉ ngơi và tái tạo.
+              Đây cũng là lúc các hoạt chất dưỡng da phát huy hiệu quả tốt hơn, giúp da
+              được cân bằng, mềm mịn và khỏe hơn vào sáng hôm sau.
+            </p>
+
+            <h2>1. Làm sạch kép để da thông thoáng hơn</h2>
+            <p>
+              Nếu ban ngày bạn có sử dụng kem chống nắng hoặc trang điểm, bước làm sạch kép
+              là điều rất cần thiết. Hãy bắt đầu với sản phẩm tẩy trang dịu nhẹ để loại bỏ
+              lớp bụi bẩn, dầu thừa và cặn mỹ phẩm trên bề mặt da. Sau đó, tiếp tục với
+              sữa rửa mặt phù hợp để làm sạch sâu hơn mà không gây khô căng.
+            </p>
+            <p>
+              Một làn da được làm sạch đúng cách sẽ hấp thụ các bước dưỡng tiếp theo tốt hơn
+              và hạn chế cảm giác bí bách sau một ngày dài.
+            </p>
+
+            <blockquote>
+              “Làm sạch đúng không phải là làm da khô đi, mà là giúp da trở về trạng thái
+              thông thoáng và dễ chịu nhất.”
+            </blockquote>
+
+            <h2>2. Toner giúp cân bằng và làm dịu da</h2>
+            <p>
+              Sau bước làm sạch, toner đóng vai trò cân bằng lại độ ẩm trên bề mặt da,
+              đồng thời hỗ trợ da mềm hơn trước khi dùng serum hoặc kem dưỡng. Với làn da
+              nhạy cảm, bạn nên ưu tiên các dòng toner có kết cấu lỏng nhẹ, bảng thành phần
+              dịu nhẹ và thiên về phục hồi.
+            </p>
+
+            <div class="blog-detail-inline-image">
+              <img src="img-product/google-shopping-nuoc-can-bang-la.webp" alt="Toner dịu nhẹ cho da" />
+            </div>
+
+            <p>
+              Một toner phù hợp có thể giúp da cảm thấy êm hơn rõ rệt, nhất là sau khi rửa mặt
+              hoặc trong những ngày da đang khô, thiếu nước và dễ kích ứng.
+            </p>
+
+            <h2>3. Serum là bước nuôi dưỡng chuyên sâu</h2>
+            <p>
+              Đây là bước bạn có thể tập trung vào nhu cầu cụ thể của da như cấp ẩm, phục hồi,
+              dưỡng sáng hoặc hỗ trợ cải thiện bề mặt da. Với routine buổi tối, serum thường
+              được ưu tiên vì kết cấu thấm nhanh, mang lại cảm giác nhẹ mặt nhưng vẫn đủ hiệu quả.
+            </p>
+
+            <ul>
+              <li>Da khô: ưu tiên serum cấp ẩm và phục hồi hàng rào ẩm.</li>
+              <li>Da dầu: chọn serum mỏng nhẹ, thấm nhanh, không gây bí da.</li>
+              <li>Da nhạy cảm: ưu tiên các công thức dịu nhẹ, tối giản.</li>
+            </ul>
+
+            <h2>4. Kem dưỡng giúp khóa ẩm hiệu quả hơn</h2>
+            <p>
+              Sau serum, kem dưỡng đóng vai trò giữ lại độ ẩm trên da và giúp các bước trước đó
+              hoạt động ổn định hơn trong suốt đêm. Nếu bạn thường thấy da khô sau khi ngủ dậy,
+              rất có thể routine hiện tại đang thiếu một bước khóa ẩm phù hợp.
+            </p>
+            <p>
+              Nên chọn kết cấu kem dưỡng theo tình trạng da thực tế: dạng gel cream cho da dầu,
+              dạng cream mềm mượt hơn cho da khô hoặc da thiếu ẩm.
+            </p>
+
+            <h2>5. Giữ routine tối giản nhưng đều đặn</h2>
+            <p>
+              Một routine buổi tối hiệu quả không nhất thiết phải quá nhiều bước. Điều quan trọng
+              là bạn hiểu làn da mình cần gì và duy trì đều đặn mỗi ngày. Chỉ với những bước cơ bản
+              nhưng phù hợp, làn da vẫn có thể được cải thiện rõ rệt theo thời gian.
+            </p>
+
+            <div class="blog-detail-highlight-box">
+              <h3>Gợi ý routine buổi tối cơ bản</h3>
+              <ol>
+                <li>Tẩy trang</li>
+                <li>Sữa rửa mặt</li>
+                <li>Toner</li>
+                <li>Serum</li>
+                <li>Kem dưỡng</li>
+              </ol>
+            </div>
+
+            <h2>Kết luận</h2>
+            <p>
+              Chăm sóc da buổi tối là một thói quen nhỏ nhưng mang lại giá trị rất lớn cho làn da.
+              Khi da được làm sạch, cân bằng và nuôi dưỡng đúng cách trước khi ngủ, bạn sẽ cảm nhận
+              sự khác biệt rõ rệt về độ mềm mịn, độ ẩm và cảm giác khỏe khoắn vào sáng hôm sau.
+            </p>
+            <p>
+              Hãy bắt đầu từ một routine đơn giản, chọn sản phẩm phù hợp và kiên trì cùng làn da của mình.
+            </p>
+          </div>
+
+          <!-- Tags + Share -->
+          <div class="blog-detail-bottom">
+            <div class="blog-detail-tags">
+              <span>Tags:</span>
+              <a href="#">Routine buổi tối</a>
+              <a href="#">Chăm sóc da</a>
+              <a href="#">Toner</a>
+              <a href="#">Serum</a>
+            </div>
+
+            <div class="blog-detail-share">
+              <span>Chia sẻ:</span>
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+          </div>
+
+          <!-- Author box -->
+          <div class="blog-detail-author">
+            <div class="blog-detail-author__avatar">
+              <img src="img-product/ini-scaled.jpg" alt="KEYSHU Team" />
+            </div>
+            <div class="blog-detail-author__info">
+              <span class="author-label">Tác giả</span>
+              <h3>KEYSHU Team</h3>
+              <p>
+                Chia sẻ kiến thức làm đẹp, skincare routine và những kinh nghiệm chọn sản phẩm
+                phù hợp cho từng loại da, giúp bạn chăm sóc da một cách nhẹ nhàng và hiệu quả hơn mỗi ngày.
+              </p>
+            </div>
+          </div>
+
+          <!-- Prev next -->
+          <div class="blog-detail-nav">
+            <a href="#" class="blog-detail-nav__item prev">
+              <span>Bài viết trước</span>
+              <strong>5 dấu hiệu cho thấy làn da của bạn đang thiếu ẩm</strong>
+            </a>
+
+            <a href="#" class="blog-detail-nav__item next">
+              <span>Bài viết tiếp theo</span>
+              <strong>Cách chọn toner phù hợp cho da dầu mụn và da nhạy cảm</strong>
+            </a>
+          </div>
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="blog-detail-sidebar">
+
+          <div class="blog-sidebar-card">
+            <h3>Tìm kiếm bài viết</h3>
+            <form class="blog-sidebar-search" action="#">
+              <input type="text" placeholder="Nhập từ khóa..." />
+              <button type="submit" aria-label="Tìm kiếm">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </form>
+          </div>
+
+          <div class="blog-sidebar-card">
+            <h3>Danh mục blog</h3>
+            <ul class="blog-sidebar-list">
+              <li><a href="#">Cách chăm sóc da</a></li>
+              <li><a href="#">Góc review</a></li>
+              <li><a href="#">Routine skincare</a></li>
+              <li><a href="#">Xu hướng làm đẹp</a></li>
+              <li><a href="#">Tin tức</a></li>
+            </ul>
+          </div>
+
+          <div class="blog-sidebar-card">
+            <h3>Bài viết nổi bật</h3>
+
+            <a href="#" class="blog-sidebar-post">
+              <img src="img-product/google-shopping-nuoc-can-bang-la.webp" alt="Bài viết 1" />
+              <div>
+                <h4>Cách chọn toner dịu nhẹ cho da nhạy cảm</h4>
+                <span>08/04/2026</span>
+              </div>
+            </a>
+
+            <a href="#" class="blog-sidebar-post">
+              <img src="img-product/rau-ma-scaled.jpg" alt="Bài viết 2" />
+              <div>
+                <h4>Routine phục hồi da sau những ngày thiếu ngủ</h4>
+                <span>05/04/2026</span>
+              </div>
+            </a>
+
+            <a href="#" class="blog-sidebar-post">
+              <img src="img-product/tay-trang-1-scaled.jpg" alt="Bài viết 3" />
+              <div>
+                <h4>Sữa rửa mặt nào phù hợp với da dầu nhưng vẫn dịu nhẹ?</h4>
+                <span>02/04/2026</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="blog-sidebar-card blog-sidebar-banner">
+            <img src="img_banner/banner_right_2.webp" alt="Banner skincare" />
+          </div>
+
+          <div class="blog-sidebar-card">
+            <h3>Từ khóa nổi bật</h3>
+            <div class="blog-sidebar-tags">
+              <a href="#">Toner</a>
+              <a href="#">Routine</a>
+              <a href="#">Da nhạy cảm</a>
+              <a href="#">Serum</a>
+              <a href="#">Cấp ẩm</a>
+              <a href="#">Phục hồi da</a>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- Related posts -->
+      <section class="blog-detail-related">
+        <div class="blog-detail-section-heading">
+          <span>Beauty Journal</span>
+          <h2>BÀI VIẾT LIÊN QUAN</h2>
+        </div>
+
+        <div class="blog-detail-related-grid">
+          <article class="blog-related-card">
+            <a href="#" class="blog-related-thumb">
+              <img src="img-product/rau-ma-scaled.jpg" alt="Bài viết liên quan 1" />
+              <span class="blog-related-tag">Chăm sóc da</span>
+            </a>
+            <div class="blog-related-content">
+              <h3><a href="#">Cách xây dựng routine skincare tối giản nhưng vẫn hiệu quả</a></h3>
+              <p>
+                Gợi ý các bước cơ bản giúp da luôn sạch, ẩm và dễ chịu mỗi ngày.
+              </p>
+            </div>
+          </article>
+
+          <article class="blog-related-card">
+            <a href="#" class="blog-related-thumb">
+              <img src="img-product/google-shopping-nuoc-can-bang-la.webp" alt="Bài viết liên quan 2" />
+              <span class="blog-related-tag">Routine</span>
+            </a>
+            <div class="blog-related-content">
+              <h3><a href="#">Vì sao toner vẫn là bước quan trọng trong chu trình dưỡng da?</a></h3>
+              <p>
+                Không chỉ cân bằng da, toner còn giúp tăng cảm giác êm dịu sau làm sạch.
+              </p>
+            </div>
+          </article>
+
+          <article class="blog-related-card">
+            <a href="#" class="blog-related-thumb">
+              <img src="img-product/tay-trang-1-scaled.jpg" alt="Bài viết liên quan 3" />
+              <span class="blog-related-tag">Góc review</span>
+            </a>
+            <div class="blog-related-content">
+              <h3><a href="#">Top sản phẩm làm sạch dịu nhẹ phù hợp cho da nhạy cảm</a></h3>
+              <p>
+                Gợi ý những lựa chọn êm da, dễ dùng và phù hợp với routine hằng ngày.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- =========================================================
+    FOOTER
+  ========================================================== -->
+  <footer class="keyshu-footer">
+
+    <section class="kf-newsletter">
+      <div class="kf-container">
+        <div class="kf-newsletter-box">
+          <div class="kf-newsletter-content">
+
+            <div class="kf-newsletter-left">
+              <h2>NHẬN BẢN TIN LÀM ĐẸP</h2>
+              <p>Đừng bỏ lỡ cơ hội săn voucher mỗi tuần</p>
+            </div>
+
+            <form class="kf-newsletter-form" id="newsletterForm">
+              <input
+                type="email"
+                id="newsletterEmail"
+                placeholder="Điền email của bạn"
+                required
+              />
+              <button type="submit">ĐĂNG KÝ</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="kf-features">
+      <div class="kf-container">
+        <div class="kf-features-grid">
+
+          <div class="kf-feature-card">
+            <i class="fas fa-award"></i>
+            <h4>BẢO HÀNH - ĐỔI TRẢ</h4>
+            <p>Đổi trả linh hoạt, an tâm mua sắm.</p>
+          </div>
+
+          <div class="kf-feature-card">
+            <i class="fas fa-truck"></i>
+            <h4>MIỄN PHÍ GIAO HÀNG</h4>
+            <p>Giao hàng nhanh trên toàn quốc.</p>
+          </div>
+
+          <div class="kf-feature-card">
+            <i class="fas fa-trophy"></i>
+            <h4>THƯƠNG HIỆU UY TÍN</h4>
+            <p>Sản phẩm chính hãng, an toàn.</p>
+          </div>
+
+          <div class="kf-feature-card">
+            <i class="fas fa-globe-asia"></i>
+            <h4>GIAO HÀNG TOÀN QUỐC</h4>
+            <p>Phục vụ mọi tỉnh thành.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="kf-main">
+      <div class="kf-container">
+        <div class="kf-main-grid">
+
+          <div class="kf-col kf-company">
+            <div class="kf-logo">
+              <img src="img/Logo-Keyshu-1-01.jpg" alt="KEYSHU" />
+            </div>
+
+            <ul class="kf-company-info">
+              <li><strong>CÔNG TY TNHH SINH DƯỢC BIO</strong></li>
+              <li>Mã số thuế: 0110855086</li>
+              <li>Địa chỉ: Hà Nội, Việt Nam</li>
+              <li>Giờ làm việc: 8:00 - 22:00 (T2 - CN)</li>
+              <li>Hotline: 1900 1265</li>
+              <li>Email: cskh@keyshu.vn</li>
+            </ul>
+
+            <div class="kf-social">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <div class="kf-col">
+            <h4>CHÍNH SÁCH HỖ TRỢ</h4>
+            <ul class="kf-links">
+              <li><a href="#">Chính sách mua hàng</a></li>
+              <li><a href="#">Chính sách đổi trả</a></li>
+              <li><a href="#">Chính sách bảo hành</a></li>
+              <li><a href="#">Chính sách bảo mật</a></li>
+              <li><a href="#">Chính sách vận chuyển</a></li>
+            </ul>
+          </div>
+
+          <div class="kf-col">
+            <h4>HOẠT ĐỘNG CỘNG ĐỒNG</h4>
+            <ul class="kf-links">
+              <li><a href="#">Câu chuyện thương hiệu</a></li>
+              <li><a href="#">Chia sẻ kiến thức làm đẹp</a></li>
+              <li><a href="#">Chăm sóc khách hàng</a></li>
+              <li><a href="#">Sự kiện &amp; ưu đãi</a></li>
+              <li><a href="#">Đồng hành cùng cộng đồng</a></li>
+            </ul>
+          </div>
+
+          <div class="kf-col">
+            <h4>FANPAGE FACEBOOK</h4>
+            <div class="kf-fanpage">
+              <iframe
+                src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/facebook&tabs=timeline&width=340&height=200&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
+                width="100%"
+                height="200"
+                style="border:none;overflow:hidden"
+                scrolling="no"
+                frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+              </iframe>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

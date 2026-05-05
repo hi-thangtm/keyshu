@@ -1,0 +1,984 @@
+/* =========================================================
+   COMBO KHUYẾN MÃI PAGE - KEYSHU
+========================================================= */
+
+/* =========================================================
+   PAGE BASE
+========================================================= */
+.combo-promo-page {
+  background:
+    linear-gradient(180deg, #ffffff 0%, #96FEFF 42%, #ffffff 100%);
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+.combo-promo-hero {
+  position: relative;
+  padding: 42px 0 56px;
+}
+
+.combo-promo-hero-wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
+  gap: 26px;
+  align-items: center;
+  padding: 34px;
+  background:
+    radial-gradient(circle at top left, rgba(150, 253, 255, 0.18), transparent 38%),
+    linear-gradient(135deg, #ffffff 0%, #f6fcf7 55%, #edf8f0 100%);
+  border: 1px solid rgba(45, 229, 230, 0.12);
+  border-radius: 30px;
+  box-shadow: 0 16px 44px rgba(45, 229, 230, 0.08);
+}
+
+.combo-promo-hero-content {
+  max-width: 640px;
+}
+
+.combo-promo-subtitle {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 14px;
+  margin-bottom: 16px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--main-color);
+  background: rgba(150, 253, 255, 0.14);
+  border: 1px solid rgba(45, 229, 230, 0.12);
+  border-radius: 999px;
+}
+
+.combo-promo-hero-content h1 {
+  margin: 0 0 16px;
+  font-size: 44px;
+  line-height: 1.1;
+  font-weight: 700;
+  color: var(--text-color);
+  text-transform: uppercase;
+}
+
+.combo-promo-hero-content p {
+  max-width: 560px;
+  margin: 0 0 28px;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #5d6d61;
+}
+
+.combo-promo-hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.combo-promo-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 0 24px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 700;
+  transition: 0.28s ease;
+}
+
+.combo-promo-btn.primary {
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--main-color), var(--cta-color));
+  box-shadow: 0 12px 24px rgba(45, 229, 230, 0.18);
+}
+
+.combo-promo-btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 28px rgba(45, 229, 230, 0.22);
+}
+
+.combo-promo-btn.secondary {
+  color: var(--main-color);
+  background: #ffffff;
+  border: 1px solid rgba(45, 229, 230, 0.18);
+  box-shadow: 0 10px 22px rgba(45, 229, 230, 0.08);
+}
+
+.combo-promo-btn.secondary:hover {
+  transform: translateY(-2px);
+  background: var(--bg-soft);
+  border-color: var(--secondary-color);
+}
+
+.combo-promo-hero-image {
+  position: relative;
+}
+
+.combo-promo-hero-image::before {
+  content: "";
+  position: absolute;
+  inset: -14px 24px 24px -14px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, rgba(150, 253, 255, 0.18), rgba(45, 229, 230, 0.06));
+  z-index: 0;
+}
+
+.combo-promo-hero-image img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 16px 36px rgba(45, 229, 230, 0.12);
+}
+
+/* =========================================================
+   COMMON SECTION
+========================================================= */
+.combo-promo-highlight,
+.combo-promo-hot-section,
+.combo-promo-skin-type-section,
+.combo-promo-banner-section,
+.combo-promo-small-section,
+.combo-promo-benefit-section,
+.combo-promo-cta {
+  position: relative;
+  padding: 30px 0 58px;
+}
+
+.combo-promo-page .section-header {
+  margin-bottom: 30px;
+}
+
+/* =========================================================
+   HIGHLIGHT
+========================================================= */
+.combo-promo-highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.combo-promo-highlight-card {
+  position: relative;
+  padding: 28px 24px 24px;
+  background: #ffffff;
+  border: 1px solid rgba(150, 253, 255, 0.18);
+  border-radius: 22px;
+  box-shadow: 0 12px 28px rgba(45, 229, 230, 0.06);
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.combo-promo-highlight-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 24px;
+  width: 58px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--main-color), var(--cta-color));
+  border-radius: 999px;
+}
+
+.combo-promo-highlight-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(45, 229, 230, 0.3);
+  box-shadow: 0 18px 34px rgba(45, 229, 230, 0.1);
+}
+
+.combo-promo-highlight-card h3 {
+  margin: 0 0 12px;
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.combo-promo-highlight-card p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #627165;
+}
+
+/* =========================================================
+   COMBO HOT
+========================================================= */
+.combo-promo-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 20px;
+}
+
+.combo-promo-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid rgba(150, 253, 255, 0.18);
+  border-radius: 24px;
+  box-shadow: 0 12px 28px rgba(45, 229, 230, 0.06);
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.combo-promo-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(45, 229, 230, 0.3);
+  box-shadow: 0 18px 36px rgba(45, 229, 230, 0.11);
+}
+
+.combo-promo-card.featured {
+  min-height: 100%;
+}
+
+.combo-promo-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 0 14px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--cta-color), var(--main-color));
+  border-radius: 999px;
+  box-shadow: 0 10px 18px rgba(3, 177, 177, 0.22);
+}
+
+.combo-promo-card-image {
+  overflow: hidden;
+  background: #f8fcf9;
+}
+
+.combo-promo-card-image img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.combo-promo-card.featured .combo-promo-card-image img {
+  height: 360px;
+}
+
+.combo-promo-card:hover .combo-promo-card-image img {
+  transform: scale(1.05);
+}
+
+.combo-promo-card-content {
+  padding: 20px 18px 20px;
+}
+
+.combo-promo-card-content h3 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.combo-promo-card:not(.featured) .combo-promo-card-content h3 {
+  font-size: 21px;
+}
+
+.combo-promo-card-content p {
+  margin: 0 0 14px;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #607064;
+}
+
+.combo-promo-items {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.combo-promo-items span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0 12px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--main-color);
+  background: rgba(150, 253, 255, 0.14);
+  border-radius: 999px;
+}
+
+.combo-promo-price {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.combo-promo-price .sale-price {
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 700;
+  color: #ff2b2b;
+}
+
+.combo-promo-price .old-price {
+  font-size: 15px;
+  color: #a2a2a2;
+  text-decoration: line-through;
+}
+
+/* =========================================================
+   COMBO BY SKIN TYPE
+========================================================= */
+.combo-skin-type-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.combo-skin-type-card {
+  display: block;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid rgba(150, 253, 255, 0.18);
+  border-radius: 22px;
+  box-shadow: 0 12px 28px rgba(45, 229, 230, 0.06);
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.combo-skin-type-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(45, 229, 230, 0.3);
+  box-shadow: 0 18px 36px rgba(45, 229, 230, 0.11);
+}
+
+.combo-skin-type-thumb {
+  overflow: hidden;
+  background: #f8fcf9;
+}
+
+.combo-skin-type-thumb img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.combo-skin-type-card:hover .combo-skin-type-thumb img {
+  transform: scale(1.05);
+}
+
+.combo-skin-type-content {
+  padding: 18px 16px 18px;
+}
+
+.combo-skin-type-content h3 {
+  margin: 0 0 10px;
+  font-size: 21px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.combo-skin-type-content p {
+  margin: 0 0 14px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #607064;
+}
+
+.combo-skin-type-content span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 14px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--main-color);
+  background: rgba(150, 253, 255, 0.14);
+  border-radius: 999px;
+}
+
+/* =========================================================
+   LARGE BANNER
+========================================================= */
+.combo-promo-banner {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.95fr) minmax(0, 1.05fr);
+  gap: 24px;
+  align-items: center;
+  padding: 24px;
+  background: linear-gradient(135deg, #ffffff 0%, #f6fcf7 100%);
+  border: 1px solid rgba(150, 253, 255, 0.18);
+  border-radius: 28px;
+  box-shadow: 0 14px 32px rgba(45, 229, 230, 0.08);
+}
+
+.combo-promo-banner-image {
+  overflow: hidden;
+  border-radius: 22px;
+}
+
+.combo-promo-banner-image img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.combo-promo-banner:hover .combo-promo-banner-image img {
+  transform: scale(1.04);
+}
+
+.combo-promo-banner-content span {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--main-color);
+}
+
+.combo-promo-banner-content h2 {
+  margin: 0 0 14px;
+  font-size: 38px;
+  line-height: 1.12;
+  font-weight: 700;
+  color: var(--text-color);
+  text-transform: uppercase;
+}
+
+.combo-promo-banner-content p {
+  max-width: 640px;
+  margin: 0 0 20px;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #607064;
+}
+
+/* =========================================================
+   SMALL COMBOS
+========================================================= */
+.combo-promo-small-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.combo-small-card {
+  display: block;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid rgba(150, 253, 255, 0.18);
+  border-radius: 22px;
+  box-shadow: 0 12px 28px rgba(45, 229, 230, 0.06);
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.combo-small-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(45, 229, 230, 0.3);
+  box-shadow: 0 18px 36px rgba(45, 229, 230, 0.11);
+}
+
+.combo-small-card-image {
+  overflow: hidden;
+  background: #f8fcf9;
+}
+
+.combo-small-card-image img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.combo-small-card:hover .combo-small-card-image img {
+  transform: scale(1.05);
+}
+
+.combo-small-card-content {
+  padding: 18px 16px 18px;
+}
+
+.combo-small-card-content h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.combo-small-card-content p {
+  min-height: 72px;
+  margin: 0 0 14px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #607064;
+}
+
+/* =========================================================
+   BENEFITS
+========================================================= */
+.combo-benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.combo-benefit-card {
+  position: relative;
+  padding: 28px 24px 24px;
+  background: #ffffff;
+  border: 1px solid rgba(150, 253, 255, 0.18);
+  border-radius: 22px;
+  box-shadow: 0 12px 28px rgba(45, 229, 230, 0.06);
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.combo-benefit-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 24px;
+  width: 58px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--main-color), var(--cta-color));
+  border-radius: 999px;
+}
+
+.combo-benefit-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(45, 229, 230, 0.3);
+  box-shadow: 0 18px 34px rgba(45, 229, 230, 0.1);
+}
+
+.combo-benefit-card h3 {
+  margin: 0 0 12px;
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.combo-benefit-card p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #627165;
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+.combo-promo-cta-box {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: center;
+  padding: 30px 32px;
+  background: linear-gradient(135deg, rgba(45, 229, 230, 0.96), rgba(150, 253, 255, 0.92));
+  border-radius: 28px;
+  box-shadow: 0 18px 40px rgba(45, 229, 230, 0.18);
+}
+
+.combo-promo-cta-content span {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: rgba(255, 255, 255, 0.82);
+  text-transform: uppercase;
+}
+
+.combo-promo-cta-content h2 {
+  margin: 0 0 12px;
+  font-size: 34px;
+  line-height: 1.15;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.combo-promo-cta-content p {
+  max-width: 720px;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.combo-promo-cta-action {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.combo-promo-cta-action .combo-promo-btn.primary {
+  background: #ffffff;
+  color: var(--main-color);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.combo-promo-cta-action .combo-promo-btn.primary:hover {
+  color: var(--cta-color);
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+@media (min-width: 1440px) {
+  .combo-promo-hero-content h1 {
+    font-size: 50px;
+  }
+
+  .combo-promo-hero-image img {
+    height: 500px;
+  }
+}
+
+/* =========================================================
+   LAPTOP / TABLET
+========================================================= */
+@media (max-width: 1199px) {
+  .combo-promo-hero-wrap {
+    grid-template-columns: 1fr 0.9fr;
+    gap: 20px;
+    padding: 28px;
+  }
+
+  .combo-promo-hero-content h1 {
+    font-size: 38px;
+  }
+
+  .combo-promo-hero-image img {
+    height: 400px;
+  }
+
+  .combo-promo-highlight-grid,
+  .combo-benefit-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .combo-promo-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .combo-promo-card.featured {
+    grid-column: span 2;
+  }
+
+  .combo-skin-type-grid,
+  .combo-promo-small-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .combo-promo-banner {
+    grid-template-columns: 1fr;
+  }
+
+  .combo-promo-banner-content h2 {
+    font-size: 32px;
+  }
+
+  .combo-promo-cta-content h2 {
+    font-size: 30px;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+@media (max-width: 991px) {
+  .combo-promo-hero {
+    padding: 24px 0 44px;
+  }
+
+  .combo-promo-hero-wrap {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .combo-promo-hero-content {
+    max-width: none;
+  }
+
+  .combo-promo-hero-content h1 {
+    font-size: 34px;
+  }
+
+  .combo-promo-hero-image img {
+    height: 340px;
+  }
+
+  .combo-promo-highlight,
+  .combo-promo-hot-section,
+  .combo-promo-skin-type-section,
+  .combo-promo-banner-section,
+  .combo-promo-small-section,
+  .combo-promo-benefit-section,
+  .combo-promo-cta {
+    padding: 22px 0 44px;
+  }
+
+  .combo-promo-cta-box {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .combo-promo-cta-action {
+    justify-content: center;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+@media (max-width: 767px) {
+  .combo-promo-hero-wrap {
+    padding: 20px;
+    border-radius: 22px;
+  }
+
+  .combo-promo-subtitle {
+    margin-bottom: 12px;
+    font-size: 11px;
+  }
+
+  .combo-promo-hero-content h1 {
+    font-size: 26px;
+    margin-bottom: 12px;
+  }
+
+  .combo-promo-hero-content p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .combo-promo-hero-actions {
+    gap: 10px;
+  }
+
+  .combo-promo-btn {
+    min-height: 44px;
+    padding: 0 18px;
+    font-size: 13px;
+  }
+
+  .combo-promo-hero-image::before {
+    inset: -8px 12px 12px -8px;
+    border-radius: 22px;
+  }
+
+  .combo-promo-hero-image img {
+    height: 240px;
+    border-radius: 18px;
+  }
+
+  .combo-promo-page .section-header {
+    margin-bottom: 22px;
+  }
+
+  .combo-promo-highlight-grid,
+  .combo-promo-grid,
+  .combo-skin-type-grid,
+  .combo-promo-small-grid,
+  .combo-benefit-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .combo-promo-card.featured {
+    grid-column: auto;
+  }
+
+  .combo-promo-highlight-card,
+  .combo-benefit-card {
+    padding: 20px 18px 18px;
+    border-radius: 18px;
+  }
+
+  .combo-promo-highlight-card::before,
+  .combo-benefit-card::before {
+    left: 18px;
+    width: 48px;
+  }
+
+  .combo-promo-highlight-card h3,
+  .combo-benefit-card h3 {
+    font-size: 19px;
+  }
+
+  .combo-promo-highlight-card p,
+  .combo-benefit-card p {
+    font-size: 14px;
+  }
+
+  .combo-promo-card,
+  .combo-skin-type-card,
+  .combo-small-card {
+    border-radius: 18px;
+  }
+
+  .combo-promo-card-image img,
+  .combo-promo-card.featured .combo-promo-card-image img {
+    height: 240px;
+  }
+
+  .combo-promo-card-content {
+    padding: 16px 14px;
+  }
+
+  .combo-promo-card-content h3,
+  .combo-promo-card:not(.featured) .combo-promo-card-content h3 {
+    font-size: 18px;
+  }
+
+  .combo-promo-card-content p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .combo-promo-items {
+    margin-bottom: 12px;
+  }
+
+  .combo-promo-items span {
+    min-height: 30px;
+    padding: 0 10px;
+    font-size: 11px;
+  }
+
+  .combo-promo-price .sale-price {
+    font-size: 20px;
+  }
+
+  .combo-promo-price .old-price {
+    font-size: 14px;
+  }
+
+  .combo-skin-type-thumb img {
+    height: 220px;
+  }
+
+  .combo-skin-type-content {
+    padding: 16px 14px;
+  }
+
+  .combo-skin-type-content h3 {
+    font-size: 18px;
+  }
+
+  .combo-skin-type-content p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .combo-promo-banner {
+    gap: 16px;
+    padding: 16px;
+    border-radius: 20px;
+  }
+
+  .combo-promo-banner-image {
+    border-radius: 18px;
+  }
+
+  .combo-promo-banner-image img {
+    height: 220px;
+  }
+
+  .combo-promo-banner-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .combo-promo-banner-content p {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .combo-small-card-image img {
+    height: 220px;
+  }
+
+  .combo-small-card-content {
+    padding: 16px 14px;
+  }
+
+  .combo-small-card-content h3 {
+    font-size: 18px;
+  }
+
+  .combo-small-card-content p {
+    min-height: auto;
+    font-size: 14px;
+  }
+
+  .combo-promo-cta-box {
+    padding: 22px 18px;
+    border-radius: 20px;
+  }
+
+  .combo-promo-cta-content h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .combo-promo-cta-content p {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+@media (max-width: 575px) {
+  .combo-promo-hero {
+    padding: 16px 0 34px;
+  }
+
+  .combo-promo-hero-wrap {
+    padding: 16px;
+  }
+
+  .combo-promo-hero-content h1 {
+    font-size: 23px;
+  }
+
+  .combo-promo-hero-image img {
+    height: 210px;
+  }
+
+  .combo-promo-highlight,
+  .combo-promo-hot-section,
+  .combo-promo-skin-type-section,
+  .combo-promo-banner-section,
+  .combo-promo-small-section,
+  .combo-promo-benefit-section,
+  .combo-promo-cta {
+    padding: 16px 0 34px;
+  }
+
+  .combo-promo-banner-content h2 {
+    font-size: 20px;
+  }
+
+  .combo-promo-cta-content h2 {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KEYSHU | KHUYẾN MÃI</title>
+
+  <!-- CSS chính -->
+  <link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="sale-page.css" />
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+</head>
+<body>
+
+  <!-- =========================================================
+    HEADER
+  ========================================================== -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-top">
+        <div class="header-logo">
+          <a href="#">
+            <img src="img/Logo-keyshu-1-01.jpg" alt="KEYSHU Logo" />
+          </a>
+        </div>
+
+        <div class="header-search">
+          <form action="#">
+            <input
+              type="text"
+              placeholder="Nhập từ khóa tìm kiếm sản phẩm, danh mục..."
+            />
+            <button type="submit" aria-label="Tìm kiếm">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M21 21L16.65 16.65M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <div class="header-actions">
+          <a href="#" class="action-item action-link">
+            <span class="action-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M3 7H21V19H3V7Z" stroke="currentColor" stroke-width="1.8" />
+                <path
+                  d="M7 7V5C7 3.89543 7.89543 3 9 3H15C16.1046 3 17 3.89543 17 5V7"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                />
+                <path d="M3 11H21" stroke="currentColor" stroke-width="1.8" />
+              </svg>
+            </span>
+            <span>Hệ thống cửa hàng</span>
+          </a>
+
+          <a href="#" class="action-item action-link">
+            <span class="action-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M4 19.5V4.5C4 3.67157 4.67157 3 5.5 3H16.5L20 6.5V19.5C20 20.3284 19.3284 21 18.5 21H5.5C4.67157 21 4 20.3284 4 19.5Z"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                />
+                <path d="M16 3V7H20" stroke="currentColor" stroke-width="1.8" />
+                <path
+                  d="M8 11H16"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M8 15H13"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </span>
+            <span>Tạp chí làm đẹp</span>
+          </a>
+
+          <a href="#" class="login-link" aria-label="Đăng nhập hoặc đăng ký">
+            <span class="login-link-icon">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                  d="M14 16.5L18.5 12L14 7.5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M18 12H9"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10 21H6.5C5.11929 21 4 19.8807 4 18.5V5.5C4 4.11929 5.11929 3 6.5 3H10"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+            <span class="login-link-text">Login/Register</span>
+          </a>
+
+          <a href="#" class="icon-btn" aria-label="Yêu thích">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M12 20.5C12 20.5 4 15.36 4 9.5C4 6.46243 6.46243 4 9.5 4C11.1569 4 12.6429 4.74157 13.6667 5.90968C14.6904 4.74157 16.1764 4 17.8333 4C20.8709 4 23.3333 6.46243 23.3333 9.5C23.3333 15.36 15.3333 20.5 15.3333 20.5H12Z"
+                stroke="currentColor"
+                stroke-width="1.7"
+                transform="translate(-1.66665 0)"
+              />
+            </svg>
+          </a>
+
+          <a href="#" class="icon-btn" aria-label="Giỏ hàng">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M3 5H5L7 15H18L20 8H8"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <circle cx="9" cy="19" r="1.6" stroke="currentColor" stroke-width="1.6" />
+              <circle cx="17" cy="19" r="1.6" stroke="currentColor" stroke-width="1.6" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <nav class="main-menu">
+        <a href="#">Trang Chủ</a>
+        <a href="#">Mặt Nạ</a>
+        <a href="#">Tẩy Trang</a>
+        <a href="#">Sữa Rửa Mặt</a>
+        <a href="#">Toner</a>
+        <a href="#">Serum</a>
+        <a href="#">Combo Siêu Hời</a>
+        <a href="#" class="active">Khuyến Mãi</a>
+        <a href="#">Liên Hệ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="promotion-page">
+
+    <!-- =========================================================
+      HERO SALE
+    ========================================================== -->
+    <section class="promotion-hero">
+      <div class="container">
+        <div class="promotion-hero-wrap">
+          <div class="promotion-hero-content">
+            <span class="promotion-hero-subtitle">KEYSHU SALE EVENT</span>
+            <h1>TRANG KHUYẾN MÃI SIÊU HỜI</h1>
+            <p>
+              Săn deal skincare chính hãng với mức giá ưu đãi hấp dẫn. Từ toner,
+              serum, sữa rửa mặt đến các combo chăm sóc da được yêu thích, tất cả
+              đều đang chờ bạn khám phá.
+            </p>
+
+            <div class="promotion-hero-actions">
+              <a href="#flash-sale" class="promotion-btn primary">Xem Flash Sale</a>
+              <a href="#combo-sale" class="promotion-btn secondary">Xem Combo Hot</a>
+            </div>
+          </div>
+
+          <div class="promotion-hero-image">
+            <img src="img_banner/slider_2.webp" alt="Khuyến mãi KEYSHU" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+      PROMOTION INFO
+    ========================================================== -->
+    <section class="promotion-info">
+      <div class="container">
+        <div class="promotion-info-grid">
+          <div class="promotion-info-card">
+            <h3>Giảm giá đến 50%</h3>
+            <p>Áp dụng cho nhiều sản phẩm skincare bán chạy và các combo tiết kiệm.</p>
+          </div>
+
+          <div class="promotion-info-card">
+            <h3>Quà tặng kèm hấp dẫn</h3>
+            <p>Nhận thêm quà mini size hoặc voucher cho đơn hàng đủ điều kiện.</p>
+          </div>
+
+          <div class="promotion-info-card">
+            <h3>Freeship toàn quốc</h3>
+            <p>Hỗ trợ giao hàng nhanh chóng, tiện lợi và an tâm mua sắm hơn.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+      FLASH SALE
+    ========================================================== -->
+    <section class="promotion-flashsale" id="flash-sale">
+      <div class="container">
+        <div class="section-header">
+          <h2>FLASH SALE HÔM NAY</h2>
+          <span>Hot deals</span>
+        </div>
+
+        <div class="promotion-flashsale-top">
+          <div class="promotion-flashsale-title">
+            <h3>Ưu đãi giới hạn</h3>
+            <p>Nhanh tay sở hữu những sản phẩm được yêu thích với mức giá tốt nhất.</p>
+          </div>
+
+          <div class="promotion-countdown">
+            <div class="promotion-countdown-item">
+              <span>02</span>
+              <small>Ngày</small>
+            </div>
+            <div class="promotion-countdown-item">
+              <span>14</span>
+              <small>Giờ</small>
+            </div>
+            <div class="promotion-countdown-item">
+              <span>26</span>
+              <small>Phút</small>
+            </div>
+            <div class="promotion-countdown-item">
+              <span>18</span>
+              <small>Giây</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="promotion-product-grid">
+          <a href="#" class="promotion-product-card">
+            <span class="promotion-badge">-25%</span>
+            <div class="promotion-product-image">
+              <img src="img-product/ini-scaled.jpg" alt="Sữa rửa mặt" />
+            </div>
+            <div class="promotion-product-info">
+              <h3>Sữa rửa mặt dịu nhẹ cho da nhạy cảm và da khô</h3>
+              <div class="promotion-product-price">
+                <span class="sale-price">279.000đ</span>
+                <span class="old-price">369.000đ</span>
+              </div>
+              <div class="promotion-progress">
+                <div class="promotion-progress-bar" style="width: 58%;"></div>
+                <span>Đã bán 128 sản phẩm</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="promotion-product-card">
+            <span class="promotion-badge">-30%</span>
+            <div class="promotion-product-image">
+              <img src="img-product/google-shopping-nuoc-can-bang-la.webp" alt="Toner" />
+            </div>
+            <div class="promotion-product-info">
+              <h3>Toner rau má cấp ẩm và hỗ trợ cân bằng da mỗi ngày</h3>
+              <div class="promotion-product-price">
+                <span class="sale-price">339.000đ</span>
+                <span class="old-price">485.000đ</span>
+              </div>
+              <div class="promotion-progress">
+                <div class="promotion-progress-bar" style="width: 72%;"></div>
+                <span>Đã bán 201 sản phẩm</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="promotion-product-card">
+            <span class="promotion-badge">-18%</span>
+            <div class="promotion-product-image">
+              <img src="img-product/rau-ma-scaled.jpg" alt="Serum phục hồi" />
+            </div>
+            <div class="promotion-product-info">
+              <h3>Serum phục hồi hỗ trợ làm dịu da và cấp ẩm chuyên sâu</h3>
+              <div class="promotion-product-price">
+                <span class="sale-price">559.000đ</span>
+                <span class="old-price">679.000đ</span>
+              </div>
+              <div class="promotion-progress">
+                <div class="promotion-progress-bar" style="width: 40%;"></div>
+                <span>Đã bán 74 sản phẩm</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="promotion-product-card">
+            <span class="promotion-badge">-22%</span>
+            <div class="promotion-product-image">
+              <img src="img-product/sg-11134201-81zu0-mmujimjksmbm91.webp" alt="Mặt nạ dưỡng da" />
+            </div>
+            <div class="promotion-product-info">
+              <h3>Mặt nạ cấp ẩm giúp da mềm mịn và tươi sáng hơn</h3>
+              <div class="promotion-product-price">
+                <span class="sale-price">199.000đ</span>
+                <span class="old-price">255.000đ</span>
+              </div>
+              <div class="promotion-progress">
+                <div class="promotion-progress-bar" style="width: 83%;"></div>
+                <span>Đã bán 316 sản phẩm</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+      COMBO SALE
+    ========================================================== -->
+    <section class="promotion-combo" id="combo-sale">
+      <div class="container">
+        <div class="section-header">
+          <h2>COMBO KHUYẾN MÃI</h2>
+          <span>Combo savings</span>
+        </div>
+
+        <div class="promotion-combo-grid">
+          <a href="#" class="promotion-combo-card large">
+            <div class="promotion-combo-image">
+              <img src="img-product/sg-11134201-81zu0-mmujimjksmbm91.webp" alt="Combo cấp ẩm" />
+            </div>
+            <div class="promotion-combo-content">
+              <span class="combo-label">Best combo</span>
+              <h3>Combo cấp ẩm phục hồi cho da khô và da thiếu nước</h3>
+              <p>
+                Bộ sản phẩm gồm toner, serum và kem dưỡng giúp hỗ trợ cấp ẩm, làm
+                dịu và duy trì làn da mềm mịn mỗi ngày.
+              </p>
+              <div class="promotion-combo-price">
+                <span class="sale-price">899.000đ</span>
+                <span class="old-price">1.190.000đ</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="promotion-combo-card">
+            <div class="promotion-combo-image">
+              <img src="img-product/tay-trang-1-scaled.jpg" alt="Combo làm sạch" />
+            </div>
+            <div class="promotion-combo-content">
+              <span class="combo-label">-20%</span>
+              <h3>Combo làm sạch da mỗi ngày</h3>
+              <p>Tẩy trang + sữa rửa mặt dịu nhẹ cho chu trình làm sạch hiệu quả hơn.</p>
+              <div class="promotion-combo-price">
+                <span class="sale-price">499.000đ</span>
+                <span class="old-price">625.000đ</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="promotion-combo-card">
+            <div class="promotion-combo-image">
+              <img src="img-product/rau-ma-scaled.jpg" alt="Combo phục hồi" />
+            </div>
+            <div class="promotion-combo-content">
+              <span class="combo-label">-15%</span>
+              <h3>Combo phục hồi da nhạy cảm</h3>
+              <p>Routine tinh gọn giúp hỗ trợ làm dịu và chăm sóc làn da dễ kích ứng.</p>
+              <div class="promotion-combo-price">
+                <span class="sale-price">759.000đ</span>
+                <span class="old-price">895.000đ</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+      VOUCHER SECTION
+    ========================================================== -->
+    <section class="promotion-voucher">
+      <div class="container">
+        <div class="section-header">
+          <h2>MÃ GIẢM GIÁ HOT</h2>
+          <span>Voucher zone</span>
+        </div>
+
+        <div class="promotion-voucher-grid">
+          <div class="promotion-voucher-card">
+            <div class="voucher-left">
+              <span class="voucher-percent">10%</span>
+            </div>
+            <div class="voucher-right">
+              <h3>KEYSHU10</h3>
+              <p>Giảm 10% cho đơn hàng từ 499.000đ</p>
+              <span class="voucher-note">Áp dụng toàn bộ skincare</span>
+            </div>
+          </div>
+
+          <div class="promotion-voucher-card">
+            <div class="voucher-left">
+              <span class="voucher-percent">50K</span>
+            </div>
+            <div class="voucher-right">
+              <h3>FREESHIP50</h3>
+              <p>Giảm 50.000đ phí vận chuyển</p>
+              <span class="voucher-note">Áp dụng toàn quốc</span>
+            </div>
+          </div>
+
+          <div class="promotion-voucher-card">
+            <div class="voucher-left">
+              <span class="voucher-percent">15%</span>
+            </div>
+            <div class="voucher-right">
+              <h3>COMBO15</h3>
+              <p>Ưu đãi thêm cho các combo bán chạy</p>
+              <span class="voucher-note">Số lượng có hạn</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+      CATEGORY SALE
+    ========================================================== -->
+    <section class="promotion-category-sale">
+      <div class="container">
+        <div class="section-header">
+          <h2>KHUYẾN MÃI THEO DANH MỤC</h2>
+          <span>Sale by category</span>
+        </div>
+
+        <div class="promotion-category-grid">
+          <a href="#" class="promotion-category-card">
+            <img src="img-product/tay-trang-1-scaled.jpg" alt="Tẩy trang" />
+            <div class="promotion-category-overlay">
+              <h3>Tẩy Trang</h3>
+              <p>Ưu đãi đến 20%</p>
+            </div>
+          </a>
+
+          <a href="#" class="promotion-category-card">
+            <img src="img-product/ini-scaled.jpg" alt="Sữa rửa mặt" />
+            <div class="promotion-category-overlay">
+              <h3>Sữa Rửa Mặt</h3>
+              <p>Ưu đãi đến 25%</p>
+            </div>
+          </a>
+
+          <a href="#" class="promotion-category-card">
+            <img src="img-product/google-shopping-nuoc-can-bang-la.webp" alt="Toner" />
+            <div class="promotion-category-overlay">
+              <h3>Toner</h3>
+              <p>Ưu đãi đến 30%</p>
+            </div>
+          </a>
+
+          <a href="#" class="promotion-category-card">
+            <img src="img-product/rau-ma-scaled.jpg" alt="Serum" />
+            <div class="promotion-category-overlay">
+              <h3>Serum</h3>
+              <p>Ưu đãi đến 18%</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+      CTA
+    ========================================================== -->
+    <section class="promotion-cta">
+      <div class="container">
+        <div class="promotion-cta-box">
+          <div class="promotion-cta-content">
+            <span>ƯU ĐÃI GIỚI HẠN</span>
+            <h2>ĐỪNG BỎ LỠ DEAL HOT HÔM NAY</h2>
+            <p>
+              Theo dõi KEYSHU để cập nhật nhanh các chương trình giảm giá, combo ưu đãi
+              và quà tặng hấp dẫn cho hành trình chăm sóc da của bạn.
+            </p>
+          </div>
+
+          <div class="promotion-cta-action">
+            <a href="#" class="promotion-btn primary">Mua ngay</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+    IMPORT CSS FOOTER + FONT AWESOME
+  ========================================================== -->
+  <link rel="stylesheet" href="footer.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <!-- =========================================================
+    FOOTER
+  ========================================================== -->
+  <footer class="keyshu-footer">
+    <section class="kf-newsletter">
+      <div class="kf-container">
+        <div class="kf-newsletter-box">
+          <div class="kf-newsletter-content">
+            <div class="kf-newsletter-left">
+              <h2>NHẬN BẢN TIN LÀM ĐẸP</h2>
+              <p>Đừng bỏ lỡ cơ hội săn voucher mỗi tuần</p>
+            </div>
+
+            <form class="kf-newsletter-form" id="newsletterForm">
+              <input
+                type="email"
+                id="newsletterEmail"
+                placeholder="Điền email của bạn"
+                required
+              />
+              <button type="submit">ĐĂNG KÝ</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="kf-features">
+      <div class="kf-container">
+        <div class="kf-features-grid">
+          <div class="kf-feature-card">
+            <i class="fas fa-award"></i>
+            <h4>BẢO HÀNH - ĐỔI TRẢ</h4>
+            <p>Đổi trả linh hoạt, an tâm mua sắm.</p>
+          </div>
+
+          <div class="kf-feature-card">
+            <i class="fas fa-truck"></i>
+            <h4>MIỄN PHÍ GIAO HÀNG</h4>
+            <p>Giao hàng nhanh trên toàn quốc.</p>
+          </div>
+
+          <div class="kf-feature-card">
+            <i class="fas fa-trophy"></i>
+            <h4>THƯƠNG HIỆU UY TÍN</h4>
+            <p>Sản phẩm chính hãng, an toàn.</p>
+          </div>
+
+          <div class="kf-feature-card">
+            <i class="fas fa-globe-asia"></i>
+            <h4>GIAO HÀNG TOÀN QUỐC</h4>
+            <p>Phục vụ mọi tỉnh thành.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="kf-main">
+      <div class="kf-container">
+        <div class="kf-main-grid">
+          <div class="kf-col kf-company">
+            <div class="kf-logo">
+              <img src="img/Logo-Keyshu-1-01.jpg" alt="KEYSHU" />
+            </div>
+
+            <ul class="kf-company-info">
+              <li><strong>CÔNG TY TNHH SINH DƯỢC BIO</strong></li>
+              <li>Mã số thuế: 0110855086</li>
+              <li>Địa chỉ: Hà Nội, Việt Nam</li>
+              <li>Giờ làm việc: 8:00 - 22:00 (T2 - CN)</li>
+              <li>Hotline: 1900 1265</li>
+              <li>Email: cskh@keyshu.vn</li>
+            </ul>
+
+            <div class="kf-social">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <div class="kf-col">
+            <h4>CHÍNH SÁCH HỖ TRỢ</h4>
+            <ul class="kf-links">
+              <li><a href="#">Chính sách mua hàng</a></li>
+              <li><a href="#">Chính sách đổi trả</a></li>
+              <li><a href="#">Chính sách bảo hành</a></li>
+              <li><a href="#">Chính sách bảo mật</a></li>
+              <li><a href="#">Chính sách vận chuyển</a></li>
+            </ul>
+          </div>
+
+          <div class="kf-col">
+            <h4>HOẠT ĐỘNG CỘNG ĐỒNG</h4>
+            <ul class="kf-links">
+              <li><a href="#">Câu chuyện thương hiệu</a></li>
+              <li><a href="#">Chia sẻ kiến thức làm đẹp</a></li>
+              <li><a href="#">Chăm sóc khách hàng</a></li>
+              <li><a href="#">Sự kiện &amp; ưu đãi</a></li>
+              <li><a href="#">Đồng hành cùng cộng đồng</a></li>
+            </ul>
+          </div>
+
+          <div class="kf-col">
+            <h4>FANPAGE FACEBOOK</h4>
+            <div class="kf-fanpage">
+              <iframe
+                src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/facebook&tabs=timeline&width=340&height=200&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
+                width="100%"
+                height="200"
+                style="border:none;overflow:hidden"
+                scrolling="no"
+                frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

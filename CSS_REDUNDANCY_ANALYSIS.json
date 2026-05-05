@@ -1,0 +1,621 @@
+{
+  "analysis_date": "2026-04-20",
+  "file_analyzed": "style.css (4700 lines)",
+  "total_redundancies_found": 45,
+  "summary": {
+    "duplicate_selectors": 8,
+    "duplicate_media_queries": 0,
+    "conflicting_rules": 12,
+    "unused_vendor_prefixes": 0,
+    "redundant_vendor_prefixes": 15,
+    "unused_css_classes": 3,
+    "unused_styles_for_removed_html_elements": 7
+  },
+  "redundancies": [
+    {
+      "id": 1,
+      "line_numbers": "121-123, 151-154",
+      "selector": ".container",
+      "type": "DUPLICATE SELECTOR",
+      "issue": "`.container` is defined twice with different max-width values (1280px vs 1320px)",
+      "current_css": [
+        "Line 121: .container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 22px; }",
+        "Line 151: .container { width: 100%; max-width: 1320px; margin: 0 auto; padding: 0 16px; }"
+      ],
+      "recommendation": "REMOVE - Keep only one definition at line 151 (header-specific). Add context comments if needed.",
+      "safe_to_remove": true,
+      "priority": "HIGH"
+    },
+    {
+      "id": 2,
+      "line_numbers": "142, 771, 834, 855, 913, 1030",
+      "selector": "-webkit-backdrop-filter",
+      "type": "REDUNDANT VENDOR PREFIX",
+      "issue": "Repeated `-webkit-backdrop-filter: blur()` paired with `backdrop-filter: blur()`. Modern browsers support the unprefixed version.",
+      "current_css": "Multiple occurrences of: -webkit-backdrop-filter: blur()",
+      "recommendation": "KEEP as is - These maintain compatibility with older Safari versions (iOS 9-14)",
+      "safe_to_remove": false,
+      "priority": "LOW",
+      "note": "Required for iOS Safari compatibility"
+    },
+    {
+      "id": 3,
+      "line_numbers": "474, 1457, 2313",
+      "selector": "::-webkit-scrollbar { display: none; }",
+      "type": "DUPLICATE RULE",
+      "issue": "Duplicate webkit scrollbar hiding rules across multiple media queries and sections",
+      "current_css": [
+        "Line 474: .premium-menu::-webkit-scrollbar { display: none; }",
+        "Line 1457: .flashsale-slider::-webkit-scrollbar { display: none; }",
+        "Line 2313: .main-menu::-webkit-scrollbar { display: none; }"
+      ],
+      "recommendation": "KEEP - These are targeting different elements and should remain",
+      "safe_to_remove": false,
+      "priority": "LOW"
+    },
+    {
+      "id": 4,
+      "line_numbers": "616, 2264",
+      "selector": "@media (max-width: 767px) { .container { padding: 0 16px; } }",
+      "type": "DUPLICATE @MEDIA QUERY RULE",
+      "issue": "Duplicate media query styling for `.container` at 767px breakpoint",
+      "current_css": [
+        "Line 616: @media (max-width: 767px) { .container { padding: 0 16px; } }",
+        "Line 2264: @media (max-width: 767px) { .container { padding: 0 16px; } }"
+      ],
+      "recommendation": "REMOVE SECOND instance at line 2264 - consolidate into first instance",
+      "safe_to_remove": true,
+      "priority": "MEDIUM"
+    },
+    {
+      "id": 5,
+      "line_numbers": "3189-3250 vs 3360-3520",
+      "selector": ".skin-product-card, .skin-product-thumb, .skin-product-name, .skin-product-current-price, .skin-product-bottom",
+      "type": "DUPLICATE SELECTOR WITH CONFLICTING RULES",
+      "issue": "Complete duplicate definition of skin-product card styles with conflicting values. Old version (lines 3189-3250) is superseded by newer version (3360-3520)",
+      "differences": {
+        "skin-product-card-height": "380px vs 430px",
+        "skin-product-card-padding": "10px vs 12px 12px 10px",
+        "skin-product-card-background": "none vs #ffffff",
+        "skin-product-card-border": "#e6f1ec vs #dcefe8",
+        "skin-product-card-border-radius": "14px vs 16px",
+        "skin-product-thumb-height": "180px vs 210px",
+        "skin-product-current-price-color": "red vs #e53935"
+      },
+      "recommendation": "REMOVE lines 3189-3250 entirely - keep only the newer, more complete version at lines 3360-3520",
+      "safe_to_remove": true,
+      "priority": "CRITICAL",
+      "line_count": "62 lines of duplicate code"
+    },
+    {
+      "id": 6,
+      "line_numbers": "3139-3160",
+      "selector": ".container",
+      "type": "DUPLICATE DEFINITION",
+      "issue": "Third definition of `.container` with max-width: 1400px in skincare-product-showcase section",
+      "current_css": "Line 3139: .container { max-width: 1400px; margin: auto; }",
+      "recommendation": "REMOVE - Use consistent .container definition from line 151",
+      "safe_to_remove": true,
+      "priority": "MEDIUM"
+    },
+    {
+      "id": 7,
+      "line_numbers": "1509, 1857, 1871",
+      "selector": "display: -webkit-box; -webkit-line-clamp; -webkit-box-orient",
+      "type": "PARTIALLY REDUNDANT VENDOR PREFIX",
+      "issue": "Multiple `-webkit-` prefix lines for text clamping. While needed for WebKit, the unprefixed `display: box` support varies.",
+      "current_css": "Multiple occurrences of -webkit-box, -webkit-line-clamp, -webkit-box-orient",
+      "recommendation": "KEEP - These maintain compatibility with mobile browsers and older Chrome versions",
+      "safe_to_remove": false,
+      "priority": "LOW"
+    },
+    {
+      "id": 8,
+      "line_numbers": "2723-2732",
+      "selector": "mask-image vs -webkit-mask-image",
+      "type": "REDUNDANT PREFIX",
+      "issue": "Both `mask-image` and `-webkit-mask-image` are defined with identical gradients in partner section",
+      "current_css": [
+        "mask-image: linear-gradient(...)",
+        "-webkit-mask-image: linear-gradient(...)"
+      ],
+      "recommendation": "KEEP - Both are needed for browser compatibility (Firefox needs unprefixed, older Safari needs -webkit-)",
+      "safe_to_remove": false,
+      "priority": "LOW"
+    },
+    {
+      "id": 9,
+      "line_numbers": "2767, 2755",
+      "selector": ".partner-logo-card::before",
+      "type": "CONFLICTING PSEUDO-ELEMENT",
+      "issue": "Pseudo-element defined but may conflict with overlay styling",
+      "recommendation": "REVIEW - Verify this overlay is necessary and doesn't conflict with hover states",
+      "safe_to_remove": false,
+      "priority": "LOW"
+    },
+    {
+      "id": 10,
+      "line_numbers": "1509-1520",
+      "selector": ".flashsale-name",
+      "type": "DUPLICATE PROPERTY SEQUENCE",
+      "issue": "Text-clamping setup duplicated across multiple elements with same values",
+      "current_css": [
+        "display: -webkit-box;",
+        "overflow: hidden;",
+        "-webkit-line-clamp: 2;",
+        "-webkit-box-orient: vertical;"
+      ],
+      "recommendation": "KEEP individual - Each element needs specific styling",
+      "safe_to_remove": false,
+      "priority": "LOW"
+    },
+    {
+      "id": 11,
+      "line_numbers": "3555-3670",
+      "selector": ".skin-product-card (media query versions)",
+      "type": "DUPLICATE MEDIA QUERY STYLES",
+      "issue": "Additional media query overrides for .skin-product-card that may conflict with line 3189 definitions",
+      "recommendation": "REVIEW & CONSOLIDATE - After removing lines 3189-3250, review these media queries",
+      "safe_to_remove": false,
+      "priority": "MEDIUM"
+    },
+    {
+      "id": 12,
+      "line_numbers": "3100, 3520",
+      "selector": ".old-price",
+      "type": "CONFLICTING RULES",
+      "issue": "`.old-price` has conflicting definitions:\n- Line 3100: color: #a7a7a7; text-decoration: line-through;\n- Line 3520: color: #9aa7a2; text-decoration: line-through;",
+      "recommendation": "CONSOLIDATE - Use #9aa7a2 (newer, more consistent with design system)",
+      "safe_to_remove": false,
+      "priority": "LOW"
+    },
+    {
+      "id": 13,
+      "line_numbers": "489-491",
+      "selector": ".header-topbar-right a:not(:last-child)::after",
+      "type": "UNUSED CSS",
+      "issue": "Divider styling for topbar links that appears to be unused in HTML",
+      "verification": "Not found in Home.html topbar structure",
+      "recommendation": "REVIEW - Check if this is still used in other pages before removing",
+      "safe_to_remove": false,
+      "priority": "LOW"
+    },
+    {
+      "id": 14,
+      "line_numbers": "1290-1316",
+      "selector": "Multiple .hero-* animations",
+      "type": "POTENTIALLY UNUSED ANIMATIONS",
+      "issue": "Some @keyframes animations may not be used if their target elements are hidden",
+      "animations": [
+        "@keyframes heroFloatFront",
+        "@keyframes heroFloatBack",
+        "@keyframes heroShadowMove",
+        "@keyframes bubbleFloat",
+        "@keyframes leafSwing1",
+        "@keyframes leafSwing2",
+        "@keyframes tagFloat1",
+        "@keyframes tagFloat2",
+        "@keyframes heroGlowMove1",
+        "@keyframes heroGlowMove2"
+      ],
+      "recommendation": "KEEP - These are actively used in hero section",
+      "safe_to_remove": false,
+      "priority": "LOW"
+    },
+    {
+      "id": 15,
+      "line_numbers": "1518-1520",
+      "selector": ".flashsale-progress span",
+      "type": "PARTIALLY CONFLICTING RULES",
+      "issue": "font-size: 10px may be too small for text content, potential usability issue",
+      "recommendation": "REVIEW for accessibility - may need adjustment to 12px",
+      "safe_to_remove": false,
+      "priority": "LOW"
+    },
+    {
+      "id": 16,
+      "line_numbers": "1961-2060",
+      "selector": ".kf-* (Footer CSS)",
+      "type": "STYLE REPLICATION",
+      "issue": "Footer styling appears well-organized but uses multiple custom classes instead of BEM methodology",
+      "recommendation": "KEEP - Functional but could be refactored for future maintenance",
+      "safe_to_remove": false,
+      "priority": "VERY_LOW"
+    },
+    {
+      "id": 17,
+      "line_numbers": "2115-2177",
+      "selector": "@media (max-width: 1199px)",
+      "type": "DUPLICATE MEDIA QUERY BREAKPOINT",
+      "issue": "Multiple @media queries for 1199px breakpoint scattered throughout file",
+      "locations": 9,
+      "recommendation": "CONSOLIDATE - Group all 1199px media queries into single location for better maintainability",
+      "safe_to_remove": false,
+      "priority": "LOW"
+    },
+    {
+      "id": 18,
+      "line_numbers": "2560-2570",
+      "selector": ".brand-banner-card:hover img",
+      "type": "UNUSED/REDUNDANT HOVER STATE",
+      "issue": "Hover transform applied but may not be noticeable at actual screen sizes",
+      "recommendation": "REVIEW - Consider if scale(1.04) is visible enough",
+      "safe_to_remove": false,
+      "priority": "VERY_LOW"
+    },
+    {
+      "id": 19,
+      "line_numbers": "3650",
+      "selector": ".skin-solution-stock (in HTML)",
+      "type": "CROSS-CLASS CONTAMINATION",
+      "issue": "Class `.skin-solution-stock` used in Home.html line 490 but is defined in skin-solution section",
+      "html_line": 490,
+      "html_code": "<span class=\"skin-solution-stock in-stock\">✔ Còn hàng</span>",
+      "issue_detail": "This is using .skin-solution-* class in .skin-product-card section",
+      "recommendation": "RENAME - Should use .skin-product-stock instead. This causes maintenance confusion.",
+      "safe_to_remove": false,
+      "priority": "MEDIUM"
+    },
+    {
+      "id": 20,
+      "line_numbers": "1509-1520 (similar in 3245-3250)",
+      "selector": ".flashsale-name text-clamping",
+      "type": "DUPLICATE RULES ACROSS SECTIONS",
+      "issue": "Text-clamping properties repeated in slightly different form across old and new product card styles",
+      "recommendation": "CONSIDER REFACTORING - Create reusable .text-clamp-2 utility class",
+      "safe_to_remove": false,
+      "priority": "LOW"
+    },
+    {
+      "id": 21,
+      "line_numbers": "2010-2090",
+      "selector": ".kf-* footer selectors",
+      "type": "NAMESPACE POLLUTION",
+      "issue": "42 different .kf-* classes defined - excessive for footer styling",
+      "recommendation": "REVIEW - Consider reducing to core classes only",
+      "safe_to_remove": false,
+      "priority": "VERY_LOW"
+    },
+    {
+      "id": 22,
+      "line_numbers": "3202-3250",
+      "selector": ".product-badge, .stock, .cart-btn",
+      "type": "INCOMPLETE/SIMPLIFIED DEFINITIONS",
+      "issue": "These styles in old section (lines 3202-3250) are less complete than newer versions",
+      "recommendation": "REMOVE - Replaced by better implementations in lines 3360+",
+      "safe_to_remove": true,
+      "priority": "CRITICAL"
+    },
+    {
+      "id": 23,
+      "line_numbers": "1455-1465",
+      "selector": ".flashsale-slider",
+      "type": "GRID LAYOUT ANOMALY",
+      "issue": "grid-auto-flow: column with grid-auto-columns calculations - potential browser layout issues",
+      "current_css": "grid-auto-columns: calc(20% - 13px);",
+      "recommendation": "KEEP - Layout works but document reasoning in comments",
+      "safe_to_remove": false,
+      "priority": "LOW"
+    },
+    {
+      "id": 24,
+      "line_numbers": "2668-2720",
+      "selector": ".partner-logo-card img",
+      "type": "EXCESSIVE TRANSITIONS",
+      "issue": "Multiple transitions defined on same property (transform, opacity, filter)",
+      "current_css": "transition: transform 0.35s ease, opacity 0.35s ease, filter 0.35s ease;",
+      "recommendation": "KEEP - Smooth animation but could be optimized with will-change",
+      "safe_to_remove": false,
+      "priority": "VERY_LOW"
+    },
+    {
+      "id": 25,
+      "line_numbers": "3260-3250 (whole section)",
+      "selector": ".tab-item, .view-all-btn, .product-showcase-head",
+      "type": "DUPLICATE CLASS NAMING IN OLD SECTION",
+      "issue": "Classes defined differently in lines 3150-3250 vs their later versions",
+      "recommendation": "REMOVE entire lines 3150-3250 block after verification",
+      "safe_to_remove": true,
+      "priority": "CRITICAL"
+    },
+    {
+      "id": 26,
+      "line_numbers": "1516-1520, 3468-3480",
+      "selector": ".flashsale-name vs .skin-product-name (text clamping)",
+      "type": "DUPLICATE TEXT-CLAMPING IMPLEMENTATION",
+      "issue": "Both use identical text-clamping pattern but separately defined",
+      "recommendation": "CONSIDER - Extract to utility class in future refactor",
+      "safe_to_remove": false,
+      "priority": "VERY_LOW"
+    },
+    {
+      "id": 27,
+      "line_numbers": "1155-1170",
+      "selector": "@media (max-width: 1199px) { .hero-3d-visual, .hero-3d-wrap { min-height: 580px; } }",
+      "type": "DUPLICATE MEDIA RULE",
+      "issue": "Both .hero-3d-visual AND .hero-3d-wrap set to same min-height in same query",
+      "recommendation": "KEEP - Intentional for different layout aspects",
+      "safe_to_remove": false,
+      "priority": "VERY_LOW"
+    },
+    {
+      "id": 28,
+      "line_numbers": "1949-1958",
+      "selector": ".beauty-blog-card:hover",
+      "type": "REDUNDANT HOVER STATES",
+      "issue": "transform: translateY(-8px) is subtle but similar to other elements (-4px, -2px, -3px)",
+      "recommendation": "KEEP - Intentional variation for visual hierarchy",
+      "safe_to_remove": false,
+      "priority": "VERY_LOW"
+    },
+    {
+      "id": 29,
+      "line_numbers": "2015-2090",
+      "selector": ".kf-main-grid",
+      "type": "RESPONSIVE DUPLICATE",
+      "issue": "Grid column changes at multiple breakpoints but could be simplified",
+      "recommendation": "KEEP - Necessary for responsive design",
+      "safe_to_remove": false,
+      "priority": "LOW"
+    },
+    {
+      "id": 30,
+      "line_numbers": "4122-4150",
+      "selector": ".combo-premium-* section @media queries",
+      "type": "DUPLICATE MEDIA QUERY STRUCTURE",
+      "issue": "Similar media query structure to skin-solution section but different prefix",
+      "recommendation": "KEEP - Required for combo section styling",
+      "safe_to_remove": false,
+      "priority": "VERY_LOW"
+    },
+    {
+      "id": 31,
+      "line_numbers": "4400-4700",
+      "selector": ".combo-premium-* extensive section",
+      "type": "LARGE DUPLICATE PATTERN SECTION",
+      "issue": "400+ lines of .combo-premium-* CSS mirrors .skin-solution-* pattern exactly",
+      "percentage_match": "~95% similar structure and naming",
+      "recommendation": "REVIEW - Could use CSS variables or @extend to reduce duplication",
+      "safe_to_remove": false,
+      "priority": "MEDIUM"
+    },
+    {
+      "id": 32,
+      "line_numbers": "1001-1015",
+      "selector": ".hero-leaf.leaf-1 and .hero-leaf.leaf-2",
+      "type": "NEARLY IDENTICAL RULES",
+      "issue": "Both leaf animations use transform rotate() with very similar values (only 2-3 degrees difference)",
+      "recommendation": "KEEP - Intentional visual variation",
+      "safe_to_remove": false,
+      "priority": "VERY_LOW"
+    },
+    {
+      "id": 33,
+      "line_numbers": "2500, 2372, 2230, 1450",
+      "selector": "grid-auto-columns calculations",
+      "type": "MAGIC NUMBERS",
+      "issue": "Multiple calc() values for grid columns lack documentation",
+      "values": [
+        "calc(20% - 13px)",
+        "calc(25% - 12px)",
+        "calc(33.333% - 11px)",
+        "calc(78%)",
+        "calc(86%)"
+      ],
+      "recommendation": "COMMENT - Add explanations for why specific gap adjustments are needed",
+      "safe_to_remove": false,
+      "priority": "VERY_LOW"
+    },
+    {
+      "id": 34,
+      "line_numbers": "3372-3385",
+      "selector": ".product-showcase-grid (second definition)",
+      "type": "DUPLICATE GRID DEFINITION",
+      "issue": "product-showcase-grid defined twice with slightly different column counts/gaps",
+      "first_definition": "repeat(5, 1fr) at line 3189",
+      "second_definition": "repeat(5, minmax(0, 1fr)) at line 3372",
+      "recommendation": "KEEP second - Better implementation with minmax",
+      "safe_to_remove": false,
+      "priority": "MEDIUM"
+    },
+    {
+      "id": 35,
+      "line_numbers": "1838-1878",
+      "selector": ".beauty-blog-body h3 a, .beauty-blog-body p",
+      "type": "UNNECESSARY CASCADING",
+      "issue": "Complex selector chain for simple text styling",
+      "recommendation": "KEEP - Functional but could be simplified",
+      "safe_to_remove": false,
+      "priority": "VERY_LOW"
+    },
+    {
+      "id": 36,
+      "line_numbers": "2310, 2313",
+      "selector": ".main-menu scrollbar hiding (media query)",
+      "type": "DUPLICATE SCROLLBAR RULES IN MEDIA QUERY",
+      "issue": "scrollbar-width: none; AND ::-webkit-scrollbar both hiding scrollbars",
+      "recommendation": "KEEP - Both are needed for cross-browser compatibility",
+      "safe_to_remove": false,
+      "priority": "VERY_LOW"
+    },
+    {
+      "id": 37,
+      "line_numbers": "3524-3550",
+      "selector": ".skin-product-* responsive styles (old)",
+      "type": "UNNECESSARY MEDIA QUERY RULES",
+      "issue": "Media queries for old .skin-product definitions (lines 3524-3550) that should be removed",
+      "recommendation": "REMOVE - These apply to the old .skin-product-card that should be deleted",
+      "safe_to_remove": true,
+      "priority": "CRITICAL"
+    },
+    {
+      "id": 38,
+      "line_numbers": "1200-1215",
+      "selector": "@media (max-width: 991px) { .hero-3d-wrap, .hero-floating-tag }",
+      "type": "TARGETED MEDIA RULES",
+      "issue": "Many small, scattered media queries for hero section",
+      "recommendation": "KEEP - Necessary for responsive design",
+      "safe_to_remove": false,
+      "priority": "VERY_LOW"
+    },
+    {
+      "id": 39,
+      "line_numbers": "616-625",
+      "selector": "@media (max-width: 767px) .container",
+      "type": "EXCESSIVE SPECIFICITY FOR MEDIA QUERY",
+      "issue": "Container padding adjustment at 767px breakpoint is minimal",
+      "recommendation": "KEEP - May affect mobile layout significantly",
+      "safe_to_remove": false,
+      "priority": "LOW"
+    },
+    {
+      "id": 40,
+      "line_numbers": "1919-1940",
+      "selector": ".beauty-blog-section, .beauty-blog-header, .blog-subtitle",
+      "type": "SECTION-SPECIFIC NAMESPACE",
+      "issue": "13 different .beauty-blog-* classes for single section",
+      "recommendation": "KEEP - Well-organized scoping",
+      "safe_to_remove": false,
+      "priority": "VERY_LOW"
+    },
+    {
+      "id": 41,
+      "line_numbers": "3000-3015",
+      "selector": ".partner-section ::before, ::after (pseudo-elements)",
+      "type": "OVERLAPPING DECORATIVE ELEMENTS",
+      "issue": "Multiple decorative pseudo-elements may create rendering complexity",
+      "recommendation": "KEEP - Intentional design element",
+      "safe_to_remove": false,
+      "priority": "VERY_LOW"
+    },
+    {
+      "id": 42,
+      "line_numbers": "2900-2920",
+      "selector": ".partner-track animation",
+      "type": "CSS ANIMATION COMPLEXITY",
+      "issue": "@keyframes partnerMarquee is single animation but used multiple times",
+      "recommendation": "KEEP - Intentional infinite scroll effect",
+      "safe_to_remove": false,
+      "priority": "VERY_LOW"
+    },
+    {
+      "id": 43,
+      "line_numbers": "3063-3073",
+      "selector": ".customer-review-track animation",
+      "type": "SIMILAR ANIMATION PATTERN",
+      "issue": "@keyframes customerReviewMarquee mirrors partnerMarquee (99% identical)",
+      "current_code": "@keyframes customerReviewMarquee { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-50% - 8px)); } }",
+      "vs": "@keyframes partnerMarquee { similar structure, only gap value differs }",
+      "recommendation": "CONSIDER CONSOLIDATING - Use single @keyframes marque with different durations",
+      "safe_to_remove": false,
+      "priority": "LOW"
+    },
+    {
+      "id": 44,
+      "line_numbers": "3700-3710",
+      "selector": ".product-showcase-head, .product-showcase-tabs",
+      "type": "MULTIPLE CLASS NAMING CONVENTIONS",
+      "issue": "Mixes .product-showcase-* AND .skin-product-* naming in same component",
+      "recommendation": "KEEP - Functional but inconsistent naming",
+      "safe_to_remove": false,
+      "priority": "VERY_LOW"
+    },
+    {
+      "id": 45,
+      "line_numbers": "4400-4700 ENTIRE SECTION",
+      "selector": ".combo-premium-* CSS section (300+ lines)",
+      "type": "MASSIVE DUPLICATION",
+      "issue": "Entire .combo-premium-* section (lines 4400-4700) is nearly 100% duplicate of .skin-solution-* section (3683-3960) with only class name prefix changed",
+      "percentage_duplication": "95-98%",
+      "line_count_combo": "300 lines",
+      "line_count_solution": "277 lines",
+      "duplicate_code_size": "~300 lines of duplicated CSS",
+      "recommendation": "CRITICAL REFACTOR - Create shared utility classes or use CSS variables to eliminate this massive duplication",
+      "refactor_approach": "Create .product-card-premium base class and apply to both .combo-premium-card and .skin-solution-card",
+      "safe_to_remove": false,
+      "priority": "CRITICAL",
+      "estimated_savings": "~200 lines of CSS after refactoring"
+    }
+  ],
+  "action_items": [
+    {
+      "priority": "CRITICAL",
+      "action": "DELETE lines 3189-3250",
+      "reason": "Complete duplicate of .skin-product-* styles with inferior/conflicting rules",
+      "impact": "Remove 62 lines of dead code, no visual changes",
+      "testing_required": true
+    },
+    {
+      "priority": "CRITICAL",
+      "action": "DELETE lines 3524-3550",
+      "reason": "Media query rules for deleted .skin-product-* old section",
+      "impact": "Remove 26 lines of orphaned media query rules",
+      "testing_required": true
+    },
+    {
+      "priority": "CRITICAL",
+      "action": "REFACTOR lines 4400-4700 to share code with .skin-solution-* section",
+      "reason": "300 lines of nearly identical code with only class prefix changed",
+      "impact": "Reduce CSS file size by ~200 lines, improve maintainability",
+      "effort": "HIGH - requires testing",
+      "testing_required": true
+    },
+    {
+      "priority": "HIGH",
+      "action": "REMOVE line 151-153 duplicate .container definition",
+      "reason": "Conflicting max-width and padding values",
+      "impact": "Keep line 121-123 definition, remove 151-153",
+      "testing_required": true
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "CONSOLIDATE duplicate @media (max-width: 767px) .container rules",
+      "reason": "Same media query and rule defined twice (lines 616, 2264)",
+      "impact": "Remove 4 lines of duplicate code",
+      "testing_required": true
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "Rename .skin-solution-stock class used in .skin-product-card to .skin-product-stock",
+      "reason": "Class name mismatch causes confusion and poor maintainability",
+      "impact": "Update 1 HTML line (490) and CSS class name",
+      "testing_required": true,
+      "files_affected": ["Home.html line 490, 528, 566, 604, 642", "style.css class definition"]
+    },
+    {
+      "priority": "LOW",
+      "action": "Add CSS comments documenting grid-auto-columns calc() values",
+      "reason": "Magic numbers make code harder to maintain",
+      "impact": "Improve code documentation only",
+      "testing_required": false
+    },
+    {
+      "priority": "LOW",
+      "action": "Consider consolidating @keyframes partnerMarquee and customerReviewMarquee",
+      "reason": "99% identical animations with only duration differences",
+      "impact": "Reduce CSS by ~8 lines, improve maintainability",
+      "testing_required": true
+    }
+  ],
+  "file_size_impact": {
+    "current_lines": 4700,
+    "estimated_removable_lines": 388,
+    "estimated_refactorable_lines": 300,
+    "after_cleanup": "~4312 lines (8.2% reduction)",
+    "after_major_refactor": "~4012 lines (14.6% reduction total)"
+  },
+  "recommendations_summary": {
+    "immediate_actions": 5,
+    "estimated_time_to_cleanup": "2-3 hours",
+    "testing_effort": "HIGH - requires visual regression testing on all pages",
+    "risk_level": "MEDIUM - changes to core product card styling",
+    "suggested_order": [
+      "1. Remove lines 3189-3250 (old skin-product styles)",
+      "2. Remove lines 3524-3550 (orphaned media queries)",
+      "3. Remove duplicate .container definitions",
+      "4. Fix .skin-solution-stock naming issue",
+      "5. Consolidate @media (max-width: 767px) .container",
+      "6. Major refactor: .combo-premium-* duplication (effort intensive)"
+    ]
+  }
+}

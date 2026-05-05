@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <!-- Thiết lập bảng mã -->
+  <meta charset="UTF-8" />
+
+  <!-- Responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tiêu đề trang -->
+  <title>KEYSHU | CHI TIẾT SẢN PHẨM</title>
+
+  <!-- CSS trang chi tiết sản phẩm -->
+  <link rel="stylesheet" href="product-detail.css" />
+
+  <!-- Font awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+</head>
+<body>
+
+  <!-- =========================================================
+    HEADER
+  ========================================================== -->
+  <header class="site-header">
+    <div class="container">
+
+      <div class="header-top">
+        <!-- Logo -->
+        <div class="header-logo">
+          <a href="#">
+            <img src="img/Logo-keyshu-1-01.jpg" alt="KEYSHU Logo" />
+          </a>
+        </div>
+
+        <!-- Search -->
+        <div class="header-search">
+          <form action="#">
+            <input
+              type="text"
+              placeholder="Nhập từ khóa tìm kiếm sản phẩm, danh mục..."
+            />
+            <button type="submit" aria-label="Tìm kiếm">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M21 21L16.65 16.65M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <!-- Action -->
+        <div class="header-actions">
+          <a href="#" class="action-item action-link">
+            <span class="action-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M3 7H21V19H3V7Z" stroke="currentColor" stroke-width="1.8" />
+                <path
+                  d="M7 7V5C7 3.89543 7.89543 3 9 3H15C16.1046 3 17 3.89543 17 5V7"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                />
+                <path d="M3 11H21" stroke="currentColor" stroke-width="1.8" />
+              </svg>
+            </span>
+            <span>Hệ thống cửa hàng</span>
+          </a>
+
+          <a href="#" class="action-item action-link">
+            <span class="action-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M4 19.5V4.5C4 3.67157 4.67157 3 5.5 3H16.5L20 6.5V19.5C20 20.3284 19.3284 21 18.5 21H5.5C4.67157 21 4 20.3284 4 19.5Z"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                />
+                <path d="M16 3V7H20" stroke="currentColor" stroke-width="1.8" />
+                <path
+                  d="M8 11H16"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M8 15H13"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </span>
+            <span>Tạp chí làm đẹp</span>
+          </a>
+
+          <a href="#" class="login-link" aria-label="Đăng nhập hoặc đăng ký">
+            <span class="login-link-icon">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                  d="M14 16.5L18.5 12L14 7.5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M18 12H9"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10 21H6.5C5.11929 21 4 19.8807 4 18.5V5.5C4 4.11929 5.11929 3 6.5 3H10"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+            <span class="login-link-text">Login/Register</span>
+          </a>
+
+          <a href="#" class="icon-btn" aria-label="Yêu thích">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M12 20.5C12 20.5 4 15.36 4 9.5C4 6.46243 6.46243 4 9.5 4C11.1569 4 12.6429 4.74157 13.6667 5.90968C14.6904 4.74157 16.1764 4 17.8333 4C20.8709 4 23.3333 6.46243 23.3333 9.5C23.3333 15.36 15.3333 20.5 15.3333 20.5H12Z"
+                stroke="currentColor"
+                stroke-width="1.7"
+                transform="translate(-1.66665 0)"
+              />
+            </svg>
+          </a>
+
+          <a href="#" class="icon-btn" aria-label="Giỏ hàng">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M3 5H5L7 15H18L20 8H8"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <circle cx="9" cy="19" r="1.6" stroke="currentColor" stroke-width="1.6" />
+              <circle cx="17" cy="19" r="1.6" stroke="currentColor" stroke-width="1.6" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Menu -->
+      <nav class="main-menu">
+        <a href="#">Trang Chủ</a>
+        <a href="#">Mặt Nạ</a>
+        <a href="#">Tẩy Trang</a>
+        <a href="#">Sữa Rửa Mặt</a>
+        <a href="#">Toner</a>
+        <a href="#">Serum</a>
+        <a href="#">Combo Siêu Hời</a>
+        <a href="#">Chính Sách</a>
+        <a href="#">Liên Hệ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================
+    PRODUCT DETAIL PAGE
+  ========================================================== -->
+  <main class="product-detail-page">
+    <div class="container">
+
+      <!-- Breadcrumb -->
+      <div class="pd-breadcrumb">
+        <a href="#">Trang chủ</a>
+        <span>›</span>
+        <a href="#">Toner</a>
+        <span>›</span>
+        <span class="current">Toner phục hồi dịu nhẹ cho da nhạy cảm</span>
+      </div>
+
+      <!-- =====================================================
+        PRODUCT TOP
+      ====================================================== -->
+      <section class="pd-top">
+        <!-- Left -->
+        <div class="pd-gallery">
+          <div class="pd-main-image">
+            <img
+              id="mainProductImage"
+              src="img-product/rau-ma-scaled.jpg"
+              alt="Toner phục hồi dịu nhẹ cho da nhạy cảm"
+            />
+          </div>
+
+          <div class="pd-thumb-list">
+            <button class="pd-thumb active" data-image="img-product/rau-ma-scaled.jpg" type="button">
+              <img src="img-product/rau-ma-scaled.jpg" alt="Ảnh sản phẩm 1" />
+            </button>
+
+            <button class="pd-thumb" data-image="img-product/tay-trang-1-scaled.jpg" type="button">
+              <img src="img-product/tay-trang-1-scaled.jpg" alt="Ảnh sản phẩm 2" />
+            </button>
+
+            <button class="pd-thumb" data-image="img-product/ini-scaled.jpg" type="button">
+              <img src="img-product/ini-scaled.jpg" alt="Ảnh sản phẩm 3" />
+            </button>
+
+            <button class="pd-thumb" data-image="img-product/google-shopping-nuoc-can-bang-la.webp" type="button">
+              <img src="img-product/google-shopping-nuoc-can-bang-la.webp" alt="Ảnh sản phẩm 4" />
+            </button>
+          </div>
+
+          <!-- Chính sách -->
+          <div class="pd-policy">
+            <h3>Chính sách</h3>
+
+            <div class="pd-policy-grid">
+              <div class="pd-policy-item">
+                <div class="pd-policy-icon">
+                  <i class="fa-solid fa-truck-fast"></i>
+                </div>
+                <span>Miễn phí vận chuyển</span>
+              </div>
+
+              <div class="pd-policy-item">
+                <div class="pd-policy-icon">
+                  <i class="fa-solid fa-wallet"></i>
+                </div>
+                <span>Giao hàng toàn quốc</span>
+              </div>
+
+              <div class="pd-policy-item">
+                <div class="pd-policy-icon">
+                  <i class="fa-solid fa-shield-heart"></i>
+                </div>
+                <span>Chính sách bảo hành</span>
+              </div>
+
+              <div class="pd-policy-item">
+                <div class="pd-policy-icon">
+                  <i class="fa-solid fa-rotate-left"></i>
+                </div>
+                <span>Chính sách đổi trả</span>
+              </div>
+            </div>
+
+            <a href="#" class="pd-hotline">
+              Gọi ngay <strong>1900 1265</strong> để được hỗ trợ nhanh nhất
+            </a>
+          </div>
+        </div>
+
+        <!-- Right -->
+        <div class="pd-info">
+          <h1 class="pd-title">Toner phục hồi dịu nhẹ cho da nhạy cảm</h1>
+
+          <div class="pd-meta">
+            <span><strong>Thương hiệu:</strong> KEYSHU</span>
+            <span><strong>Thể loại:</strong> Chăm sóc da</span>
+          </div>
+
+          <div class="pd-price-box">
+            <span class="pd-price-current">235.000đ</span>
+            <span class="pd-price-old">320.000đ</span>
+          </div>
+
+          <div class="pd-option-group">
+            <div class="pd-option-title">Dung tích:</div>
+            <div class="pd-option-list">
+              <button class="pd-option-btn active" type="button">100ml</button>
+              <button class="pd-option-btn" type="button">150ml</button>
+              <button class="pd-option-btn" type="button">200ml</button>
+              <button class="pd-option-btn" type="button">Mini</button>
+            </div>
+          </div>
+
+          <div class="pd-buy-row">
+            <div class="pd-qty-box">
+              <button type="button" class="qty-btn" id="minusQty">-</button>
+              <input type="text" id="quantityInput" value="1" readonly />
+              <button type="button" class="qty-btn" id="plusQty">+</button>
+            </div>
+
+            <button class="pd-add-cart-btn" type="button">Thêm vào giỏ</button>
+          </div>
+
+          <div class="pd-stock">Còn hàng</div>
+
+          <div class="pd-gift-box">
+            <h3>
+              <i class="fa-solid fa-gift"></i>
+              Quà tặng kèm khi mua sản phẩm
+            </h3>
+
+            <ul>
+              <li>Tặng mini sample cho đơn từ 499.000đ.</li>
+              <li>Thêm ngay một mùi hương mới vào bộ sưu tập của bạn.</li>
+              <li>Đơn từ 1.000.000đ nhận túi đựng mỹ phẩm cao cấp.</li>
+              <li>Thiết kế tinh tế, tiện mang theo trong túi xách hằng ngày.</li>
+              <li>Khách hàng mới nhận voucher 50.000đ.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+        PRODUCT DESCRIPTION
+      ====================================================== -->
+      <section class="pd-description-section">
+        <div class="pd-section-title">
+          <h2>MÔ TẢ SẢN PHẨM</h2>
+        </div>
+
+        <div class="pd-description-wrap">
+          <!-- Left description -->
+          <div class="pd-description-left">
+            <div class="pd-spec-row pd-spec-season">
+              <div class="pd-spec-label">Khuyên dùng</div>
+              <div class="pd-season-list">
+                <div class="pd-season-item">
+                  <img src="img_banner/banner_right_1.webp" alt="Mùa hè" />
+                  <span>Mùa Hè</span>
+                </div>
+
+                <div class="pd-season-item">
+                  <img src="img_banner/banner_right_2.webp" alt="Mùa xuân" />
+                  <span>Mùa Xuân</span>
+                </div>
+
+                <div class="pd-season-item">
+                  <img src="img-product/ini-scaled.jpg" alt="Mùa thu" />
+                  <span>Mùa Thu</span>
+                </div>
+
+                <div class="pd-season-item">
+                  <img src="img-product/tay-trang-1-scaled.jpg" alt="Mùa đông" />
+                  <span>Mùa Đông</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pd-spec-row">
+              <div class="pd-spec-label">Phong cách</div>
+              <div class="pd-spec-value">Dịu nhẹ, tươi mát, dễ chịu</div>
+            </div>
+
+            <div class="pd-spec-row">
+              <div class="pd-spec-label">Phát hành</div>
+              <div class="pd-spec-value">2026</div>
+            </div>
+
+            <div class="pd-spec-row">
+              <div class="pd-spec-label">Loại da</div>
+              <div class="pd-spec-value">Da nhạy cảm, da khô, da hỗn hợp</div>
+            </div>
+
+            <div class="pd-spec-row">
+              <div class="pd-spec-label">Độ tuổi</div>
+              <div class="pd-spec-value">20+</div>
+            </div>
+
+            <div class="pd-spec-row pd-progress-row">
+              <div class="pd-spec-label">Độ dịu nhẹ</div>
+              <div class="pd-progress-wrap">
+                <div class="pd-progress-bar">
+                  <span style="width: 82%;"></span>
+                </div>
+
+                <div class="pd-progress-note">
+                  <span>Nhẹ</span>
+                  <span>Vừa</span>
+                  <span>Cao</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pd-spec-row pd-progress-row">
+              <div class="pd-spec-label">Độ cấp ẩm</div>
+              <div class="pd-progress-wrap">
+                <div class="pd-progress-bar dark">
+                  <span style="width: 68%;"></span>
+                </div>
+
+                <div class="pd-progress-note">
+                  <span>Thấp</span>
+                  <span>Vừa</span>
+                  <span>Cao</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pd-notes">
+              <p><strong>Thành phần nổi bật:</strong> Rau má, HA, Panthenol.</p>
+              <p><strong>Kết cấu:</strong> Lỏng nhẹ, thấm nhanh, không nhờn rít.</p>
+              <p><strong>Cảm giác sau dùng:</strong> Da mềm, ẩm và dễ chịu hơn.</p>
+            </div>
+
+            <div class="pd-description-text">
+              <p>
+                Toner phục hồi dịu nhẹ KEYSHU là sản phẩm phù hợp cho làn da cần
+                được cân bằng lại sau bước làm sạch. Công thức tập trung vào cảm
+                giác dịu nhẹ, hỗ trợ cấp ẩm và giảm khô căng trên bề mặt da.
+              </p>
+
+              <p>
+                Sản phẩm phù hợp dùng hằng ngày, đặc biệt với làn da nhạy cảm hoặc
+                da đang treatment cần một bước đệm êm ái trước serum và kem dưỡng.
+                Chất toner thấm nhanh, không gây bết và mang lại cảm giác tươi mát,
+                dễ chịu khi sử dụng.
+              </p>
+
+              <p>
+                Với tinh thần skincare an toàn - thiên nhiên - hiệu quả, KEYSHU
+                hướng đến những sản phẩm dễ dùng, tối giản nhưng vẫn mang lại trải
+                nghiệm chỉn chu trong từng bước chăm sóc da.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right images -->
+          <div class="pd-description-right">
+            <div class="pd-desc-image">
+              <img src="img-product/rau-ma-scaled.jpg" alt="Ảnh mô tả sản phẩm 1" />
+            </div>
+
+            <div class="pd-desc-image">
+              <img src="img-product/ini-scaled.jpg" alt="Ảnh mô tả sản phẩm 2" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+        RELATED PRODUCTS
+      ====================================================== -->
+      <section class="pd-related-section">
+        <div class="pd-section-title related-title">
+          <h2>SẢN PHẨM LIÊN QUAN</h2>
+          <p>
+            Những sản phẩm phù hợp để kết hợp trong routine chăm sóc da hằng ngày.
+          </p>
+        </div>
+
+        <div class="pd-related-grid">
+          <!-- item 1 -->
+          <article class="pd-related-card">
+            <span class="pd-related-badge">-18%</span>
+
+            <div class="pd-related-thumb">
+              <img src="img-product/tay-trang-1-scaled.jpg" alt="Sản phẩm liên quan 1" />
+            </div>
+
+            <div class="pd-related-body">
+              <h3>Tẩy trang dịu nhẹ cho da nhạy cảm</h3>
+              <p>100ml | Làm sạch sâu | Không khô da</p>
+
+              <div class="pd-related-price">
+                <span class="current">289.000đ</span>
+                <span class="old">350.000đ</span>
+              </div>
+
+              <div class="pd-related-actions">
+                <a href="#" class="pd-related-btn">Tùy chọn</a>
+                <a href="#" class="pd-related-icon">
+                  <i class="fa-regular fa-eye"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- item 2 -->
+          <article class="pd-related-card">
+            <span class="pd-related-badge">-24%</span>
+
+            <div class="pd-related-thumb">
+              <img src="img-product/ini-scaled.jpg" alt="Sản phẩm liên quan 2" />
+            </div>
+
+            <div class="pd-related-body">
+              <h3>Sữa rửa mặt cấp ẩm cho da khô</h3>
+              <p>150ml | Dịu nhẹ | Giữ ẩm tự nhiên</p>
+
+              <div class="pd-related-price">
+                <span class="current">235.000đ</span>
+                <span class="old">310.000đ</span>
+              </div>
+
+              <div class="pd-related-actions">
+                <a href="#" class="pd-related-btn">Tùy chọn</a>
+                <a href="#" class="pd-related-icon">
+                  <i class="fa-regular fa-eye"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- item 3 -->
+          <article class="pd-related-card">
+            <span class="pd-related-badge">-27%</span>
+
+            <div class="pd-related-thumb">
+              <img src="img-product/rau-ma-scaled.jpg" alt="Sản phẩm liên quan 3" />
+            </div>
+
+            <div class="pd-related-body">
+              <h3>Toner phục hồi dịu nhẹ cho da nhạy cảm</h3>
+              <p>100ml | Cân bằng da | Cấp ẩm</p>
+
+              <div class="pd-related-price">
+                <span class="current">235.000đ</span>
+                <span class="old">320.000đ</span>
+              </div>
+
+              <div class="pd-related-actions">
+                <a href="#" class="pd-related-btn">Tùy chọn</a>
+                <a href="#" class="pd-related-icon">
+                  <i class="fa-regular fa-eye"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- item 4 -->
+          <article class="pd-related-card">
+            <span class="pd-related-badge">-15%</span>
+
+            <div class="pd-related-thumb">
+              <img src="img-product/google-shopping-nuoc-can-bang-la.webp" alt="Sản phẩm liên quan 4" />
+            </div>
+
+            <div class="pd-related-body">
+              <h3>Serum cấp ẩm chuyên sâu cho da thiếu nước</h3>
+              <p>30ml | Phục hồi | Mềm mịn</p>
+
+              <div class="pd-related-price">
+                <span class="current">399.000đ</span>
+                <span class="old">469.000đ</span>
+              </div>
+
+              <div class="pd-related-actions">
+                <a href="#" class="pd-related-btn">Tùy chọn</a>
+                <a href="#" class="pd-related-icon">
+                  <i class="fa-regular fa-eye"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- item 5 -->
+          <article class="pd-related-card">
+            <span class="pd-related-badge">-20%</span>
+
+            <div class="pd-related-thumb">
+              <img src="img-product/tay-trang-1-scaled.jpg" alt="Sản phẩm liên quan 5" />
+            </div>
+
+            <div class="pd-related-body">
+              <h3>Kem dưỡng phục hồi hàng rào ẩm cho da</h3>
+              <p>50g | Dưỡng ẩm | Phục hồi</p>
+
+              <div class="pd-related-price">
+                <span class="current">355.000đ</span>
+                <span class="old">445.000đ</span>
+              </div>
+
+              <div class="pd-related-actions">
+                <a href="#" class="pd-related-btn">Tùy chọn</a>
+                <a href="#" class="pd-related-icon">
+                  <i class="fa-regular fa-eye"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- =========================================================
+    FOOTER
+  ========================================================== -->
+  <footer class="keyshu-footer">
+
+    <!-- Newsletter -->
+    <section class="kf-newsletter">
+      <div class="kf-container">
+        <div class="kf-newsletter-box">
+          <div class="kf-newsletter-content">
+
+            <div class="kf-newsletter-left">
+              <h2>NHẬN BẢN TIN LÀM ĐẸP</h2>
+              <p>Đừng bỏ lỡ cơ hội săn voucher mỗi tuần</p>
+            </div>
+
+            <form class="kf-newsletter-form" id="newsletterForm">
+              <input
+                type="email"
+                id="newsletterEmail"
+                placeholder="Điền email của bạn"
+                required
+              />
+              <button type="submit">ĐĂNG KÝ</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="kf-features">
+      <div class="kf-container">
+        <div class="kf-features-grid">
+
+          <div class="kf-feature-card">
+            <i class="fas fa-award"></i>
+            <h4>BẢO HÀNH - ĐỔI TRẢ</h4>
+            <p>Đổi trả linh hoạt, an tâm mua sắm.</p>
+          </div>
+
+          <div class="kf-feature-card">
+            <i class="fas fa-truck"></i>
+            <h4>MIỄN PHÍ GIAO HÀNG</h4>
+            <p>Giao hàng nhanh trên toàn quốc.</p>
+          </div>
+
+          <div class="kf-feature-card">
+            <i class="fas fa-trophy"></i>
+            <h4>THƯƠNG HIỆU UY TÍN</h4>
+            <p>Sản phẩm chính hãng, an toàn.</p>
+          </div>
+
+          <div class="kf-feature-card">
+            <i class="fas fa-globe-asia"></i>
+            <h4>GIAO HÀNG TOÀN QUỐC</h4>
+            <p>Phục vụ mọi tỉnh thành.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer main -->
+    <section class="kf-main">
+      <div class="kf-container">
+        <div class="kf-main-grid">
+
+          <div class="kf-col kf-company">
+            <div class="kf-logo">
+              <img src="img/Logo-Keyshu-1-01.jpg" alt="KEYSHU" />
+            </div>
+
+            <ul class="kf-company-info">
+              <li><strong>CÔNG TY TNHH SINH DƯỢC BIO</strong></li>
+              <li>Mã số thuế: 0110855086</li>
+              <li>Địa chỉ: Hà Nội, Việt Nam</li>
+              <li>Giờ làm việc: 8:00 - 22:00 (T2 - CN)</li>
+              <li>Hotline: 1900 1265</li>
+              <li>Email: cskh@keyshu.vn</li>
+            </ul>
+
+            <div class="kf-social">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <div class="kf-col">
+            <h4>CHÍNH SÁCH HỖ TRỢ</h4>
+            <ul class="kf-links">
+              <li><a href="#">Chính sách mua hàng</a></li>
+              <li><a href="#">Chính sách đổi trả</a></li>
+              <li><a href="#">Chính sách bảo hành</a></li>
+              <li><a href="#">Chính sách bảo mật</a></li>
+              <li><a href="#">Chính sách vận chuyển</a></li>
+            </ul>
+          </div>
+
+          <div class="kf-col">
+            <h4>HOẠT ĐỘNG CỘNG ĐỒNG</h4>
+            <ul class="kf-links">
+              <li><a href="#">Câu chuyện thương hiệu</a></li>
+              <li><a href="#">Chia sẻ kiến thức làm đẹp</a></li>
+              <li><a href="#">Chăm sóc khách hàng</a></li>
+              <li><a href="#">Sự kiện &amp; ưu đãi</a></li>
+              <li><a href="#">Đồng hành cùng cộng đồng</a></li>
+            </ul>
+          </div>
+
+          <div class="kf-col">
+            <h4>FANPAGE FACEBOOK</h4>
+            <div class="kf-fanpage">
+              <iframe
+                src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/facebook&tabs=timeline&width=340&height=200&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
+                width="100%"
+                height="200"
+                style="border:none;overflow:hidden"
+                scrolling="no"
+                frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </footer>
+
+  <!-- =========================================================
+    JS DEMO
+  ========================================================== -->
+  <script>
+    // Sticky header
+    const header = document.querySelector(".site-header");
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 10) {
+        header.classList.add("is-scrolled");
+      } else {
+        header.classList.remove("is-scrolled");
+      }
+    });
+
+    // Gallery
+    const mainImage = document.getElementById("mainProductImage");
+    const thumbs = document.querySelectorAll(".pd-thumb");
+
+    thumbs.forEach((thumb) => {
+      thumb.addEventListener("click", function () {
+        thumbs.forEach((item) => item.classList.remove("active"));
+        this.classList.add("active");
+        mainImage.src = this.dataset.image;
+      });
+    });
+
+    // Quantity
+    const minusBtn = document.getElementById("minusQty");
+    const plusBtn = document.getElementById("plusQty");
+    const quantityInput = document.getElementById("quantityInput");
+
+    minusBtn.addEventListener("click", function () {
+      let value = parseInt(quantityInput.value, 10);
+      if (value > 1) {
+        quantityInput.value = value - 1;
+      }
+    });
+
+    plusBtn.addEventListener("click", function () {
+      let value = parseInt(quantityInput.value, 10);
+      quantityInput.value = value + 1;
+    });
+
+    // Active option
+    document.querySelectorAll(".pd-option-list").forEach((group) => {
+      const buttons = group.querySelectorAll(".pd-option-btn");
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", function () {
+          buttons.forEach((item) => item.classList.remove("active"));
+          this.classList.add("active");
+        });
+      });
+    });
+
+    // Newsletter
+    const form = document.getElementById("newsletterForm");
+    const emailInput = document.getElementById("newsletterEmail");
+
+    if (form && emailInput) {
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const email = emailInput.value.trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!email) {
+          alert("Vui lòng nhập email của bạn.");
+          emailInput.focus();
+          return;
+        }
+
+        if (!emailRegex.test(email)) {
+          alert("Email chưa đúng định dạng.");
+          emailInput.focus();
+          return;
+        }
+
+        alert("Đăng ký nhận tin thành công!");
+        form.reset();
+      });
+    }
+  </script>
+</body>
+</html>

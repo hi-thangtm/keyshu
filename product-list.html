@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KEYSHU | DANH MỤC SẢN PHẨM</title>
+
+  <link rel="stylesheet" href="product-list.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+</head>
+<body>
+
+  <!-- =========================================================
+    HEADER
+  ========================================================== -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-top">
+        <div class="header-logo">
+          <a href="#">
+            <img src="img/Logo-keyshu-1-01.jpg" alt="KEYSHU Logo" />
+          </a>
+        </div>
+
+        <div class="header-search">
+          <form action="#">
+            <input
+              type="text"
+              placeholder="Nhập từ khóa tìm kiếm sản phẩm, danh mục..."
+            />
+            <button type="submit" aria-label="Tìm kiếm">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M21 21L16.65 16.65M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <div class="header-actions">
+          <a href="#" class="action-item action-link">
+            <span class="action-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M3 7H21V19H3V7Z" stroke="currentColor" stroke-width="1.8" />
+                <path
+                  d="M7 7V5C7 3.89543 7.89543 3 9 3H15C16.1046 3 17 3.89543 17 5V7"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                />
+                <path d="M3 11H21" stroke="currentColor" stroke-width="1.8" />
+              </svg>
+            </span>
+            <span>Hệ thống cửa hàng</span>
+          </a>
+
+          <a href="#" class="action-item action-link">
+            <span class="action-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M4 19.5V4.5C4 3.67157 4.67157 3 5.5 3H16.5L20 6.5V19.5C20 20.3284 19.3284 21 18.5 21H5.5C4.67157 21 4 20.3284 4 19.5Z"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                />
+                <path d="M16 3V7H20" stroke="currentColor" stroke-width="1.8" />
+                <path
+                  d="M8 11H16"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M8 15H13"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </span>
+            <span>Tạp chí làm đẹp</span>
+          </a>
+
+          <a href="#" class="login-link" aria-label="Đăng nhập hoặc đăng ký">
+            <span class="login-link-icon">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                  d="M14 16.5L18.5 12L14 7.5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M18 12H9"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10 21H6.5C5.11929 21 4 19.8807 4 18.5V5.5C4 4.11929 5.11929 3 6.5 3H10"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+            <span class="login-link-text">Login/Register</span>
+          </a>
+
+          <a href="#" class="icon-btn" aria-label="Yêu thích">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M12 20.5C12 20.5 4 15.36 4 9.5C4 6.46243 6.46243 4 9.5 4C11.1569 4 12.6429 4.74157 13.6667 5.90968C14.6904 4.74157 16.1764 4 17.8333 4C20.8709 4 23.3333 6.46243 23.3333 9.5C23.3333 15.36 15.3333 20.5 15.3333 20.5H12Z"
+                stroke="currentColor"
+                stroke-width="1.7"
+                transform="translate(-1.66665 0)"
+              />
+            </svg>
+          </a>
+
+          <a href="#" class="icon-btn" aria-label="Giỏ hàng">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M3 5H5L7 15H18L20 8H8"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <circle cx="9" cy="19" r="1.6" stroke="currentColor" stroke-width="1.6" />
+              <circle cx="17" cy="19" r="1.6" stroke="currentColor" stroke-width="1.6" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <nav class="main-menu">
+        <a href="#">Trang Chủ</a>
+        <a href="#">Mặt Nạ</a>
+        <a href="#">Tẩy Trang</a>
+        <a href="#">Sữa Rửa Mặt</a>
+        <a href="#">Toner</a>
+        <a href="#">Serum</a>
+        <a href="#">Combo Siêu Hời</a>
+        <a href="#">Chính Sách</a>
+        <a href="#">Liên Hệ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="product-page">
+    <div class="container">
+
+      <!-- =========================================================
+        BREADCRUMB
+      ========================================================== -->
+      <div class="breadcrumb">
+        <a href="#">Trang chủ</a>
+        <span>/</span>
+        <a href="#">Sản phẩm</a>
+        <span>/</span>
+        <strong>Toner</strong>
+      </div>
+
+      <!-- =========================================================
+        CATEGORY TOP
+      ========================================================== -->
+      <section class="top-category-section">
+        <div class="section-title-row">
+          <h2>DANH MỤC SẢN PHẨM</h2>
+        </div>
+
+        <div class="top-category-grid">
+          <a href="#" class="top-category-card active">
+            <div class="top-category-thumb">
+              <img src="img-product/rau-ma-scaled.jpg" alt="Toner rau má" />
+            </div>
+            <div class="top-category-info">
+              <h3>Toner rau má</h3>
+              <span>29 sản phẩm</span>
+            </div>
+          </a>
+
+          <a href="#" class="top-category-card">
+            <div class="top-category-thumb">
+              <img src="img-product/tay-trang-1-scaled.jpg" alt="Tẩy trang" />
+            </div>
+            <div class="top-category-info">
+              <h3>Tẩy trang</h3>
+              <span>13 sản phẩm</span>
+            </div>
+          </a>
+
+          <a href="#" class="top-category-card">
+            <div class="top-category-thumb">
+              <img src="img-product/ini-scaled.jpg" alt="Sữa rửa mặt" />
+            </div>
+            <div class="top-category-info">
+              <h3>Sữa rửa mặt</h3>
+              <span>29 sản phẩm</span>
+            </div>
+          </a>
+
+          <a href="#" class="top-category-card">
+            <div class="top-category-thumb">
+              <img src="img-product/google-shopping-nuoc-can-bang-la.webp" alt="Serum" />
+            </div>
+            <div class="top-category-info">
+              <h3>Serum phục hồi</h3>
+              <span>15 sản phẩm</span>
+            </div>
+          </a>
+
+          <a href="#" class="top-category-card">
+            <div class="top-category-thumb">
+              <img src="img-product/sg-11134201-81zu0-mmujimjksmbm91.webp" alt="Mặt nạ" />
+            </div>
+            <div class="top-category-info">
+              <h3>Mặt nạ mini</h3>
+              <span>15 sản phẩm</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- =========================================================
+        PRODUCT LIST LAYOUT
+      ========================================================== -->
+      <section class="product-list-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="product-sidebar">
+          <div class="filter-box filter-highlight">
+            <h3>Bộ lọc sản phẩm</h3>
+            <p>Giúp bạn tìm sản phẩm nhanh hơn</p>
+          </div>
+
+          <div class="filter-box">
+            <div class="filter-title">CHỌN MỨC GIÁ</div>
+
+            <label class="filter-check">
+              <input type="checkbox" />
+              <span>Dưới 199k</span>
+            </label>
+
+            <label class="filter-check">
+              <input type="checkbox" />
+              <span>Từ 199k - 299k</span>
+            </label>
+
+            <label class="filter-check">
+              <input type="checkbox" />
+              <span>Từ 300k - 499k</span>
+            </label>
+
+            <label class="filter-check">
+              <input type="checkbox" />
+              <span>Từ 500k - 799k</span>
+            </label>
+
+            <label class="filter-check">
+              <input type="checkbox" />
+              <span>Trên 800k</span>
+            </label>
+          </div>
+
+          <div class="filter-box">
+            <div class="filter-title">DUNG TÍCH</div>
+
+            <label class="filter-check">
+              <input type="checkbox" />
+              <span>100ml</span>
+            </label>
+
+            <label class="filter-check">
+              <input type="checkbox" />
+              <span>150ml</span>
+            </label>
+
+            <label class="filter-check">
+              <input type="checkbox" />
+              <span>200ml</span>
+            </label>
+
+            <label class="filter-check">
+              <input type="checkbox" />
+              <span>250ml</span>
+            </label>
+          </div>
+
+          <div class="filter-box">
+            <div class="filter-title">LOẠI DA</div>
+
+            <label class="filter-check">
+              <input type="checkbox" />
+              <span>Da dầu mụn</span>
+            </label>
+
+            <label class="filter-check">
+              <input type="checkbox" />
+              <span>Da nhạy cảm</span>
+            </label>
+
+            <label class="filter-check">
+              <input type="checkbox" />
+              <span>Da khô</span>
+            </label>
+
+            <label class="filter-check">
+              <input type="checkbox" />
+              <span>Da hỗn hợp</span>
+            </label>
+          </div>
+        </aside>
+
+        <!-- RIGHT CONTENT -->
+        <div class="product-main">
+          <div class="product-toolbar">
+            <div class="toolbar-left">
+              <h2>Toner</h2>
+              <span>Hiển thị 12 sản phẩm</span>
+            </div>
+
+            <div class="toolbar-tags">
+              <button class="toolbar-tag active">Nổi bật</button>
+              <button class="toolbar-tag">Bán chạy</button>
+              <button class="toolbar-tag">Mới nhất</button>
+              <button class="toolbar-tag">Giá thấp đến cao</button>
+              <button class="toolbar-tag">Giá cao xuống thấp</button>
+            </div>
+          </div>
+
+          <div class="product-grid">
+
+            <article class="product-card">
+              <span class="discount-badge">-27%</span>
+              <a href="#" class="product-thumb">
+                <img src="img-product/rau-ma-scaled.jpg" alt="Toner rau má phục hồi" />
+              </a>
+              <div class="product-info">
+                <div class="product-brand">KEYSHU</div>
+                <h3 class="product-name">
+                  Toner rau má phục hồi da, hỗ trợ cân bằng và làm dịu da nhạy cảm
+                </h3>
+                <div class="product-meta">150ml</div>
+                <div class="product-price">
+                  <span class="sale-price">289.000đ</span>
+                  <span class="old-price">395.000đ</span>
+                </div>
+                <div class="product-actions">
+                  <a href="#" class="choose-btn">Tùy chọn</a>
+                  <a href="#" class="circle-btn" aria-label="Yêu thích">
+                    <i class="fa-regular fa-heart"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <span class="discount-badge">-8%</span>
+              <a href="#" class="product-thumb">
+                <img src="img-product/google-shopping-nuoc-can-bang-la.webp" alt="Toner cấp ẩm" />
+              </a>
+              <div class="product-info">
+                <div class="product-brand">KEYSHU</div>
+                <h3 class="product-name">
+                  Toner cấp ẩm dịu nhẹ giúp bề mặt da mềm hơn và hấp thụ dưỡng chất tốt hơn
+                </h3>
+                <div class="product-meta">200ml</div>
+                <div class="product-price">
+                  <span class="sale-price">359.000đ</span>
+                  <span class="old-price">390.000đ</span>
+                </div>
+                <div class="product-actions">
+                  <a href="#" class="choose-btn">Tùy chọn</a>
+                  <a href="#" class="circle-btn" aria-label="Yêu thích">
+                    <i class="fa-regular fa-heart"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <span class="discount-badge">-20%</span>
+              <a href="#" class="product-thumb">
+                <img src="img-product/ini-scaled.jpg" alt="Sữa rửa mặt dịu nhẹ" />
+              </a>
+              <div class="product-info">
+                <div class="product-brand">KEYSHU</div>
+                <h3 class="product-name">
+                  Sữa rửa mặt dịu nhẹ làm sạch sâu nhưng vẫn giữ độ ẩm tự nhiên cho da
+                </h3>
+                <div class="product-meta">120ml</div>
+                <div class="product-price">
+                  <span class="sale-price">245.000đ</span>
+                  <span class="old-price">305.000đ</span>
+                </div>
+                <div class="product-actions">
+                  <a href="#" class="choose-btn">Tùy chọn</a>
+                  <a href="#" class="circle-btn" aria-label="Yêu thích">
+                    <i class="fa-regular fa-heart"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <span class="discount-badge">-12%</span>
+              <a href="#" class="product-thumb">
+                <img src="img-product/tay-trang-1-scaled.jpg" alt="Tẩy trang làm sạch" />
+              </a>
+              <div class="product-info">
+                <div class="product-brand">KEYSHU</div>
+                <h3 class="product-name">
+                  Nước tẩy trang làm sạch lớp chống nắng và bụi bẩn cho da dầu mụn
+                </h3>
+                <div class="product-meta">250ml</div>
+                <div class="product-price">
+                  <span class="sale-price">199.000đ</span>
+                  <span class="old-price">225.000đ</span>
+                </div>
+                <div class="product-actions">
+                  <a href="#" class="choose-btn">Tùy chọn</a>
+                  <a href="#" class="circle-btn" aria-label="Yêu thích">
+                    <i class="fa-regular fa-heart"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <span class="discount-badge">-15%</span>
+              <a href="#" class="product-thumb">
+                <img src="img-product/sg-11134201-81zu0-mmujimjksmbm91.webp" alt="Mặt nạ phục hồi" />
+              </a>
+              <div class="product-info">
+                <div class="product-brand">KEYSHU</div>
+                <h3 class="product-name">
+                  Mặt nạ phục hồi và làm dịu da sau mụn, hỗ trợ cấp nước nhanh
+                </h3>
+                <div class="product-meta">5 miếng</div>
+                <div class="product-price">
+                  <span class="sale-price">179.000đ</span>
+                  <span class="old-price">210.000đ</span>
+                </div>
+                <div class="product-actions">
+                  <a href="#" class="choose-btn">Tùy chọn</a>
+                  <a href="#" class="circle-btn" aria-label="Yêu thích">
+                    <i class="fa-regular fa-heart"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <span class="discount-badge">-18%</span>
+              <a href="#" class="product-thumb">
+                <img src="img-product/rau-ma-scaled.jpg" alt="Serum dưỡng sáng" />
+              </a>
+              <div class="product-info">
+                <div class="product-brand">KEYSHU</div>
+                <h3 class="product-name">
+                  Serum dưỡng sáng hỗ trợ làm đều màu da và phục hồi làn da xỉn màu
+                </h3>
+                <div class="product-meta">30ml</div>
+                <div class="product-price">
+                  <span class="sale-price">429.000đ</span>
+                  <span class="old-price">525.000đ</span>
+                </div>
+                <div class="product-actions">
+                  <a href="#" class="choose-btn">Tùy chọn</a>
+                  <a href="#" class="circle-btn" aria-label="Yêu thích">
+                    <i class="fa-regular fa-heart"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <span class="discount-badge">-10%</span>
+              <a href="#" class="product-thumb">
+                <img src="img-product/ini-scaled.jpg" alt="Kem dưỡng phục hồi" />
+              </a>
+              <div class="product-info">
+                <div class="product-brand">KEYSHU</div>
+                <h3 class="product-name">
+                  Kem dưỡng phục hồi hàng rào ẩm, phù hợp cho da nhạy cảm và da treatment
+                </h3>
+                <div class="product-meta">50g</div>
+                <div class="product-price">
+                  <span class="sale-price">389.000đ</span>
+                  <span class="old-price">432.000đ</span>
+                </div>
+                <div class="product-actions">
+                  <a href="#" class="choose-btn">Tùy chọn</a>
+                  <a href="#" class="circle-btn" aria-label="Yêu thích">
+                    <i class="fa-regular fa-heart"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <span class="discount-badge">-25%</span>
+              <a href="#" class="product-thumb">
+                <img src="img-product/google-shopping-nuoc-can-bang-la.webp" alt="Toner mini" />
+              </a>
+              <div class="product-info">
+                <div class="product-brand">KEYSHU</div>
+                <h3 class="product-name">
+                  Toner mini tiện lợi mang theo, hỗ trợ cấp ẩm nhanh và làm dịu tức thì
+                </h3>
+                <div class="product-meta">50ml</div>
+                <div class="product-price">
+                  <span class="sale-price">119.000đ</span>
+                  <span class="old-price">159.000đ</span>
+                </div>
+                <div class="product-actions">
+                  <a href="#" class="choose-btn">Tùy chọn</a>
+                  <a href="#" class="circle-btn" aria-label="Yêu thích">
+                    <i class="fa-regular fa-heart"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+
+          <div class="pagination">
+            <a href="#" class="page-btn active">1</a>
+            <a href="#" class="page-btn">2</a>
+            <a href="#" class="page-btn">3</a>
+            <a href="#" class="page-btn">4</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+        FAVORITE PRODUCTS
+      ========================================================== -->
+      <section class="horizontal-product-section">
+        <div class="section-center-head">
+          <h2>SẢN PHẨM YÊU THÍCH</h2>
+          <p>
+            Những sản phẩm được nhiều khách hàng lựa chọn nhờ bảng thành phần dịu nhẹ,
+            cảm giác dễ chịu trên da và hiệu quả chăm sóc hằng ngày.
+          </p>
+        </div>
+
+        <div class="horizontal-product-grid">
+          <article class="small-product-card sold-out">
+            <span class="product-state">Hết hàng</span>
+            <a href="#" class="small-thumb">
+              <img src="img-product/sg-11134201-81zu0-mmujimjksmbm91.webp" alt="Mặt nạ cấp ẩm" />
+            </a>
+            <div class="small-info">
+              <div class="small-brand">KEYSHU</div>
+              <h3>Mặt nạ cấp ẩm làm dịu nhanh cho da thiếu nước</h3>
+              <div class="small-price-row">
+                <span class="sale-price">99.000đ</span>
+                <span class="old-price">139.000đ</span>
+              </div>
+              <div class="product-actions">
+                <a href="#" class="choose-btn disabled">Hết hàng</a>
+                <a href="#" class="circle-btn" aria-label="Yêu thích">
+                  <i class="fa-regular fa-heart"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="small-product-card">
+            <span class="discount-badge">-8%</span>
+            <a href="#" class="small-thumb">
+              <img src="img-product/tay-trang-1-scaled.jpg" alt="Tẩy trang dịu nhẹ" />
+            </a>
+            <div class="small-info">
+              <div class="small-brand">KEYSHU</div>
+              <h3>Tẩy trang dịu nhẹ cho da nhạy cảm</h3>
+              <div class="small-price-row">
+                <span class="sale-price">210.000đ</span>
+                <span class="old-price">229.000đ</span>
+              </div>
+              <div class="product-actions">
+                <a href="#" class="choose-btn">Tùy chọn</a>
+                <a href="#" class="circle-btn" aria-label="Yêu thích">
+                  <i class="fa-regular fa-heart"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="small-product-card">
+            <span class="discount-badge">-30%</span>
+            <a href="#" class="small-thumb">
+              <img src="img-product/rau-ma-scaled.jpg" alt="Toner phục hồi" />
+            </a>
+            <div class="small-info">
+              <div class="small-brand">KEYSHU</div>
+              <h3>Toner phục hồi cho da sau mụn</h3>
+              <div class="small-price-row">
+                <span class="sale-price">280.000đ</span>
+                <span class="old-price">399.000đ</span>
+              </div>
+              <div class="product-actions">
+                <a href="#" class="choose-btn">Tùy chọn</a>
+                <a href="#" class="circle-btn" aria-label="Yêu thích">
+                  <i class="fa-regular fa-heart"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="small-product-card">
+            <span class="discount-badge">-20%</span>
+            <a href="#" class="small-thumb">
+              <img src="img-product/google-shopping-nuoc-can-bang-la.webp" alt="Serum" />
+            </a>
+            <div class="small-info">
+              <div class="small-brand">KEYSHU</div>
+              <h3>Serum cấp ẩm làm mềm da</h3>
+              <div class="small-price-row">
+                <span class="sale-price">360.000đ</span>
+                <span class="old-price">450.000đ</span>
+              </div>
+              <div class="product-actions">
+                <a href="#" class="choose-btn">Tùy chọn</a>
+                <a href="#" class="circle-btn" aria-label="Yêu thích">
+                  <i class="fa-regular fa-heart"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="small-product-card">
+            <span class="discount-badge">-10%</span>
+            <a href="#" class="small-thumb">
+              <img src="img-product/ini-scaled.jpg" alt="Sữa rửa mặt" />
+            </a>
+            <div class="small-info">
+              <div class="small-brand">KEYSHU</div>
+              <h3>Sữa rửa mặt bọt mịn dịu nhẹ</h3>
+              <div class="small-price-row">
+                <span class="sale-price">245.000đ</span>
+                <span class="old-price">272.000đ</span>
+              </div>
+              <div class="product-actions">
+                <a href="#" class="choose-btn">Tùy chọn</a>
+                <a href="#" class="circle-btn" aria-label="Yêu thích">
+                  <i class="fa-regular fa-heart"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- =========================================================
+        VIEWED PRODUCTS
+      ========================================================== -->
+      <section class="horizontal-product-section viewed-section">
+        <div class="section-center-head">
+          <h2>SẢN PHẨM ĐÃ XEM</h2>
+          <p>
+            Một vài sản phẩm bạn đã xem gần đây, phù hợp để tiếp tục tham khảo
+            và lựa chọn nhanh hơn trong lần ghé thăm này.
+          </p>
+        </div>
+
+        <div class="horizontal-product-grid">
+          <article class="small-product-card">
+            <span class="discount-badge">-5%</span>
+            <a href="#" class="small-thumb">
+              <img src="img-product/ini-scaled.jpg" alt="Kem dưỡng" />
+            </a>
+            <div class="small-info">
+              <div class="small-brand">KEYSHU</div>
+              <h3>Kem dưỡng ẩm phục hồi ban đêm</h3>
+              <div class="small-price-row">
+                <span class="sale-price">399.000đ</span>
+                <span class="old-price">420.000đ</span>
+              </div>
+              <div class="product-actions">
+                <a href="#" class="choose-btn">Tùy chọn</a>
+                <a href="#" class="circle-btn" aria-label="Yêu thích">
+                  <i class="fa-regular fa-heart"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="small-product-card">
+            <span class="discount-badge">-15%</span>
+            <a href="#" class="small-thumb">
+              <img src="img-product/rau-ma-scaled.jpg" alt="Toner rau má" />
+            </a>
+            <div class="small-info">
+              <div class="small-brand">KEYSHU</div>
+              <h3>Toner rau má cấp ẩm dịu da</h3>
+              <div class="small-price-row">
+                <span class="sale-price">289.000đ</span>
+                <span class="old-price">340.000đ</span>
+              </div>
+              <div class="product-actions">
+                <a href="#" class="choose-btn">Tùy chọn</a>
+                <a href="#" class="circle-btn" aria-label="Yêu thích">
+                  <i class="fa-regular fa-heart"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="small-product-card">
+            <span class="discount-badge">-12%</span>
+            <a href="#" class="small-thumb">
+              <img src="img-product/google-shopping-nuoc-can-bang-la.webp" alt="Essence" />
+            </a>
+            <div class="small-info">
+              <div class="small-brand">KEYSHU</div>
+              <h3>Essence làm dịu và hỗ trợ phục hồi</h3>
+              <div class="small-price-row">
+                <span class="sale-price">449.000đ</span>
+                <span class="old-price">510.000đ</span>
+              </div>
+              <div class="product-actions">
+                <a href="#" class="choose-btn">Tùy chọn</a>
+                <a href="#" class="circle-btn" aria-label="Yêu thích">
+                  <i class="fa-regular fa-heart"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="small-product-card">
+            <span class="discount-badge">-18%</span>
+            <a href="#" class="small-thumb">
+              <img src="img-product/tay-trang-1-scaled.jpg" alt="Tẩy trang mini" />
+            </a>
+            <div class="small-info">
+              <div class="small-brand">KEYSHU</div>
+              <h3>Tẩy trang mini tiện lợi hằng ngày</h3>
+              <div class="small-price-row">
+                <span class="sale-price">119.000đ</span>
+                <span class="old-price">145.000đ</span>
+              </div>
+              <div class="product-actions">
+                <a href="#" class="choose-btn">Tùy chọn</a>
+                <a href="#" class="circle-btn" aria-label="Yêu thích">
+                  <i class="fa-regular fa-heart"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="small-product-card">
+            <span class="discount-badge">-7%</span>
+            <a href="#" class="small-thumb">
+              <img src="img-product/sg-11134201-81zu0-mmujimjksmbm91.webp" alt="Mặt nạ" />
+            </a>
+            <div class="small-info">
+              <div class="small-brand">KEYSHU</div>
+              <h3>Mặt nạ làm dịu hỗ trợ phục hồi</h3>
+              <div class="small-price-row">
+                <span class="sale-price">159.000đ</span>
+                <span class="old-price">171.000đ</span>
+              </div>
+              <div class="product-actions">
+                <a href="#" class="choose-btn">Tùy chọn</a>
+                <a href="#" class="circle-btn" aria-label="Yêu thích">
+                  <i class="fa-regular fa-heart"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- =========================================================
+    FOOTER
+  ========================================================== -->
+  <footer class="keyshu-footer">
+    <section class="kf-newsletter">
+      <div class="kf-container">
+        <div class="kf-newsletter-box">
+          <div class="kf-newsletter-content">
+            <div class="kf-newsletter-left">
+              <h2>NHẬN BẢN TIN LÀM ĐẸP</h2>
+              <p>Đừng bỏ lỡ cơ hội săn voucher mỗi tuần</p>
+            </div>
+
+            <form class="kf-newsletter-form" id="newsletterForm">
+              <input
+                type="email"
+                id="newsletterEmail"
+                placeholder="Điền email của bạn"
+                required
+              />
+              <button type="submit">ĐĂNG KÝ</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="kf-features">
+      <div class="kf-container">
+        <div class="kf-features-grid">
+          <div class="kf-feature-card">
+            <i class="fas fa-award"></i>
+            <h4>BẢO HÀNH - ĐỔI TRẢ</h4>
+            <p>Đổi trả linh hoạt, an tâm mua sắm.</p>
+          </div>
+
+          <div class="kf-feature-card">
+            <i class="fas fa-truck"></i>
+            <h4>MIỄN PHÍ GIAO HÀNG</h4>
+            <p>Giao hàng nhanh trên toàn quốc.</p>
+          </div>
+
+          <div class="kf-feature-card">
+            <i class="fas fa-trophy"></i>
+            <h4>THƯƠNG HIỆU UY TÍN</h4>
+            <p>Sản phẩm chính hãng, an toàn.</p>
+          </div>
+
+          <div class="kf-feature-card">
+            <i class="fas fa-globe-asia"></i>
+            <h4>GIAO HÀNG TOÀN QUỐC</h4>
+            <p>Phục vụ mọi tỉnh thành.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="kf-main">
+      <div class="kf-container">
+        <div class="kf-main-grid">
+          <div class="kf-col kf-company">
+            <div class="kf-logo">
+              <img src="img/Logo-Keyshu-1-01.jpg" alt="KEYSHU" />
+            </div>
+
+            <ul class="kf-company-info">
+              <li><strong>CÔNG TY TNHH SINH DƯỢC BIO</strong></li>
+              <li>Mã số thuế: 0110855086</li>
+              <li>Địa chỉ: Hà Nội, Việt Nam</li>
+              <li>Giờ làm việc: 8:00 - 22:00 (T2 - CN)</li>
+              <li>Hotline: 1900 1265</li>
+              <li>Email: cskh@keyshu.vn</li>
+            </ul>
+
+            <div class="kf-social">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <div class="kf-col">
+            <h4>CHÍNH SÁCH HỖ TRỢ</h4>
+            <ul class="kf-links">
+              <li><a href="#">Chính sách mua hàng</a></li>
+              <li><a href="#">Chính sách đổi trả</a></li>
+              <li><a href="#">Chính sách bảo hành</a></li>
+              <li><a href="#">Chính sách bảo mật</a></li>
+              <li><a href="#">Chính sách vận chuyển</a></li>
+            </ul>
+          </div>
+
+          <div class="kf-col">
+            <h4>HOẠT ĐỘNG CỘNG ĐỒNG</h4>
+            <ul class="kf-links">
+              <li><a href="#">Câu chuyện thương hiệu</a></li>
+              <li><a href="#">Chia sẻ kiến thức làm đẹp</a></li>
+              <li><a href="#">Chăm sóc khách hàng</a></li>
+              <li><a href="#">Sự kiện &amp; ưu đãi</a></li>
+              <li><a href="#">Đồng hành cùng cộng đồng</a></li>
+            </ul>
+          </div>
+
+          <div class="kf-col">
+            <h4>FANPAGE FACEBOOK</h4>
+            <div class="kf-fanpage">
+              <iframe
+                src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/facebook&tabs=timeline&width=340&height=200&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
+                width="100%"
+                height="200"
+                style="border:none;overflow:hidden"
+                scrolling="no"
+                frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </footer>
+
+</body>
+</html>

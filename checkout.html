@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KEYSHU | THANH TOÁN</title>
+
+  <link rel="stylesheet" href="checkout.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+</head>
+<body>
+  <!-- =========================================================
+    HEADER
+  ========================================================== -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-top">
+        <div class="header-logo">
+          <a href="#">
+            <img src="img/Logo-keyshu-1-01.jpg" alt="KEYSHU Logo" />
+          </a>
+        </div>
+
+        <div class="header-search">
+          <form action="#">
+            <input
+              type="text"
+              placeholder="Nhập từ khóa tìm kiếm sản phẩm, danh mục..."
+            />
+            <button type="submit" aria-label="Tìm kiếm">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M21 21L16.65 16.65M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <div class="header-actions">
+          <a href="#" class="action-item action-link">
+            <span class="action-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M3 7H21V19H3V7Z" stroke="currentColor" stroke-width="1.8" />
+                <path
+                  d="M7 7V5C7 3.89543 7.89543 3 9 3H15C16.1046 3 17 3.89543 17 5V7"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                />
+                <path d="M3 11H21" stroke="currentColor" stroke-width="1.8" />
+              </svg>
+            </span>
+            <span>Hệ thống cửa hàng</span>
+          </a>
+
+          <a href="#" class="action-item action-link">
+            <span class="action-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M4 19.5V4.5C4 3.67157 4.67157 3 5.5 3H16.5L20 6.5V19.5C20 20.3284 19.3284 21 18.5 21H5.5C4.67157 21 4 20.3284 4 19.5Z"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                />
+                <path d="M16 3V7H20" stroke="currentColor" stroke-width="1.8" />
+                <path
+                  d="M8 11H16"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M8 15H13"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </span>
+            <span>Tạp chí làm đẹp</span>
+          </a>
+
+          <a href="#" class="login-link" aria-label="Đăng nhập hoặc đăng ký">
+            <span class="login-link-icon">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                  d="M14 16.5L18.5 12L14 7.5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M18 12H9"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10 21H6.5C5.11929 21 4 19.8807 4 18.5V5.5C4 4.11929 5.11929 3 6.5 3H10"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+            <span class="login-link-text">Login/Register</span>
+          </a>
+
+          <a href="#" class="icon-btn" aria-label="Yêu thích">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M12 20.5C12 20.5 4 15.36 4 9.5C4 6.46243 6.46243 4 9.5 4C11.1569 4 12.6429 4.74157 13.6667 5.90968C14.6904 4.74157 16.1764 4 17.8333 4C20.8709 4 23.3333 6.46243 23.3333 9.5C23.3333 15.36 15.3333 20.5 15.3333 20.5H12Z"
+                stroke="currentColor"
+                stroke-width="1.7"
+                transform="translate(-1.66665 0)"
+              />
+            </svg>
+          </a>
+
+          <a href="#" class="icon-btn" aria-label="Giỏ hàng">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M3 5H5L7 15H18L20 8H8"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <circle cx="9" cy="19" r="1.6" stroke="currentColor" stroke-width="1.6" />
+              <circle cx="17" cy="19" r="1.6" stroke="currentColor" stroke-width="1.6" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <nav class="main-menu">
+        <a href="#">Trang Chủ</a>
+        <a href="#">Mặt Nạ</a>
+        <a href="#">Tẩy Trang</a>
+        <a href="#">Sữa Rửa Mặt</a>
+        <a href="#">Toner</a>
+        <a href="#">Serum</a>
+        <a href="#">Combo Siêu Hời</a>
+        <a href="#">Chính Sách</a>
+        <a href="#">Liên Hệ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================
+    CHECKOUT PAGE
+  ========================================================== -->
+  <main class="checkout-page">
+    <div class="container">
+      <div class="checkout-breadcrumb">
+        <a href="#">Trang chủ</a>
+        <span>›</span>
+        <a href="#">Giỏ hàng</a>
+        <span>›</span>
+        <span class="current">Thanh toán</span>
+      </div>
+
+      <div class="checkout-heading">
+        <h1>THANH TOÁN ĐƠN HÀNG</h1>
+        <p>Hoàn tất thông tin để đặt hàng nhanh chóng và an toàn.</p>
+      </div>
+
+      <div class="checkout-layout">
+        <!-- LEFT -->
+        <section class="checkout-main">
+          <!-- Customer info -->
+          <div class="checkout-card">
+            <div class="checkout-card-head">
+              <h2>THÔNG TIN GIAO HÀNG</h2>
+            </div>
+
+            <div class="checkout-form-grid">
+              <div class="form-group">
+                <label for="fullName">Họ và tên *</label>
+                <input type="text" id="fullName" placeholder="Nhập họ và tên" />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Số điện thoại *</label>
+                <input type="text" id="phone" placeholder="Nhập số điện thoại" />
+              </div>
+
+              <div class="form-group full">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Nhập email của bạn" />
+              </div>
+
+              <div class="form-group">
+                <label for="province">Tỉnh / Thành phố *</label>
+                <select id="province">
+                  <option>Chọn tỉnh / thành phố</option>
+                  <option>Hà Nội</option>
+                  <option>Hồ Chí Minh</option>
+                  <option>Đà Nẵng</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="district">Quận / Huyện *</label>
+                <select id="district">
+                  <option>Chọn quận / huyện</option>
+                  <option>Ba Đình</option>
+                  <option>Cầu Giấy</option>
+                  <option>Đống Đa</option>
+                </select>
+              </div>
+
+              <div class="form-group full">
+                <label for="address">Địa chỉ cụ thể *</label>
+                <input
+                  type="text"
+                  id="address"
+                  placeholder="Số nhà, tên đường, phường/xã..."
+                />
+              </div>
+
+              <div class="form-group full">
+                <label for="note">Ghi chú đơn hàng</label>
+                <textarea
+                  id="note"
+                  rows="4"
+                  placeholder="Ví dụ: giao giờ hành chính, gọi trước khi giao..."
+                ></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- Shipping method -->
+          <div class="checkout-card">
+            <div class="checkout-card-head">
+              <h2>PHƯƠNG THỨC GIAO HÀNG</h2>
+            </div>
+
+            <div class="checkout-radio-list">
+              <label class="checkout-radio-card active">
+                <input type="radio" name="shipping" checked />
+                <span class="radio-custom"></span>
+                <span class="radio-content">
+                  <strong>Giao hàng tiêu chuẩn</strong>
+                  <small>Miễn phí vận chuyển toàn quốc</small>
+                </span>
+                <span class="radio-price free">Miễn phí</span>
+              </label>
+
+              <label class="checkout-radio-card">
+                <input type="radio" name="shipping" />
+                <span class="radio-custom"></span>
+                <span class="radio-content">
+                  <strong>Giao hàng nhanh</strong>
+                  <small>Dự kiến nhận trong ngày / 24h</small>
+                </span>
+                <span class="radio-price">25.000đ</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Payment -->
+          <div class="checkout-card">
+            <div class="checkout-card-head">
+              <h2>PHƯƠNG THỨC THANH TOÁN</h2>
+            </div>
+
+            <div class="checkout-radio-list">
+              <label class="checkout-radio-card active">
+                <input type="radio" name="payment" checked />
+                <span class="radio-custom"></span>
+                <span class="radio-content">
+                  <strong>Thanh toán khi nhận hàng (COD)</strong>
+                  <small>Kiểm tra hàng trước khi thanh toán</small>
+                </span>
+              </label>
+
+              <label class="checkout-radio-card">
+                <input type="radio" name="payment" />
+                <span class="radio-custom"></span>
+                <span class="radio-content">
+                  <strong>Chuyển khoản ngân hàng</strong>
+                  <small>Thanh toán nhanh, xác nhận đơn tự động</small>
+                </span>
+              </label>
+
+              
+            </div>
+          </div>
+        </section>
+
+        <!-- RIGHT -->
+        <aside class="checkout-sidebar">
+          <div class="checkout-summary-card">
+            <div class="checkout-card-head summary-head">
+              <h2>ĐƠN HÀNG CỦA BẠN</h2>
+            </div>
+
+            <div class="summary-product-list">
+              <div class="summary-product-item">
+                <div class="summary-product-thumb">
+                  <img src="img-product/rau-ma-scaled.jpg" alt="Toner KEYSHU" />
+                  <span class="summary-qty">1</span>
+                </div>
+                <div class="summary-product-info">
+                  <h3>Toner phục hồi dịu nhẹ KEYSHU</h3>
+                  <p>100ml</p>
+                </div>
+                <div class="summary-product-price">235.000đ</div>
+              </div>
+
+              <div class="summary-product-item">
+                <div class="summary-product-thumb">
+                  <img src="img-product/ini-scaled.jpg" alt="Sữa rửa mặt" />
+                  <span class="summary-qty">1</span>
+                </div>
+                <div class="summary-product-info">
+                  <h3>Sữa rửa mặt cấp ẩm cho da khô</h3>
+                  <p>150ml</p>
+                </div>
+                <div class="summary-product-price">289.000đ</div>
+              </div>
+
+              <div class="summary-product-item">
+                <div class="summary-product-thumb">
+                  <img src="img-product/google-shopping-nuoc-can-bang-la.webp" alt="Serum" />
+                  <span class="summary-qty">1</span>
+                </div>
+                <div class="summary-product-info">
+                  <h3>Serum cấp ẩm chuyên sâu</h3>
+                  <p>30ml</p>
+                </div>
+                <div class="summary-product-price">399.000đ</div>
+              </div>
+            </div>
+
+            <div class="summary-coupon-box">
+              <label for="coupon">Mã giảm giá</label>
+              <div class="summary-coupon-row">
+                <input type="text" id="coupon" placeholder="Nhập mã giảm giá" />
+                <button type="button">Áp dụng</button>
+              </div>
+            </div>
+
+            <div class="summary-total-box">
+              <div class="summary-line">
+                <span>Tạm tính</span>
+                <strong>923.000đ</strong>
+              </div>
+
+              <div class="summary-line">
+                <span>Phí vận chuyển</span>
+                <strong class="free">Miễn phí</strong>
+              </div>
+
+              <div class="summary-line total">
+                <span>Tổng thanh toán</span>
+                <strong>923.000đ</strong>
+              </div>
+            </div>
+
+            <button class="place-order-btn" type="button">
+              HOÀN TẤT ĐẶT HÀNG
+            </button>
+
+            <a href="#" class="back-cart-btn">Quay lại giỏ hàng</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================
+    FOOTER
+  ========================================================== -->
+  <footer class="keyshu-footer">
+    <section class="kf-newsletter">
+      <div class="kf-container">
+        <div class="kf-newsletter-box">
+          <div class="kf-newsletter-content">
+            <div class="kf-newsletter-left">
+              <h2>NHẬN BẢN TIN LÀM ĐẸP</h2>
+              <p>Đừng bỏ lỡ cơ hội săn voucher mỗi tuần</p>
+            </div>
+
+            <form class="kf-newsletter-form" id="newsletterForm">
+              <input
+                type="email"
+                id="newsletterEmail"
+                placeholder="Điền email của bạn"
+                required
+              />
+              <button type="submit">ĐĂNG KÝ</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="kf-features">
+      <div class="kf-container">
+        <div class="kf-features-grid">
+          <div class="kf-feature-card">
+            <i class="fas fa-award"></i>
+            <h4>BẢO HÀNH - ĐỔI TRẢ</h4>
+            <p>Đổi trả linh hoạt, an tâm mua sắm.</p>
+          </div>
+
+          <div class="kf-feature-card">
+            <i class="fas fa-truck"></i>
+            <h4>MIỄN PHÍ GIAO HÀNG</h4>
+            <p>Giao hàng nhanh trên toàn quốc.</p>
+          </div>
+
+          <div class="kf-feature-card">
+            <i class="fas fa-trophy"></i>
+            <h4>THƯƠNG HIỆU UY TÍN</h4>
+            <p>Sản phẩm chính hãng, an toàn.</p>
+          </div>
+
+          <div class="kf-feature-card">
+            <i class="fas fa-globe-asia"></i>
+            <h4>GIAO HÀNG TOÀN QUỐC</h4>
+            <p>Phục vụ mọi tỉnh thành.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="kf-main">
+      <div class="kf-container">
+        <div class="kf-main-grid">
+          <div class="kf-col kf-company">
+            <div class="kf-logo">
+              <img src="img/Logo-Keyshu-1-01.jpg" alt="KEYSHU" />
+            </div>
+
+            <ul class="kf-company-info">
+              <li><strong>CÔNG TY TNHH SINH DƯỢC BIO</strong></li>
+              <li>Mã số thuế: 0110855086</li>
+              <li>Địa chỉ: Hà Nội, Việt Nam</li>
+              <li>Giờ làm việc: 8:00 - 22:00 (T2 - CN)</li>
+              <li>Hotline: 1900 1265</li>
+              <li>Email: cskh@keyshu.vn</li>
+            </ul>
+
+            <div class="kf-social">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <div class="kf-col">
+            <h4>CHÍNH SÁCH HỖ TRỢ</h4>
+            <ul class="kf-links">
+              <li><a href="#">Chính sách mua hàng</a></li>
+              <li><a href="#">Chính sách đổi trả</a></li>
+              <li><a href="#">Chính sách bảo hành</a></li>
+              <li><a href="#">Chính sách bảo mật</a></li>
+              <li><a href="#">Chính sách vận chuyển</a></li>
+            </ul>
+          </div>
+
+          <div class="kf-col">
+            <h4>HOẠT ĐỘNG CỘNG ĐỒNG</h4>
+            <ul class="kf-links">
+              <li><a href="#">Câu chuyện thương hiệu</a></li>
+              <li><a href="#">Chia sẻ kiến thức làm đẹp</a></li>
+              <li><a href="#">Chăm sóc khách hàng</a></li>
+              <li><a href="#">Sự kiện &amp; ưu đãi</a></li>
+              <li><a href="#">Đồng hành cùng cộng đồng</a></li>
+            </ul>
+          </div>
+
+          <div class="kf-col">
+            <h4>FANPAGE FACEBOOK</h4>
+            <div class="kf-fanpage">
+              <iframe
+                src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/facebook&tabs=timeline&width=340&height=200&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
+                width="100%"
+                height="200"
+                style="border:none;overflow:hidden"
+                scrolling="no"
+                frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </footer>
+</body>
+</html>

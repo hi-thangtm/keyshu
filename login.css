@@ -1,0 +1,262 @@
+:root {
+  --main-color: #03B0B1;
+  --secondary-color: #2DE5E6;
+  --cta-color: #03B0B1;
+  --bg-soft: #96FEFF;
+  --text-color: #043B3C;
+}
+
+/* Reset */
+.login-card,
+.login-form,
+.login-form * {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   BACKGROUND PAGE
+========================================================= */
+.login-page {
+  background: var(--bg-soft);
+  padding: 20px 0 70px;
+}
+
+/* =========================================================
+   BREADCRUMB
+========================================================= */
+.login-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 40px;
+  font-size: 15px;
+}
+
+.login-breadcrumb a {
+  color: #6b7c72;
+  text-decoration: none;
+}
+
+.login-breadcrumb a:hover {
+  color: var(--main-color);
+}
+
+.login-breadcrumb .separator {
+  color: #9aa9a0;
+}
+
+.login-breadcrumb .current {
+  color: var(--main-color);
+  font-weight: 600;
+}
+
+/* =========================================================
+   LOGIN WRAP
+========================================================= */
+.login-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+.login-card {
+  width: 100%;
+  max-width: 520px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px 26px;
+  border: 1px solid rgba(45, 229, 230, 0.08);
+  box-shadow: 0 12px 30px rgba(45, 229, 230, 0.08);
+}
+
+/* Title */
+.login-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: var(--main-color);
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   INPUT
+========================================================= */
+.login-form .field {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.login-form input {
+  width: 100%;
+  height: 52px;
+  padding: 0 18px;
+  border-radius: 12px;
+  border: 1px solid #e3eee7;
+  background: #fff;
+  font-size: 15px;
+  color: var(--text-color);
+  transition: all 0.25s ease;
+}
+
+.login-form input::placeholder {
+  color: #9db3a7;
+}
+
+/* Focus */
+.login-form input:focus {
+  border-color: var(--main-color);
+  box-shadow: 0 0 0 4px rgba(45, 229, 230, 0.12);
+}
+
+/* =========================================================
+   SHOW PASSWORD
+========================================================= */
+.show-pass {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  color: #7a8f84;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.show-pass:hover {
+  color: var(--main-color);
+}
+
+/* =========================================================
+   BUTTON
+========================================================= */
+.login-btn {
+  width: 100%;
+  height: 50px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(90deg, var(--main-color), var(--cta-color));
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.login-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(45, 229, 230, 0.2);
+}
+
+/* =========================================================
+   LINKS
+========================================================= */
+.row.links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 14px;
+  font-size: 14px;
+}
+
+.link-muted {
+  color: #6b7c72;
+  text-decoration: none;
+}
+
+.link-register {
+  color: var(--text-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link-muted:hover,
+.link-register:hover {
+  color: var(--main-color);
+}
+
+/* =========================================================
+   OR
+========================================================= */
+.or {
+  text-align: center;
+  margin: 16px 0 12px;
+  font-size: 14px;
+  color: #7a8f84;
+}
+
+/* =========================================================
+   SOCIAL
+========================================================= */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  min-width: 150px;
+  height: 44px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.social-fb {
+  background: #3b5998;
+}
+
+.social-gg {
+  background: #db4437;
+}
+
+.sicon {
+  width: 45px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.1);
+}
+
+.social span:last-child {
+  flex: 1;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+@media (max-width: 768px) {
+  .login-card {
+    padding: 22px 16px;
+    border-radius: 14px;
+  }
+
+  .login-breadcrumb {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  .row.links {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .socials {
+    flex-direction: column;
+  }
+
+  .social {
+    width: 100%;
+  }
+}

@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KEYSHU | COUPON & VOUCHER</title>
+
+  <!-- CSS chính -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="voucher.css" />
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+</head>
+<body>
+
+  <!-- =========================================================
+    HEADER
+  ========================================================== -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-top">
+        <div class="header-logo">
+          <a href="#">
+            <img src="img/Logo-keyshu-1-01.jpg" alt="KEYSHU Logo" />
+          </a>
+        </div>
+
+        <div class="header-search">
+          <form action="#">
+            <input
+              type="text"
+              placeholder="Nhập từ khóa tìm kiếm sản phẩm, danh mục..."
+            />
+            <button type="submit" aria-label="Tìm kiếm">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M21 21L16.65 16.65M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <div class="header-actions">
+          <a href="#" class="action-item action-link">
+            <span class="action-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M3 7H21V19H3V7Z" stroke="currentColor" stroke-width="1.8" />
+                <path
+                  d="M7 7V5C7 3.89543 7.89543 3 9 3H15C16.1046 3 17 3.89543 17 5V7"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                />
+                <path d="M3 11H21" stroke="currentColor" stroke-width="1.8" />
+              </svg>
+            </span>
+            <span>Hệ thống cửa hàng</span>
+          </a>
+
+          <a href="#" class="action-item action-link">
+            <span class="action-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M4 19.5V4.5C4 3.67157 4.67157 3 5.5 3H16.5L20 6.5V19.5C20 20.3284 19.3284 21 18.5 21H5.5C4.67157 21 4 20.3284 4 19.5Z"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                />
+                <path d="M16 3V7H20" stroke="currentColor" stroke-width="1.8" />
+                <path
+                  d="M8 11H16"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M8 15H13"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </span>
+            <span>Tạp chí làm đẹp</span>
+          </a>
+
+          <a href="#" class="login-link" aria-label="Đăng nhập hoặc đăng ký">
+            <span class="login-link-icon">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                  d="M14 16.5L18.5 12L14 7.5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M18 12H9"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10 21H6.5C5.11929 21 4 19.8807 4 18.5V5.5C4 4.11929 5.11929 3 6.5 3H10"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+            <span class="login-link-text">Login/Register</span>
+          </a>
+
+          <a href="#" class="icon-btn" aria-label="Yêu thích">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M12 20.5C12 20.5 4 15.36 4 9.5C4 6.46243 6.46243 4 9.5 4C11.1569 4 12.6429 4.74157 13.6667 5.90968C14.6904 4.74157 16.1764 4 17.8333 4C20.8709 4 23.3333 6.46243 23.3333 9.5C23.3333 15.36 15.3333 20.5 15.3333 20.5H12Z"
+                stroke="currentColor"
+                stroke-width="1.7"
+                transform="translate(-1.66665 0)"
+              />
+            </svg>
+          </a>
+
+          <a href="#" class="icon-btn" aria-label="Giỏ hàng">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M3 5H5L7 15H18L20 8H8"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <circle cx="9" cy="19" r="1.6" stroke="currentColor" stroke-width="1.6" />
+              <circle cx="17" cy="19" r="1.6" stroke="currentColor" stroke-width="1.6" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <nav class="main-menu">
+        <a href="#">Trang Chủ</a>
+        <a href="#">Mặt Nạ</a>
+        <a href="#">Tẩy Trang</a>
+        <a href="#">Sữa Rửa Mặt</a>
+        <a href="#">Toner</a>
+        <a href="#">Serum</a>
+        <a href="#">Khuyến Mãi</a>
+        <a href="#" class="active">Voucher</a>
+        <a href="#">Liên Hệ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="coupon-page">
+
+    <!-- =========================================================
+      HERO
+    ========================================================== -->
+    <section class="coupon-hero">
+      <div class="container">
+        <div class="coupon-hero-wrap">
+          <div class="coupon-hero-content">
+            <span class="coupon-hero-subtitle">KEYSHU VOUCHER ZONE</span>
+            <h1>THU THẬP VOUCHER - MUA SẮM TIẾT KIỆM HƠN</h1>
+            <p>
+              Khám phá mã giảm giá độc quyền từ KEYSHU để chăm sóc da hiệu quả hơn
+              với chi phí tối ưu hơn. Từ voucher giảm giá sản phẩm, freeship đến ưu đãi
+              dành riêng cho thành viên đều có mặt tại đây.
+            </p>
+
+            <div class="coupon-hero-actions">
+              <a href="#voucher-list" class="coupon-btn primary">Nhận voucher ngay</a>
+              <a href="#voucher-guide" class="coupon-btn secondary">Cách sử dụng</a>
+            </div>
+          </div>
+
+          <div class="coupon-hero-image">
+            <img src="img_banner/e4e986f0-1375-4e41-866f-d814451ae4f1-1024x412.webp" alt="Voucher KEYSHU" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+      HIGHLIGHT
+    ========================================================== -->
+    <section class="coupon-highlight">
+      <div class="container">
+        <div class="coupon-highlight-grid">
+          <div class="coupon-highlight-card">
+            <h3>Voucher giảm đến 15%</h3>
+            <p>Áp dụng cho nhiều sản phẩm skincare và combo bán chạy.</p>
+          </div>
+
+          <div class="coupon-highlight-card">
+            <h3>Voucher freeship toàn quốc</h3>
+            <p>Tiết kiệm chi phí giao hàng cho đơn đủ điều kiện.</p>
+          </div>
+
+          <div class="coupon-highlight-card">
+            <h3>Ưu đãi riêng cho thành viên</h3>
+            <p>Nhận thêm mã độc quyền khi đăng ký và đăng nhập tài khoản.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+      VOUCHER LIST
+    ========================================================== -->
+    <section class="coupon-list-section" id="voucher-list">
+      <div class="container">
+        <div class="section-header">
+          <h2>KHO VOUCHER HOT</h2>
+          <span>Coupon collection</span>
+        </div>
+
+        <div class="coupon-list-grid">
+          <div class="coupon-ticket-card">
+            <div class="coupon-ticket-left">
+              <span class="coupon-ticket-value">10%</span>
+            </div>
+            <div class="coupon-ticket-right">
+              <div class="coupon-ticket-top">
+                <span class="coupon-label">Toàn bộ sản phẩm</span>
+                <span class="coupon-status active">Còn hiệu lực</span>
+              </div>
+              <h3>KEYSHU10</h3>
+              <p>Giảm 10% cho đơn hàng từ 499.000đ</p>
+              <ul>
+                <li>Áp dụng cho sản phẩm chăm sóc da</li>
+                <li>Không áp dụng cùng mã khác</li>
+                <li>Hạn sử dụng: 30/06/2026</li>
+              </ul>
+              <div class="coupon-ticket-actions">
+                <button type="button">Lưu mã</button>
+                <a href="#">Mua ngay</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="coupon-ticket-card">
+            <div class="coupon-ticket-left">
+              <span class="coupon-ticket-value">50K</span>
+            </div>
+            <div class="coupon-ticket-right">
+              <div class="coupon-ticket-top">
+                <span class="coupon-label">Freeship</span>
+                <span class="coupon-status active">Còn hiệu lực</span>
+              </div>
+              <h3>FREESHIP50</h3>
+              <p>Giảm 50.000đ phí vận chuyển cho đơn từ 699.000đ</p>
+              <ul>
+                <li>Áp dụng giao hàng toàn quốc</li>
+                <li>Dùng cho đơn đủ điều kiện</li>
+                <li>Hạn sử dụng: 30/06/2026</li>
+              </ul>
+              <div class="coupon-ticket-actions">
+                <button type="button">Lưu mã</button>
+                <a href="#">Mua ngay</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="coupon-ticket-card">
+            <div class="coupon-ticket-left">
+              <span class="coupon-ticket-value">15%</span>
+            </div>
+            <div class="coupon-ticket-right">
+              <div class="coupon-ticket-top">
+                <span class="coupon-label">Combo tiết kiệm</span>
+                <span class="coupon-status active">Còn hiệu lực</span>
+              </div>
+              <h3>COMBO15</h3>
+              <p>Ưu đãi 15% cho các combo dưỡng da được chọn</p>
+              <ul>
+                <li>Áp dụng combo cấp ẩm và phục hồi</li>
+                <li>Số lượng voucher có hạn</li>
+                <li>Hạn sử dụng: 25/06/2026</li>
+              </ul>
+              <div class="coupon-ticket-actions">
+                <button type="button">Lưu mã</button>
+                <a href="#">Xem combo</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="coupon-ticket-card">
+            <div class="coupon-ticket-left">
+              <span class="coupon-ticket-value">20K</span>
+            </div>
+            <div class="coupon-ticket-right">
+              <div class="coupon-ticket-top">
+                <span class="coupon-label">Khách hàng mới</span>
+                <span class="coupon-status active">Còn hiệu lực</span>
+              </div>
+              <h3>WELCOME20</h3>
+              <p>Giảm 20.000đ cho lần mua đầu tiên tại KEYSHU</p>
+              <ul>
+                <li>Áp dụng cho tài khoản mới</li>
+                <li>Đơn hàng từ 299.000đ</li>
+                <li>Hạn sử dụng: 31/07/2026</li>
+              </ul>
+              <div class="coupon-ticket-actions">
+                <button type="button">Lưu mã</button>
+                <a href="#">Dùng ngay</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="coupon-ticket-card">
+            <div class="coupon-ticket-left">
+              <span class="coupon-ticket-value">99K</span>
+            </div>
+            <div class="coupon-ticket-right">
+              <div class="coupon-ticket-top">
+                <span class="coupon-label">Đơn hàng lớn</span>
+                <span class="coupon-status active">Còn hiệu lực</span>
+              </div>
+              <h3>SAVE99</h3>
+              <p>Giảm 99.000đ cho đơn hàng từ 999.000đ</p>
+              <ul>
+                <li>Áp dụng cho toàn bộ website</li>
+                <li>Không áp dụng cùng voucher freeship</li>
+                <li>Hạn sử dụng: 15/07/2026</li>
+              </ul>
+              <div class="coupon-ticket-actions">
+                <button type="button">Lưu mã</button>
+                <a href="#">Mua ngay</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="coupon-ticket-card">
+            <div class="coupon-ticket-left">
+              <span class="coupon-ticket-value">12%</span>
+            </div>
+            <div class="coupon-ticket-right">
+              <div class="coupon-ticket-top">
+                <span class="coupon-label">Serum & Toner</span>
+                <span class="coupon-status limited">Giới hạn</span>
+              </div>
+              <h3>SERUM12</h3>
+              <p>Giảm 12% cho nhóm sản phẩm serum và toner</p>
+              <ul>
+                <li>Áp dụng sản phẩm được chọn</li>
+                <li>Số lượng mã giới hạn</li>
+                <li>Hạn sử dụng: 20/06/2026</li>
+              </ul>
+              <div class="coupon-ticket-actions">
+                <button type="button">Lưu mã</button>
+                <a href="#">Xem sản phẩm</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+      MEMBER BENEFITS
+    ========================================================== -->
+    <section class="coupon-member-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>ƯU ĐÃI THÀNH VIÊN</h2>
+          <span>Member benefits</span>
+        </div>
+
+        <div class="coupon-member-grid">
+          <div class="coupon-member-card">
+            <h3>Silver Member</h3>
+            <p>Nhận voucher sinh nhật và ưu đãi định kỳ cho đơn hàng tiếp theo.</p>
+          </div>
+
+          <div class="coupon-member-card featured">
+            <h3>Gold Member</h3>
+            <p>Ưu đãi độc quyền, tích điểm nhanh hơn và được ưu tiên trong các dịp sale lớn.</p>
+          </div>
+
+          <div class="coupon-member-card">
+            <h3>VIP Member</h3>
+            <p>Nhận mã giảm giá riêng, quà tặng đặc biệt và cơ hội trải nghiệm sản phẩm sớm.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+      GUIDE
+    ========================================================== -->
+    <section class="coupon-guide-section" id="voucher-guide">
+      <div class="container">
+        <div class="section-header">
+          <h2>CÁCH SỬ DỤNG VOUCHER</h2>
+          <span>How to use</span>
+        </div>
+
+        <div class="coupon-guide-steps">
+          <div class="coupon-guide-step">
+            <div class="coupon-guide-number">01</div>
+            <div class="coupon-guide-content">
+              <h3>Chọn voucher phù hợp</h3>
+              <p>
+                Xem điều kiện áp dụng của từng mã giảm giá để chọn voucher phù hợp nhất
+                với đơn hàng và nhu cầu mua sắm của bạn.
+              </p>
+            </div>
+          </div>
+
+          <div class="coupon-guide-step">
+            <div class="coupon-guide-number">02</div>
+            <div class="coupon-guide-content">
+              <h3>Sao chép hoặc lưu mã</h3>
+              <p>
+                Nhấn lưu mã để ghi nhớ voucher hoặc sao chép mã giảm giá trước khi tiến
+                hành thanh toán.
+              </p>
+            </div>
+          </div>
+
+          <div class="coupon-guide-step">
+            <div class="coupon-guide-number">03</div>
+            <div class="coupon-guide-content">
+              <h3>Áp mã tại bước thanh toán</h3>
+              <p>
+                Điền mã voucher vào ô khuyến mãi trong trang giỏ hàng hoặc checkout để
+                hệ thống tự động trừ ưu đãi hợp lệ.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+      FAQ
+    ========================================================== -->
+    <section class="coupon-faq-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>THẮC MẮC THƯỜNG GẶP</h2>
+          <span>Voucher FAQs</span>
+        </div>
+
+        <div class="coupon-faq-list">
+          <div class="coupon-faq-item">
+            <h3>Tôi có thể dùng nhiều voucher cùng lúc không?</h3>
+            <p>
+              Tùy từng chương trình, đa số voucher sẽ không áp dụng đồng thời với mã
+              giảm giá khác. Bạn nên kiểm tra điều kiện cụ thể của từng mã.
+            </p>
+          </div>
+
+          <div class="coupon-faq-item">
+            <h3>Voucher hết hạn có dùng lại được không?</h3>
+            <p>
+              Không. Voucher chỉ có hiệu lực trong thời gian quy định. Sau khi hết hạn,
+              mã sẽ không còn áp dụng được tại bước thanh toán.
+            </p>
+          </div>
+
+          <div class="coupon-faq-item">
+            <h3>Làm sao để nhận thêm voucher mới?</h3>
+            <p>
+              Bạn có thể theo dõi KEYSHU, đăng ký tài khoản thành viên và nhận bản tin
+              để cập nhật nhanh các chương trình ưu đãi mới nhất.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+      CTA
+    ========================================================== -->
+    <section class="coupon-cta">
+      <div class="container">
+        <div class="coupon-cta-box">
+          <div class="coupon-cta-content">
+            <span>KEYSHU DEALS</span>
+            <h2>NHẬN THÊM ƯU ĐÃI MỖI TUẦN</h2>
+            <p>
+              Đăng ký nhận bản tin để cập nhật voucher mới, chương trình giảm giá hot
+              và các deal skincare hấp dẫn chỉ dành cho khách hàng thân thiết.
+            </p>
+          </div>
+
+          <div class="coupon-cta-action">
+            <a href="#" class="coupon-btn primary">Nhận ưu đãi ngay</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+    IMPORT CSS FOOTER + FONT AWESOME
+  ========================================================== -->
+  <link rel="stylesheet" href="footer.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <!-- =========================================================
+    FOOTER
+  ========================================================== -->
+  <footer class="keyshu-footer">
+    <section class="kf-newsletter">
+      <div class="kf-container">
+        <div class="kf-newsletter-box">
+          <div class="kf-newsletter-content">
+            <div class="kf-newsletter-left">
+              <h2>NHẬN BẢN TIN LÀM ĐẸP</h2>
+              <p>Đừng bỏ lỡ cơ hội săn voucher mỗi tuần</p>
+            </div>
+
+            <form class="kf-newsletter-form" id="newsletterForm">
+              <input
+                type="email"
+                id="newsletterEmail"
+                placeholder="Điền email của bạn"
+                required
+              />
+              <button type="submit">ĐĂNG KÝ</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="kf-features">
+      <div class="kf-container">
+        <div class="kf-features-grid">
+          <div class="kf-feature-card">
+            <i class="fas fa-award"></i>
+            <h4>BẢO HÀNH - ĐỔI TRẢ</h4>
+            <p>Đổi trả linh hoạt, an tâm mua sắm.</p>
+          </div>
+
+          <div class="kf-feature-card">
+            <i class="fas fa-truck"></i>
+            <h4>MIỄN PHÍ GIAO HÀNG</h4>
+            <p>Giao hàng nhanh trên toàn quốc.</p>
+          </div>
+
+          <div class="kf-feature-card">
+            <i class="fas fa-trophy"></i>
+            <h4>THƯƠNG HIỆU UY TÍN</h4>
+            <p>Sản phẩm chính hãng, an toàn.</p>
+          </div>
+
+          <div class="kf-feature-card">
+            <i class="fas fa-globe-asia"></i>
+            <h4>GIAO HÀNG TOÀN QUỐC</h4>
+            <p>Phục vụ mọi tỉnh thành.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="kf-main">
+      <div class="kf-container">
+        <div class="kf-main-grid">
+          <div class="kf-col kf-company">
+            <div class="kf-logo">
+              <img src="img/Logo-Keyshu-1-01.jpg" alt="KEYSHU" />
+            </div>
+
+            <ul class="kf-company-info">
+              <li><strong>CÔNG TY TNHH SINH DƯỢC BIO</strong></li>
+              <li>Mã số thuế: 0110855086</li>
+              <li>Địa chỉ: Hà Nội, Việt Nam</li>
+              <li>Giờ làm việc: 8:00 - 22:00 (T2 - CN)</li>
+              <li>Hotline: 1900 1265</li>
+              <li>Email: cskh@keyshu.vn</li>
+            </ul>
+
+            <div class="kf-social">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <div class="kf-col">
+            <h4>CHÍNH SÁCH HỖ TRỢ</h4>
+            <ul class="kf-links">
+              <li><a href="#">Chính sách mua hàng</a></li>
+              <li><a href="#">Chính sách đổi trả</a></li>
+              <li><a href="#">Chính sách bảo hành</a></li>
+              <li><a href="#">Chính sách bảo mật</a></li>
+              <li><a href="#">Chính sách vận chuyển</a></li>
+            </ul>
+          </div>
+
+          <div class="kf-col">
+            <h4>HOẠT ĐỘNG CỘNG ĐỒNG</h4>
+            <ul class="kf-links">
+              <li><a href="#">Câu chuyện thương hiệu</a></li>
+              <li><a href="#">Chia sẻ kiến thức làm đẹp</a></li>
+              <li><a href="#">Chăm sóc khách hàng</a></li>
+              <li><a href="#">Sự kiện &amp; ưu đãi</a></li>
+              <li><a href="#">Đồng hành cùng cộng đồng</a></li>
+            </ul>
+          </div>
+
+          <div class="kf-col">
+            <h4>FANPAGE FACEBOOK</h4>
+            <div class="kf-fanpage">
+              <iframe
+                src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/facebook&tabs=timeline&width=340&height=200&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
+                width="100%"
+                height="200"
+                style="border:none;overflow:hidden"
+                scrolling="no"
+                frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

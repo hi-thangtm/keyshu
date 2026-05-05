@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KEYSHU | ROUTINE SKINCARE</title>
+
+  <!-- CSS chính -->
+  <link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="skincare.css" />
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+</head>
+<body>
+
+  <!-- =========================================================
+    HEADER
+  ========================================================== -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-top">
+        <div class="header-logo">
+          <a href="#">
+            <img src="img/Logo-keyshu-1-01.jpg" alt="KEYSHU Logo" />
+          </a>
+        </div>
+
+        <div class="header-search">
+          <form action="#">
+            <input
+              type="text"
+              placeholder="Nhập từ khóa tìm kiếm sản phẩm, danh mục..."
+            />
+            <button type="submit" aria-label="Tìm kiếm">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M21 21L16.65 16.65M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <div class="header-actions">
+          <a href="#" class="action-item action-link">
+            <span class="action-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M3 7H21V19H3V7Z" stroke="currentColor" stroke-width="1.8" />
+                <path
+                  d="M7 7V5C7 3.89543 7.89543 3 9 3H15C16.1046 3 17 3.89543 17 5V7"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                />
+                <path d="M3 11H21" stroke="currentColor" stroke-width="1.8" />
+              </svg>
+            </span>
+            <span>Hệ thống cửa hàng</span>
+          </a>
+
+          <a href="#" class="action-item action-link">
+            <span class="action-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M4 19.5V4.5C4 3.67157 4.67157 3 5.5 3H16.5L20 6.5V19.5C20 20.3284 19.3284 21 18.5 21H5.5C4.67157 21 4 20.3284 4 19.5Z"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                />
+                <path d="M16 3V7H20" stroke="currentColor" stroke-width="1.8" />
+                <path
+                  d="M8 11H16"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M8 15H13"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </span>
+            <span>Tạp chí làm đẹp</span>
+          </a>
+
+          <a href="#" class="login-link" aria-label="Đăng nhập hoặc đăng ký">
+            <span class="login-link-icon">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                  d="M14 16.5L18.5 12L14 7.5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M18 12H9"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10 21H6.5C5.11929 21 4 19.8807 4 18.5V5.5C4 4.11929 5.11929 3 6.5 3H10"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+            <span class="login-link-text">Login/Register</span>
+          </a>
+
+          <a href="#" class="icon-btn" aria-label="Yêu thích">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M12 20.5C12 20.5 4 15.36 4 9.5C4 6.46243 6.46243 4 9.5 4C11.1569 4 12.6429 4.74157 13.6667 5.90968C14.6904 4.74157 16.1764 4 17.8333 4C20.8709 4 23.3333 6.46243 23.3333 9.5C23.3333 15.36 15.3333 20.5 15.3333 20.5H12Z"
+                stroke="currentColor"
+                stroke-width="1.7"
+                transform="translate(-1.66665 0)"
+              />
+            </svg>
+          </a>
+
+          <a href="#" class="icon-btn" aria-label="Giỏ hàng">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M3 5H5L7 15H18L20 8H8"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <circle cx="9" cy="19" r="1.6" stroke="currentColor" stroke-width="1.6" />
+              <circle cx="17" cy="19" r="1.6" stroke="currentColor" stroke-width="1.6" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <nav class="main-menu">
+        <a href="#">Trang Chủ</a>
+        <a href="#">Mặt Nạ</a>
+        <a href="#">Tẩy Trang</a>
+        <a href="#">Sữa Rửa Mặt</a>
+        <a href="#">Toner</a>
+        <a href="#">Serum</a>
+        <a href="#">Routine Skincare</a>
+        <a href="#">Chính Sách</a>
+        <a href="#">Liên Hệ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="routine-page">
+    <!-- =========================================================
+      HERO
+    ========================================================== -->
+    <section class="routine-hero">
+      <div class="container">
+        <div class="routine-hero-wrap">
+          <div class="routine-hero-content">
+            <span class="routine-hero-subtitle">KEYSHU SKINCARE GUIDE</span>
+            <h1>QUY TRÌNH CHĂM SÓC DA CHUẨN KHOA HỌC</h1>
+            <p>
+              Một routine phù hợp sẽ giúp làn da hấp thụ dưỡng chất tốt hơn,
+              duy trì độ ẩm ổn định và hỗ trợ cải thiện những vấn đề da thường gặp
+              như khô ráp, xỉn màu, dầu thừa hay nhạy cảm.
+            </p>
+
+            <div class="routine-hero-actions">
+              <a href="#routine-morning" class="routine-btn primary">Routine buổi sáng</a>
+              <a href="#routine-night" class="routine-btn secondary">Routine buổi tối</a>
+            </div>
+          </div>
+
+          <div class="routine-hero-image">
+            <img src="img_banner/banner_right_2.webp" alt="Routine chăm sóc da KEYSHU" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+      INTRO
+    ========================================================== -->
+    <section class="routine-intro">
+      <div class="container">
+        <div class="section-header">
+          <h2>ROUTINE SKINCARE LÀ GÌ?</h2>
+          <span>Skincare routine</span>
+        </div>
+
+        <div class="routine-intro-grid">
+          <div class="routine-intro-card">
+            <h3>Làm sạch đúng cách</h3>
+            <p>
+              Bắt đầu từ việc loại bỏ bụi bẩn, dầu thừa và cặn trang điểm để da
+              thông thoáng, sẵn sàng hấp thụ các bước dưỡng phía sau.
+            </p>
+          </div>
+
+          <div class="routine-intro-card">
+            <h3>Dưỡng theo thứ tự</h3>
+            <p>
+              Sản phẩm nên được dùng theo kết cấu từ lỏng đến đặc để tăng hiệu quả
+              thẩm thấu, tránh chồng chéo không cần thiết.
+            </p>
+          </div>
+
+          <div class="routine-intro-card">
+            <h3>Duy trì đều đặn</h3>
+            <p>
+              Một chu trình chăm sóc da chỉ phát huy tác dụng khi được thực hiện
+              ổn định, nhẹ nhàng và phù hợp với tình trạng da thực tế.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+      MORNING ROUTINE
+    ========================================================== -->
+    <section class="routine-steps-section" id="routine-morning">
+      <div class="container">
+        <div class="section-header">
+          <h2>ROUTINE BUỔI SÁNG</h2>
+          <span>Morning skincare</span>
+        </div>
+
+        <div class="routine-timeline">
+          <div class="routine-step-card">
+            <div class="routine-step-number">01</div>
+            <div class="routine-step-image">
+              <img src="img-product/tay-trang-1-scaled.jpg" alt="Làm sạch da buổi sáng" />
+            </div>
+            <div class="routine-step-content">
+              <h3>Làm sạch dịu nhẹ</h3>
+              <p>
+                Sử dụng sữa rửa mặt dịu nhẹ để loại bỏ dầu thừa sau một đêm, giúp da
+                sạch thoáng mà vẫn giữ được độ ẩm tự nhiên.
+              </p>
+              <span class="routine-step-tag">Sữa rửa mặt</span>
+            </div>
+          </div>
+
+          <div class="routine-step-card">
+            <div class="routine-step-number">02</div>
+            <div class="routine-step-image">
+              <img src="img-product/google-shopping-nuoc-can-bang-la.webp" alt="Toner buổi sáng" />
+            </div>
+            <div class="routine-step-content">
+              <h3>Cân bằng da với toner</h3>
+              <p>
+                Toner giúp làm dịu bề mặt da, cấp ẩm nhanh và tạo nền lý tưởng để các
+                bước dưỡng tiếp theo hoạt động tốt hơn.
+              </p>
+              <span class="routine-step-tag">Toner</span>
+            </div>
+          </div>
+
+          <div class="routine-step-card">
+            <div class="routine-step-number">03</div>
+            <div class="routine-step-image">
+              <img src="img-product/rau-ma-scaled.jpg" alt="Serum dưỡng sáng" />
+            </div>
+            <div class="routine-step-content">
+              <h3>Serum cấp ẩm hoặc dưỡng sáng</h3>
+              <p>
+                Chọn serum theo nhu cầu của da như cấp ẩm, phục hồi hoặc hỗ trợ làm
+                sáng để da mềm mịn và tươi tắn hơn trong ngày.
+              </p>
+              <span class="routine-step-tag">Serum</span>
+            </div>
+          </div>
+
+          <div class="routine-step-card">
+            <div class="routine-step-number">04</div>
+            <div class="routine-step-image">
+              <img src="img-product/ini-scaled.jpg" alt="Kem dưỡng buổi sáng" />
+            </div>
+            <div class="routine-step-content">
+              <h3>Khóa ẩm với kem dưỡng</h3>
+              <p>
+                Kem dưỡng giúp giữ lại độ ẩm cần thiết, hạn chế tình trạng khô ráp và
+                hỗ trợ hàng rào bảo vệ da ổn định hơn.
+              </p>
+              <span class="routine-step-tag">Kem dưỡng</span>
+            </div>
+          </div>
+
+          <div class="routine-step-card">
+            <div class="routine-step-number">05</div>
+            <div class="routine-step-image">
+              <img src="img_blog/blog-13.jpg" alt="Kem chống nắng" />
+            </div>
+            <div class="routine-step-content">
+              <h3>Kem chống nắng</h3>
+              <p>
+                Đây là bước quan trọng vào ban ngày giúp bảo vệ da trước tác động của
+                tia UV, giảm nguy cơ sạm da và lão hóa sớm.
+              </p>
+              <span class="routine-step-tag">Bảo vệ da</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+      NIGHT ROUTINE
+    ========================================================== -->
+    <section class="routine-steps-section routine-night-section" id="routine-night">
+      <div class="container">
+        <div class="section-header">
+          <h2>ROUTINE BUỔI TỐI</h2>
+          <span>Night skincare</span>
+        </div>
+
+        <div class="routine-timeline">
+          <div class="routine-step-card">
+            <div class="routine-step-number">01</div>
+            <div class="routine-step-image">
+              <img src="img-product/tay-trang-1-scaled.jpg" alt="Tẩy trang" />
+            </div>
+            <div class="routine-step-content">
+              <h3>Tẩy trang</h3>
+              <p>
+                Loại bỏ lớp chống nắng, bụi bẩn và cặn makeup sau một ngày dài để da
+                sạch sâu và hạn chế bí tắc lỗ chân lông.
+              </p>
+              <span class="routine-step-tag">Tẩy trang</span>
+            </div>
+          </div>
+
+          <div class="routine-step-card">
+            <div class="routine-step-number">02</div>
+            <div class="routine-step-image">
+              <img src="img-product/tay-trang-1-scaled.jpg" alt="Sữa rửa mặt buổi tối" />
+            </div>
+            <div class="routine-step-content">
+              <h3>Sữa rửa mặt</h3>
+              <p>
+                Làm sạch lần hai giúp da thông thoáng hơn, tạo điều kiện để các hoạt
+                chất dưỡng da buổi tối phát huy hiệu quả tốt hơn.
+              </p>
+              <span class="routine-step-tag">Làm sạch sâu</span>
+            </div>
+          </div>
+
+          <div class="routine-step-card">
+            <div class="routine-step-number">03</div>
+            <div class="routine-step-image">
+              <img src="img-product/google-shopping-nuoc-can-bang-la.webp" alt="Toner phục hồi" />
+            </div>
+            <div class="routine-step-content">
+              <h3>Toner phục hồi</h3>
+              <p>
+                Bổ sung độ ẩm tức thì, giúp làn da thư giãn sau khi làm sạch và chuẩn
+                bị tốt hơn cho serum hoặc tinh chất.
+              </p>
+              <span class="routine-step-tag">Cân bằng da</span>
+            </div>
+          </div>
+
+          <div class="routine-step-card">
+            <div class="routine-step-number">04</div>
+            <div class="routine-step-image">
+              <img src="img-product/rau-ma-scaled.jpg" alt="Serum phục hồi da" />
+            </div>
+            <div class="routine-step-content">
+              <h3>Serum đặc trị hoặc phục hồi</h3>
+              <p>
+                Buổi tối là thời điểm phù hợp để sử dụng các serum hỗ trợ phục hồi,
+                cấp ẩm chuyên sâu hoặc cải thiện bề mặt da.
+              </p>
+              <span class="routine-step-tag">Tinh chất</span>
+            </div>
+          </div>
+
+          <div class="routine-step-card">
+            <div class="routine-step-number">05</div>
+            <div class="routine-step-image">
+              <img src="img-product/sg-11134201-81zu0-mmujimjksmbm91.webp" alt="Mặt nạ dưỡng da" />
+            </div>
+            <div class="routine-step-content">
+              <h3>Mặt nạ 2 - 3 lần mỗi tuần</h3>
+              <p>
+                Bổ sung mặt nạ cấp ẩm hoặc làm dịu để tăng cảm giác thư giãn và hỗ trợ
+                phục hồi làn da sau ngày dài tiếp xúc môi trường.
+              </p>
+              <span class="routine-step-tag">Mặt nạ</span>
+            </div>
+          </div>
+
+          <div class="routine-step-card">
+            <div class="routine-step-number">06</div>
+            <div class="routine-step-image">
+              <img src="img-product/ini-scaled.jpg" alt="Kem dưỡng khóa ẩm" />
+            </div>
+            <div class="routine-step-content">
+              <h3>Kem dưỡng khóa ẩm</h3>
+              <p>
+                Bước cuối cùng giúp giữ lại toàn bộ dưỡng chất và hỗ trợ da phục hồi
+                tốt hơn trong khi nghỉ ngơi.
+              </p>
+              <span class="routine-step-tag">Khóa ẩm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+      ROUTINE BY SKIN TYPE
+    ========================================================== -->
+    <section class="routine-skin-type">
+      <div class="container">
+        <div class="section-header">
+          <h2>GỢI Ý THEO LOẠI DA</h2>
+          <span>Skin type routine</span>
+        </div>
+
+        <div class="routine-type-grid">
+          <div class="routine-type-card">
+            <h3>Da dầu</h3>
+            <p>
+              Ưu tiên sản phẩm làm sạch dịu nhẹ, toner cân bằng, serum mỏng nhẹ và kem
+              dưỡng có kết cấu thoáng để giảm cảm giác bí da.
+            </p>
+            <a href="#">Xem sản phẩm phù hợp</a>
+          </div>
+
+          <div class="routine-type-card">
+            <h3>Da khô</h3>
+            <p>
+              Nên tập trung vào khả năng cấp ẩm và khóa ẩm với toner giàu ẩm, serum
+              phục hồi và kem dưỡng có độ nuôi dưỡng tốt hơn.
+            </p>
+            <a href="#">Xem sản phẩm phù hợp</a>
+          </div>
+
+          <div class="routine-type-card">
+            <h3>Da nhạy cảm</h3>
+            <p>
+              Chọn các sản phẩm lành tính, tối giản bước dưỡng và ưu tiên thành phần
+              làm dịu, phục hồi hàng rào bảo vệ da.
+            </p>
+            <a href="#">Xem sản phẩm phù hợp</a>
+          </div>
+
+          <div class="routine-type-card">
+            <h3>Da hỗn hợp</h3>
+            <p>
+              Kết hợp làm sạch vừa đủ, dưỡng ẩm cân bằng và điều chỉnh sản phẩm theo
+              từng vùng da để routine linh hoạt hơn.
+            </p>
+            <a href="#">Xem sản phẩm phù hợp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+      FEATURED PRODUCTS
+    ========================================================== -->
+    <section class="routine-products">
+      <div class="container">
+        <div class="section-header">
+          <h2>SẢN PHẨM GỢI Ý CHO ROUTINE</h2>
+          <span>Recommended products</span>
+        </div>
+
+        <div class="routine-product-grid">
+          <a href="#" class="routine-product-card">
+            <div class="routine-product-image">
+              <img src="img-product/tay-trang-1-scaled.jpg" alt="Nước tẩy trang" />
+            </div>
+            <div class="routine-product-info">
+              <h3>Nước tẩy trang dịu nhẹ cho da nhạy cảm</h3>
+              <div class="routine-product-price">
+                <span class="sale-price">299.000đ</span>
+                <span class="old-price">349.000đ</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="routine-product-card">
+            <div class="routine-product-image">
+              <img src="img-product/google-shopping-nuoc-can-bang-la.webp" alt="Toner rau má" />
+            </div>
+            <div class="routine-product-info">
+              <h3>Toner rau má cấp ẩm và cân bằng da</h3>
+              <div class="routine-product-price">
+                <span class="sale-price">389.000đ</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="routine-product-card">
+            <div class="routine-product-image">
+              <img src="img-product/rau-ma-scaled.jpg" alt="Serum phục hồi" />
+            </div>
+            <div class="routine-product-info">
+              <h3>Serum phục hồi hỗ trợ làm dịu và cấp ẩm</h3>
+              <div class="routine-product-price">
+                <span class="sale-price">559.000đ</span>
+                <span class="old-price">629.000đ</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="routine-product-card">
+            <div class="routine-product-image">
+              <img src="img-product/ini-scaled.jpg" alt="Kem dưỡng khóa ẩm" />
+            </div>
+            <div class="routine-product-info">
+              <h3>Kem dưỡng khóa ẩm cho làn da mềm mịn hơn</h3>
+              <div class="routine-product-price">
+                <span class="sale-price">429.000đ</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+      CTA
+    ========================================================== -->
+    <section class="routine-cta">
+      <div class="container">
+        <div class="routine-cta-box">
+          <div class="routine-cta-content">
+            <span>KEYSHU CARE</span>
+            <h2>BẠN CHƯA BIẾT NÊN BẮT ĐẦU TỪ ĐÂU?</h2>
+            <p>
+              Hãy để KEYSHU gợi ý routine chăm sóc da phù hợp với tình trạng da và
+              nhu cầu hiện tại của bạn.
+            </p>
+          </div>
+
+          <div class="routine-cta-action">
+            <a href="#" class="routine-btn primary">Nhận tư vấn routine</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+    IMPORT CSS FOOTER + FONT AWESOME
+  ========================================================== -->
+  <link rel="stylesheet" href="footer.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <!-- =========================================================
+    FOOTER
+  ========================================================== -->
+  <footer class="keyshu-footer">
+    <section class="kf-newsletter">
+      <div class="kf-container">
+        <div class="kf-newsletter-box">
+          <div class="kf-newsletter-content">
+            <div class="kf-newsletter-left">
+              <h2>NHẬN BẢN TIN LÀM ĐẸP</h2>
+              <p>Đừng bỏ lỡ cơ hội săn voucher mỗi tuần</p>
+            </div>
+
+            <form class="kf-newsletter-form" id="newsletterForm">
+              <input
+                type="email"
+                id="newsletterEmail"
+                placeholder="Điền email của bạn"
+                required
+              />
+              <button type="submit">ĐĂNG KÝ</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="kf-features">
+      <div class="kf-container">
+        <div class="kf-features-grid">
+          <div class="kf-feature-card">
+            <i class="fas fa-award"></i>
+            <h4>BẢO HÀNH - ĐỔI TRẢ</h4>
+            <p>Đổi trả linh hoạt, an tâm mua sắm.</p>
+          </div>
+
+          <div class="kf-feature-card">
+            <i class="fas fa-truck"></i>
+            <h4>MIỄN PHÍ GIAO HÀNG</h4>
+            <p>Giao hàng nhanh trên toàn quốc.</p>
+          </div>
+
+          <div class="kf-feature-card">
+            <i class="fas fa-trophy"></i>
+            <h4>THƯƠNG HIỆU UY TÍN</h4>
+            <p>Sản phẩm chính hãng, an toàn.</p>
+          </div>
+
+          <div class="kf-feature-card">
+            <i class="fas fa-globe-asia"></i>
+            <h4>GIAO HÀNG TOÀN QUỐC</h4>
+            <p>Phục vụ mọi tỉnh thành.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="kf-main">
+      <div class="kf-container">
+        <div class="kf-main-grid">
+          <div class="kf-col kf-company">
+            <div class="kf-logo">
+              <img src="img/Logo-Keyshu-1-01.jpg" alt="KEYSHU" />
+            </div>
+
+            <ul class="kf-company-info">
+              <li><strong>CÔNG TY TNHH SINH DƯỢC BIO</strong></li>
+              <li>Mã số thuế: 0110855086</li>
+              <li>Địa chỉ: Hà Nội, Việt Nam</li>
+              <li>Giờ làm việc: 8:00 - 22:00 (T2 - CN)</li>
+              <li>Hotline: 1900 1265</li>
+              <li>Email: cskh@keyshu.vn</li>
+            </ul>
+
+            <div class="kf-social">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <div class="kf-col">
+            <h4>CHÍNH SÁCH HỖ TRỢ</h4>
+            <ul class="kf-links">
+              <li><a href="#">Chính sách mua hàng</a></li>
+              <li><a href="#">Chính sách đổi trả</a></li>
+              <li><a href="#">Chính sách bảo hành</a></li>
+              <li><a href="#">Chính sách bảo mật</a></li>
+              <li><a href="#">Chính sách vận chuyển</a></li>
+            </ul>
+          </div>
+
+          <div class="kf-col">
+            <h4>HOẠT ĐỘNG CỘNG ĐỒNG</h4>
+            <ul class="kf-links">
+              <li><a href="#">Câu chuyện thương hiệu</a></li>
+              <li><a href="#">Chia sẻ kiến thức làm đẹp</a></li>
+              <li><a href="#">Chăm sóc khách hàng</a></li>
+              <li><a href="#">Sự kiện &amp; ưu đãi</a></li>
+              <li><a href="#">Đồng hành cùng cộng đồng</a></li>
+            </ul>
+          </div>
+
+          <div class="kf-col">
+            <h4>FANPAGE FACEBOOK</h4>
+            <div class="kf-fanpage">
+              <iframe
+                src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/facebook&tabs=timeline&width=340&height=200&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
+                width="100%"
+                height="200"
+                style="border:none;overflow:hidden"
+                scrolling="no"
+                frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

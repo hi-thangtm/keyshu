@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KEYSHU | LIÊN HỆ</title>
+
+  <!-- File CSS chính -->
+  <link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="contact.css" />
+  <!-- Font / preload -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+</head>
+<body>
+
+  <!-- =========================================================
+    HEADER
+  ========================================================== -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-top">
+        <div class="header-logo">
+          <a href="#">
+            <img src="img/Logo-keyshu-1-01.jpg" alt="KEYSHU Logo" />
+          </a>
+        </div>
+
+        <div class="header-search">
+          <form action="#">
+            <input
+              type="text"
+              placeholder="Nhập từ khóa tìm kiếm sản phẩm, danh mục..."
+            />
+            <button type="submit" aria-label="Tìm kiếm">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M21 21L16.65 16.65M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <div class="header-actions">
+          <a href="#" class="action-item action-link">
+            <span class="action-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M3 7H21V19H3V7Z" stroke="currentColor" stroke-width="1.8" />
+                <path
+                  d="M7 7V5C7 3.89543 7.89543 3 9 3H15C16.1046 3 17 3.89543 17 5V7"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                />
+                <path d="M3 11H21" stroke="currentColor" stroke-width="1.8" />
+              </svg>
+            </span>
+            <span>Hệ thống cửa hàng</span>
+          </a>
+
+          <a href="#" class="action-item action-link">
+            <span class="action-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M4 19.5V4.5C4 3.67157 4.67157 3 5.5 3H16.5L20 6.5V19.5C20 20.3284 19.3284 21 18.5 21H5.5C4.67157 21 4 20.3284 4 19.5Z"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                />
+                <path d="M16 3V7H20" stroke="currentColor" stroke-width="1.8" />
+                <path
+                  d="M8 11H16"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M8 15H13"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </span>
+            <span>Tạp chí làm đẹp</span>
+          </a>
+
+          <a href="#" class="login-link" aria-label="Đăng nhập hoặc đăng ký">
+            <span class="login-link-icon">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                  d="M14 16.5L18.5 12L14 7.5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M18 12H9"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10 21H6.5C5.11929 21 4 19.8807 4 18.5V5.5C4 4.11929 5.11929 3 6.5 3H10"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+            <span class="login-link-text">Login/Register</span>
+          </a>
+
+          <a href="#" class="icon-btn" aria-label="Yêu thích">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M12 20.5C12 20.5 4 15.36 4 9.5C4 6.46243 6.46243 4 9.5 4C11.1569 4 12.6429 4.74157 13.6667 5.90968C14.6904 4.74157 16.1764 4 17.8333 4C20.8709 4 23.3333 6.46243 23.3333 9.5C23.3333 15.36 15.3333 20.5 15.3333 20.5H12Z"
+                stroke="currentColor"
+                stroke-width="1.7"
+                transform="translate(-1.66665 0)"
+              />
+            </svg>
+          </a>
+
+          <a href="#" class="icon-btn" aria-label="Giỏ hàng">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M3 5H5L7 15H18L20 8H8"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <circle cx="9" cy="19" r="1.6" stroke="currentColor" stroke-width="1.6" />
+              <circle cx="17" cy="19" r="1.6" stroke="currentColor" stroke-width="1.6" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <nav class="main-menu">
+        <a href="#">Trang Chủ</a>
+        <a href="#">Mặt Nạ</a>
+        <a href="#">Tẩy Trang</a>
+        <a href="#">Sữa Rửa Mặt</a>
+        <a href="#">Toner</a>
+        <a href="#">Serum</a>
+        <a href="#">Combo Siêu Hời</a>
+        <a href="#">Chính Sách</a>
+        <a href="#" class="active">Liên Hệ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contact-page">
+    <!-- =========================================================
+      HERO CONTACT
+    ========================================================== -->
+    <section class="contact-hero">
+      <div class="container">
+        <div class="contact-hero-box">
+          <div class="contact-hero-content">
+            <span class="contact-hero-subtitle">KEYSHU Skincare</span>
+            <h1>LIÊN HỆ VỚI CHÚNG TÔI</h1>
+            <p>
+              KEYSHU luôn sẵn sàng lắng nghe và đồng hành cùng bạn trong hành trình
+              chăm sóc da an toàn, lành tính và hiệu quả mỗi ngày.
+            </p>
+
+            <div class="contact-hero-actions">
+              <a href="#contact-form-section" class="contact-hero-btn primary">Gửi liên hệ</a>
+              <a href="#contact-info-section" class="contact-hero-btn secondary">Xem thông tin</a>
+            </div>
+          </div>
+
+          <div class="contact-hero-image">
+            <img src="img_banner/banner_right_1.webp" alt="Liên hệ KEYSHU" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+      CONTACT INFO
+    ========================================================== -->
+    <section class="contact-info-section" id="contact-info-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>THÔNG TIN LIÊN HỆ</h2>
+          <span>Contact us</span>
+        </div>
+
+        <div class="contact-info-grid">
+          <div class="contact-info-card">
+            <div class="contact-info-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 21C12 21 19 15.5 19 9.5C19 5.91015 15.866 3 12 3C8.13401 3 5 5.91015 5 9.5C5 15.5 12 21 12 21Z"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                />
+                <circle cx="12" cy="9.5" r="2.5" stroke="currentColor" stroke-width="1.8" />
+              </svg>
+            </div>
+            <h3>Địa chỉ</h3>
+            <p>Hà Nội, Việt Nam</p>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-info-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M22 16.92V19.92C22 20.47 21.55 20.92 21 20.92C10.51 20.92 2 12.41 2 1.92C2 1.37 2.45 0.920044 3 0.920044H6C6.55 0.920044 7 1.37 7 1.92V5.09C7 5.56 6.67 5.96 6.21 6.05L4.45 6.4C5.21 9.04 6.88 11.36 9.12 13.1L10.58 11.64C10.91 11.31 11.43 11.25 11.83 11.48L14.67 13.12C15.07 13.35 15.28 13.8 15.18 14.25L14.79 16.08C14.7 16.53 15.05 16.92 15.51 16.92H22Z"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3>Hotline</h3>
+            <p>1900 1265</p>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-info-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M4 5H20C21.1046 5 22 5.89543 22 7V17C22 18.1046 21.1046 19 20 19H4C2.89543 19 2 18.1046 2 17V7C2 5.89543 2.89543 5 4 5Z"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                />
+                <path
+                  d="M22 7L12 13L2 7"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3>Email</h3>
+            <p>cskh@keyshu.vn</p>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-info-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" />
+                <path
+                  d="M12 7V12L15 15"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3>Giờ làm việc</h3>
+            <p>8:00 - 22:00 (T2 - CN)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+      CONTACT MAIN
+    ========================================================== -->
+    <section class="contact-main-section" id="contact-form-section">
+      <div class="container">
+        <div class="contact-main-grid">
+          <!-- Form -->
+          <div class="contact-form-wrap">
+            <div class="contact-box-heading">
+              <span>Send message</span>
+              <h2>GỬI YÊU CẦU CHO KEYSHU</h2>
+              <p>
+                Hãy để lại thông tin, KEYSHU sẽ phản hồi bạn sớm nhất với sự hỗ trợ
+                tận tâm và phù hợp nhất cho nhu cầu chăm sóc da của bạn.
+              </p>
+            </div>
+
+            <form class="contact-form">
+              <div class="contact-form-grid">
+                <div class="contact-form-group">
+                  <label for="fullname">Họ và tên</label>
+                  <input type="text" id="fullname" placeholder="Nhập họ và tên của bạn" />
+                </div>
+
+                <div class="contact-form-group">
+                  <label for="phone">Số điện thoại</label>
+                  <input type="text" id="phone" placeholder="Nhập số điện thoại" />
+                </div>
+
+                <div class="contact-form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" placeholder="Nhập email của bạn" />
+                </div>
+
+                <div class="contact-form-group">
+                  <label for="subject">Chủ đề</label>
+                  <input type="text" id="subject" placeholder="Ví dụ: Tư vấn sản phẩm, hợp tác..." />
+                </div>
+
+                <div class="contact-form-group full-width">
+                  <label for="message">Nội dung</label>
+                  <textarea
+                    id="message"
+                    rows="6"
+                    placeholder="Nhập nội dung bạn cần KEYSHU hỗ trợ..."
+                  ></textarea>
+                </div>
+              </div>
+
+              <button type="submit" class="contact-submit-btn">Gửi liên hệ ngay</button>
+            </form>
+          </div>
+
+          <!-- Side info -->
+          <div class="contact-side-wrap">
+            <div class="contact-side-card">
+              <span class="contact-side-label">KEYSHU CARE</span>
+              <h3>Tư vấn chăm sóc da</h3>
+              <p>
+                Đội ngũ KEYSHU sẵn sàng hỗ trợ tư vấn routine, lựa chọn sản phẩm phù hợp
+                và giải đáp những thắc mắc trong quá trình sử dụng.
+              </p>
+
+              <ul class="contact-side-list">
+                <li>
+                  <strong>Hỗ trợ khách hàng:</strong>
+                  <span>1900 1265</span>
+                </li>
+                <li>
+                  <strong>Email CSKH:</strong>
+                  <span>cskh@keyshu.vn</span>
+                </li>
+                <li>
+                  <strong>Hợp tác / đại lý:</strong>
+                  <span>partner@keyshu.vn</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="contact-side-card">
+              <span class="contact-side-label">FOLLOW KEYSHU</span>
+              <h3>Kết nối cùng thương hiệu</h3>
+              <p>
+                Theo dõi KEYSHU để cập nhật ưu đãi mới, kiến thức làm đẹp và các dòng
+                sản phẩm chăm sóc da được yêu thích.
+              </p>
+
+              <div class="contact-social-links">
+                <a href="#">Facebook</a>
+                <a href="#">TikTok</a>
+                <a href="#">Instagram</a>
+                <a href="#">YouTube</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+      MAP / SHOWROOM
+    ========================================================== -->
+    <section class="contact-map-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>HỆ THỐNG CỬA HÀNG</h2>
+          <span>Store system</span>
+        </div>
+
+        <div class="contact-map-layout">
+          <div class="contact-store-list">
+            <div class="contact-store-item active">
+              <h3>Showroom Hà Nội</h3>
+              <p>Trung tâm tư vấn và trải nghiệm sản phẩm chăm sóc da KEYSHU.</p>
+              <ul>
+                <li>Địa chỉ: Hà Nội, Việt Nam</li>
+                <li>Hotline: 1900 1265</li>
+                <li>Giờ mở cửa: 8:00 - 22:00</li>
+              </ul>
+            </div>
+
+            <div class="contact-store-item">
+              <h3>Đại lý liên kết</h3>
+              <p>Hỗ trợ mua hàng nhanh chóng và tiện lợi tại nhiều khu vực.</p>
+              <ul>
+                <li>Tư vấn sản phẩm chính hãng</li>
+                <li>Hỗ trợ đổi trả theo chính sách</li>
+                <li>Giao hàng toàn quốc</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="contact-map-frame">
+            <iframe
+              src="https://www.google.com/maps?q=Hanoi,Vietnam&z=13&output=embed"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+      FAQ CONTACT
+    ========================================================== -->
+    <section class="contact-faq-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>CÂU HỎI THƯỜNG GẶP</h2>
+          <span>FAQs</span>
+        </div>
+
+        <div class="contact-faq-list">
+          <div class="contact-faq-item">
+            <h3>KEYSHU phản hồi liên hệ trong bao lâu?</h3>
+            <p>
+              Chúng tôi thường phản hồi trong thời gian sớm nhất trong khung giờ làm việc.
+              Với những yêu cầu cần tư vấn kỹ hơn, đội ngũ CSKH sẽ liên hệ trực tiếp.
+            </p>
+          </div>
+
+          <div class="contact-faq-item">
+            <h3>Tôi có thể nhận tư vấn chọn sản phẩm theo tình trạng da không?</h3>
+            <p>
+              Có. Bạn chỉ cần để lại thông tin hoặc gọi hotline, KEYSHU sẽ hỗ trợ tư vấn
+              routine phù hợp với làn da và nhu cầu hiện tại của bạn.
+            </p>
+          </div>
+
+          <div class="contact-faq-item">
+            <h3>KEYSHU có hỗ trợ hợp tác đại lý hoặc cộng tác viên không?</h3>
+            <p>
+              Có. Bạn có thể gửi yêu cầu hợp tác qua form liên hệ hoặc email để đội ngũ
+              KEYSHU trao đổi chi tiết hơn.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+    IMPORT CSS FOOTER + FONT AWESOME
+  ========================================================== -->
+  <link rel="stylesheet" href="footer.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <!-- =========================================================
+    FOOTER
+  ========================================================== -->
+  <footer class="keyshu-footer">
+    <section class="kf-newsletter">
+      <div class="kf-container">
+        <div class="kf-newsletter-box">
+          <div class="kf-newsletter-content">
+            <div class="kf-newsletter-left">
+              <h2>NHẬN BẢN TIN LÀM ĐẸP</h2>
+              <p>Đừng bỏ lỡ cơ hội săn voucher mỗi tuần</p>
+            </div>
+
+            <form class="kf-newsletter-form" id="newsletterForm">
+              <input
+                type="email"
+                id="newsletterEmail"
+                placeholder="Điền email của bạn"
+                required
+              />
+              <button type="submit">ĐĂNG KÝ</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="kf-features">
+      <div class="kf-container">
+        <div class="kf-features-grid">
+          <div class="kf-feature-card">
+            <i class="fas fa-award"></i>
+            <h4>BẢO HÀNH - ĐỔI TRẢ</h4>
+            <p>Đổi trả linh hoạt, an tâm mua sắm.</p>
+          </div>
+
+          <div class="kf-feature-card">
+            <i class="fas fa-truck"></i>
+            <h4>MIỄN PHÍ GIAO HÀNG</h4>
+            <p>Giao hàng nhanh trên toàn quốc.</p>
+          </div>
+
+          <div class="kf-feature-card">
+            <i class="fas fa-trophy"></i>
+            <h4>THƯƠNG HIỆU UY TÍN</h4>
+            <p>Sản phẩm chính hãng, an toàn.</p>
+          </div>
+
+          <div class="kf-feature-card">
+            <i class="fas fa-globe-asia"></i>
+            <h4>GIAO HÀNG TOÀN QUỐC</h4>
+            <p>Phục vụ mọi tỉnh thành.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="kf-main">
+      <div class="kf-container">
+        <div class="kf-main-grid">
+          <div class="kf-col kf-company">
+            <div class="kf-logo">
+              <img src="img/Logo-Keyshu-1-01.jpg" alt="KEYSHU" />
+            </div>
+
+            <ul class="kf-company-info">
+              <li><strong>CÔNG TY TNHH SINH DƯỢC BIO</strong></li>
+              <li>Mã số thuế: 0110855086</li>
+              <li>Địa chỉ: Hà Nội, Việt Nam</li>
+              <li>Giờ làm việc: 8:00 - 22:00 (T2 - CN)</li>
+              <li>Hotline: 1900 1265</li>
+              <li>Email: cskh@keyshu.vn</li>
+            </ul>
+
+            <div class="kf-social">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <div class="kf-col">
+            <h4>CHÍNH SÁCH HỖ TRỢ</h4>
+            <ul class="kf-links">
+              <li><a href="#">Chính sách mua hàng</a></li>
+              <li><a href="#">Chính sách đổi trả</a></li>
+              <li><a href="#">Chính sách bảo hành</a></li>
+              <li><a href="#">Chính sách bảo mật</a></li>
+              <li><a href="#">Chính sách vận chuyển</a></li>
+            </ul>
+          </div>
+
+          <div class="kf-col">
+            <h4>HOẠT ĐỘNG CỘNG ĐỒNG</h4>
+            <ul class="kf-links">
+              <li><a href="#">Câu chuyện thương hiệu</a></li>
+              <li><a href="#">Chia sẻ kiến thức làm đẹp</a></li>
+              <li><a href="#">Chăm sóc khách hàng</a></li>
+              <li><a href="#">Sự kiện &amp; ưu đãi</a></li>
+              <li><a href="#">Đồng hành cùng cộng đồng</a></li>
+            </ul>
+          </div>
+
+          <div class="kf-col">
+            <h4>FANPAGE FACEBOOK</h4>
+            <div class="kf-fanpage">
+              <iframe
+                src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/facebook&tabs=timeline&width=340&height=200&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
+                width="100%"
+                height="200"
+                style="border:none;overflow:hidden"
+                scrolling="no"
+                frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
